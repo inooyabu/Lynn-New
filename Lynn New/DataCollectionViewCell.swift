@@ -10,4 +10,12 @@ import UIKit
 class DataCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var backgroundImage: UIImageView!
     
+    override class func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    func loadData(item: UIImage){
+        backgroundImage.image = item
+    }
+    
 }

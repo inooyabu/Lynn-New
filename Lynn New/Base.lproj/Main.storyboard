@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ctX-iK-WpN">
-                                <rect key="frame" x="-56" y="0.0" width="945" height="409"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ctX-iK-WpN">
+                                <rect key="frame" x="0.0" y="35" width="773" height="299"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rfz-hV-HrH">
                                     <size key="itemSize" width="782" height="378"/>
@@ -29,21 +28,16 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="aia-6F-cdx" customClass="DataCollectionViewCell" customModule="Lynn_New" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="15.666666666666666" width="782" height="378"/>
+                                        <rect key="frame" x="0.0" y="-39.666666666666664" width="782" height="378"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AWf-Yv-Tpt">
                                             <rect key="frame" x="0.0" y="0.0" width="782" height="378"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hqu-pj-O5Q">
-                                                    <rect key="frame" x="8" y="-26" width="817" height="397"/>
+                                                    <rect key="frame" x="8" y="0.0" width="774" height="370"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="81I-LQ-9Rh">
-                                                    <rect key="frame" x="332" y="344" width="121" height="27"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="pageIndicatorTintColor" red="0.042289458219999999" green="0.47238522770000002" blue="0.73336368799999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </pageControl>
                                             </subviews>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="782" height="378"/>
@@ -53,12 +47,26 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="81I-LQ-9Rh">
+                                <rect key="frame" x="362" y="342" width="121.66666666666666" height="27"/>
+                                <color key="pageIndicatorTintColor" systemColor="linkColor"/>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ctX-iK-WpN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9jX-6H-e24"/>
+                            <constraint firstItem="ctX-iK-WpN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="UIS-9o-12i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ctX-iK-WpN" secondAttribute="trailing" constant="27" id="VJt-VW-RqR"/>
+                            <constraint firstItem="81I-LQ-9Rh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="0.16666666666662877" id="XjB-vU-aee"/>
+                            <constraint firstItem="81I-LQ-9Rh" firstAttribute="top" secondItem="ctX-iK-WpN" secondAttribute="bottom" constant="8" symbolic="YES" id="aEc-ut-b6D"/>
+                            <constraint firstItem="81I-LQ-9Rh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wTu-r2-KSt"/>
+                            <constraint firstItem="81I-LQ-9Rh" firstAttribute="top" secondItem="ctX-iK-WpN" secondAttribute="bottom" constant="8" symbolic="YES" id="wei-sI-1hF"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="ctX-iK-WpN" id="TBT-vm-4eG"/>
+                        <outlet property="pageController" destination="81I-LQ-9Rh" id="d83-rf-Bgk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -67,6 +75,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -14,6 +14,19 @@
 		6D9FB36026ABF52800111D66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB35F26ABF52800111D66 /* Assets.xcassets */; };
 		6D9FB36326ABF52800111D66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB36126ABF52800111D66 /* LaunchScreen.storyboard */; };
 		6D9FB36B26AC03C800111D66 /* DataCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9FB36A26AC03C800111D66 /* DataCollectionViewCell.swift */; };
+		6D9FB39726AC67CD00111D66 /* stortel5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB38A26AC67CC00111D66 /* stortel5.mp3 */; };
+		6D9FB39826AC67CD00111D66 /* stortel2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB38B26AC67CC00111D66 /* stortel2.mp3 */; };
+		6D9FB39926AC67CD00111D66 /* stortel4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB38C26AC67CC00111D66 /* stortel4.mp3 */; };
+		6D9FB39A26AC67CD00111D66 /* stortel10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB38D26AC67CC00111D66 /* stortel10.mp3 */; };
+		6D9FB39B26AC67CD00111D66 /* stortel6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB38E26AC67CC00111D66 /* stortel6.mp3 */; };
+		6D9FB39C26AC67CD00111D66 /* stortel7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB38F26AC67CC00111D66 /* stortel7.mp3 */; };
+		6D9FB39D26AC67CD00111D66 /* stortel9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB39026AC67CC00111D66 /* stortel9.mp3 */; };
+		6D9FB39E26AC67CD00111D66 /* stortel8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB39126AC67CC00111D66 /* stortel8.mp3 */; };
+		6D9FB39F26AC67CD00111D66 /* stortel3 new.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB39226AC67CC00111D66 /* stortel3 new.mp3 */; };
+		6D9FB3A026AC67CD00111D66 /* stortel11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB39326AC67CC00111D66 /* stortel11.mp3 */; };
+		6D9FB3A126AC67CD00111D66 /* stortel3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB39426AC67CD00111D66 /* stortel3.mp3 */; };
+		6D9FB3A226AC67CD00111D66 /* sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB39526AC67CD00111D66 /* sound1.mp3 */; };
+		6D9FB3A326AC67CD00111D66 /* stortel1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB39626AC67CD00111D66 /* stortel1.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +39,19 @@
 		6D9FB36226ABF52800111D66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D9FB36426ABF52800111D66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D9FB36A26AC03C800111D66 /* DataCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCollectionViewCell.swift; sourceTree = "<group>"; };
+		6D9FB38A26AC67CC00111D66 /* stortel5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel5.mp3; sourceTree = "<group>"; };
+		6D9FB38B26AC67CC00111D66 /* stortel2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel2.mp3; sourceTree = "<group>"; };
+		6D9FB38C26AC67CC00111D66 /* stortel4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel4.mp3; sourceTree = "<group>"; };
+		6D9FB38D26AC67CC00111D66 /* stortel10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel10.mp3; sourceTree = "<group>"; };
+		6D9FB38E26AC67CC00111D66 /* stortel6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel6.mp3; sourceTree = "<group>"; };
+		6D9FB38F26AC67CC00111D66 /* stortel7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel7.mp3; sourceTree = "<group>"; };
+		6D9FB39026AC67CC00111D66 /* stortel9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel9.mp3; sourceTree = "<group>"; };
+		6D9FB39126AC67CC00111D66 /* stortel8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel8.mp3; sourceTree = "<group>"; };
+		6D9FB39226AC67CC00111D66 /* stortel3 new.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "stortel3 new.mp3"; sourceTree = "<group>"; };
+		6D9FB39326AC67CC00111D66 /* stortel11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel11.mp3; sourceTree = "<group>"; };
+		6D9FB39426AC67CD00111D66 /* stortel3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel3.mp3; sourceTree = "<group>"; };
+		6D9FB39526AC67CD00111D66 /* sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound1.mp3; sourceTree = "<group>"; };
+		6D9FB39626AC67CD00111D66 /* stortel1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel1.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +84,7 @@
 		6D9FB35526ABF52700111D66 /* Lynn New */ = {
 			isa = PBXGroup;
 			children = (
+				6D9FB36D26AC673F00111D66 /* Audio */,
 				6D9FB35626ABF52700111D66 /* AppDelegate.swift */,
 				6D9FB35826ABF52700111D66 /* SceneDelegate.swift */,
 				6D9FB35A26ABF52700111D66 /* ViewController.swift */,
@@ -68,6 +95,26 @@
 				6D9FB36A26AC03C800111D66 /* DataCollectionViewCell.swift */,
 			);
 			path = "Lynn New";
+			sourceTree = "<group>";
+		};
+		6D9FB36D26AC673F00111D66 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				6D9FB39526AC67CD00111D66 /* sound1.mp3 */,
+				6D9FB39626AC67CD00111D66 /* stortel1.mp3 */,
+				6D9FB38B26AC67CC00111D66 /* stortel2.mp3 */,
+				6D9FB39226AC67CC00111D66 /* stortel3 new.mp3 */,
+				6D9FB39426AC67CD00111D66 /* stortel3.mp3 */,
+				6D9FB38C26AC67CC00111D66 /* stortel4.mp3 */,
+				6D9FB38A26AC67CC00111D66 /* stortel5.mp3 */,
+				6D9FB38E26AC67CC00111D66 /* stortel6.mp3 */,
+				6D9FB38F26AC67CC00111D66 /* stortel7.mp3 */,
+				6D9FB39126AC67CC00111D66 /* stortel8.mp3 */,
+				6D9FB39026AC67CC00111D66 /* stortel9.mp3 */,
+				6D9FB38D26AC67CC00111D66 /* stortel10.mp3 */,
+				6D9FB39326AC67CC00111D66 /* stortel11.mp3 */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +174,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D9FB3A226AC67CD00111D66 /* sound1.mp3 in Resources */,
+				6D9FB3A026AC67CD00111D66 /* stortel11.mp3 in Resources */,
+				6D9FB39F26AC67CD00111D66 /* stortel3 new.mp3 in Resources */,
+				6D9FB39C26AC67CD00111D66 /* stortel7.mp3 in Resources */,
+				6D9FB39726AC67CD00111D66 /* stortel5.mp3 in Resources */,
+				6D9FB39826AC67CD00111D66 /* stortel2.mp3 in Resources */,
 				6D9FB36326ABF52800111D66 /* LaunchScreen.storyboard in Resources */,
+				6D9FB39E26AC67CD00111D66 /* stortel8.mp3 in Resources */,
+				6D9FB3A326AC67CD00111D66 /* stortel1.mp3 in Resources */,
+				6D9FB39A26AC67CD00111D66 /* stortel10.mp3 in Resources */,
+				6D9FB3A126AC67CD00111D66 /* stortel3.mp3 in Resources */,
+				6D9FB39926AC67CD00111D66 /* stortel4.mp3 in Resources */,
+				6D9FB39D26AC67CD00111D66 /* stortel9.mp3 in Resources */,
+				6D9FB39B26AC67CD00111D66 /* stortel6.mp3 in Resources */,
 				6D9FB36026ABF52800111D66 /* Assets.xcassets in Resources */,
 				6D9FB35E26ABF52700111D66 /* Main.storyboard in Resources */,
 			);
