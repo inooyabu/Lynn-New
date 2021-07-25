@@ -24,6 +24,8 @@ class ViewController: UIViewController {
                                 UIImage(named: "11")]
     
     var voice = ["stortel1", "stortel2", "stortel3 new", "stortel4", "stortel5", "stortel6", "stortel7", "stortel8", "stortel9", "stortel10", "stortel11"]
+    
+    var airgif = [UIImage.gif(name: "Hero Lynn"),UIImage.gif(name: "Superman Not Me"),UIImage.gif(name: "Benefit"),UIImage.gif(name: "Secret"),UIImage.gif(name: "contain New"),UIImage.gif(name: "cry New"),UIImage.gif(name: "weak"),UIImage.gif(name: "Sweat"),UIImage.gif(name:"Presence"),UIImage.gif(name: "Child"),UIImage.gif(name: "more water")]
                                 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,10 +36,6 @@ class ViewController: UIViewController {
         pageController.numberOfPages = backgroundImageArray.count
         playSound(number: 0)
         print("Play Sound on viewDidLoad")
-        
-//        pageController.subviews.forEach {
-//            $0.transform = CGAffineTransform(scaleX: 2, y: 2)
-//        }
         
     }
     
@@ -56,8 +54,7 @@ class ViewController: UIViewController {
         }catch{
             print(error)
         }
-        
-       
+     
     }
 
 
@@ -88,15 +85,7 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
         let w = scrollView.bounds.size.width
         let currentPage = Int(ceil(x/w))
         self.pageController.currentPage = currentPage
-//        self.pageController.subviews.forEach {
-//            $0.transform = CGAffineTransform(scaleX: 2, y: 2)
-//        }
-        
-//        for dot in self.pageController.subviews{
-//            dot.transform = CGAffineTransform.init(scaleX: 2, y: 2)
-//        }
-//
-//        playSound(number: currentPage)
+                
         switch self.pageController.currentPage {
         case 0:
             playSound(number: 0)
@@ -141,13 +130,13 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
             print("Default, Current Page \(currentPage), Array Sound = \(0) ")
         }
     }
-    
-    //Spacing antar dot di page controller belum tau caranya
-    override func viewDidLayoutSubviews() {
-        pageController.subviews.forEach {
-            $0.transform = CGAffineTransform(scaleX: 2, y: 2)
-        }
-    }
+//
+//    //Spacing antar dot di page controller belum tau caranya
+//    override func viewDidLayoutSubviews() {
+//        pageController.subviews.forEach {
+//            $0.transform = CGAffineTransform(scaleX: 2, y: 2)
+//        }
+//    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemWidth = collectionView.frame.size.width
@@ -160,6 +149,8 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
     }
 }
 
+
+//Ini kode full screen, tapi masih aneh
 //extension ViewController: UICollectionViewDelegateFlowLayout{
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 //        let size = UIScreen.main.bounds

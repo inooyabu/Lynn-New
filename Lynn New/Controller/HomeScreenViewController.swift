@@ -19,6 +19,7 @@ class HomeScreenViewController: UIViewController {
     let profilGif = UIImage.gif(name: "Profil")
     var bgSoundURI: URL?
     var backgroundSound = AVAudioPlayer()
+    var nama = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +32,19 @@ class HomeScreenViewController: UIViewController {
         namaTextField.layer.borderWidth = 2.0
         namaTextField.layer.borderColor = UIColor(red: 95.0/255.0, green: 28.0/255.0, blue: 53.0/255.0, alpha: 100.0).cgColor
         namaTextField.layer.masksToBounds = true
+        namaTextField.placeholder = "Masukkan namamu"
         
         playSound()
+        
+        //Dismiss keyboard when tap anywhere
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    
    
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     private func playSound() {
@@ -63,9 +74,34 @@ class HomeScreenViewController: UIViewController {
         present(startingPage, animated: false, completion: nil)
     }
     
-    
+    //Besok tambahin alert kalau nama empty
     @IBAction func simpanButtonTapped(_ sender: Any) {
-        print("Button simpan tapped")
+        nama = namaTextField.text ?? "Nama Empty"
+        print("Button simpan tapped || Oi \(nama)")
+        
+//        let homeScreen2 = storyboard?.instantiateViewController(identifier: "Home Screen 2") as! HomeScreen2ViewController
+//        homeScreen2.modalPresentationStyle = .fullScreen
+////        homeScreen2.textGreeting = nama
+//
+//        let transition = CATransition()
+//        transition.duration = 0.5
+//        transition.type = CATransitionType.push
+//        transition.subtype = CATransitionSubtype.fromRight
+//        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+//        view.window!.layer.add(transition, forKey: kCATransition)
+//        present(homeScreen2, animated: false, completion: nil)
+        
+        let storyTelling = storyboard?.instantiateViewController(identifier: "Story Telling") as! ViewController
+        storyTelling.modalPresentationStyle = .fullScreen
+        
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromRight
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        view.window!.layer.add(transition, forKey: kCATransition)
+        present(storyTelling, animated: false, completion: nil)
+        
     }
 }
 
