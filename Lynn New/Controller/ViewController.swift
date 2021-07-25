@@ -107,6 +107,8 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
         case 0:
             playSound(number: 0)
             print("Current Page \(currentPage), Array Sound = \(0)")
+            
+            
         case 1:
             playSound(number: 1)
             print("Current Page \(currentPage), Array Sound = \(1)")
