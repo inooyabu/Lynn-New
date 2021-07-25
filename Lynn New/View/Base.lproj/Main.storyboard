@@ -124,6 +124,9 @@
                                 <state key="normal" title="Simpan">
                                     <color key="titleColor" red="0.9489546418" green="0.92926537990000002" blue="0.93725687270000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="simpanButtonTapped:" destination="QXZ-CS-ciy" eventType="touchUpInside" id="UOZ-vq-k7d"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bitmap" translatesAutoresizingMaskIntoConstraints="NO" id="az5-Q2-xjT">
                                 <rect key="frame" x="328" y="76.666666666666657" width="387" height="91.666666666666657"/>

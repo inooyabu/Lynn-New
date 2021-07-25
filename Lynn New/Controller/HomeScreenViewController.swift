@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class HomeScreenViewController: UIViewController {
 
@@ -14,8 +15,10 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet weak var namaTextField: UITextField!
     
     @IBOutlet weak var simpanButton: UIButton!
+    
     let profilGif = UIImage.gif(name: "Profil")
-//    let borderColor = UIColor(hex: "#5F1C35")
+    var bgSoundURI: URL?
+    var backgroundSound = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +31,26 @@ class HomeScreenViewController: UIViewController {
         namaTextField.layer.borderWidth = 2.0
         namaTextField.layer.borderColor = UIColor(red: 95.0/255.0, green: 28.0/255.0, blue: 53.0/255.0, alpha: 100.0).cgColor
         namaTextField.layer.masksToBounds = true
+        
+        playSound()
    
     }
     
+    private func playSound() {
+        bgSoundURI = URL(fileURLWithPath: Bundle.main.path(forResource: "home page", ofType: "mp3")!)
+        do{
+            guard let uri = bgSoundURI else {return}
+            backgroundSound = try AVAudioPlayer(contentsOf: uri)
+            backgroundSound.play()
+            
+        }catch{
+            print(error)
+        }
+    }
     
     @IBAction func homeButtonTapped(_ sender: Any) {
         print("Home Button Tapped")
+        backgroundSound.stop()
         let startingPage = storyboard?.instantiateViewController(identifier: "Starting Page") as! StartingPageViewController
         startingPage.modalPresentationStyle = .fullScreen
         
@@ -44,6 +61,11 @@ class HomeScreenViewController: UIViewController {
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         view.window!.layer.add(transition, forKey: kCATransition)
         present(startingPage, animated: false, completion: nil)
+    }
+    
+    
+    @IBAction func simpanButtonTapped(_ sender: Any) {
+        print("Button simpan tapped")
     }
 }
 
