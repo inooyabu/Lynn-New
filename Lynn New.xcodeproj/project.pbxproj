@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6D1D96B226ADA20B003C760B /* HomeScreen2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1D96B126ADA20B003C760B /* HomeScreen2ViewController.swift */; };
+		6D1D96B426ADCC27003C760B /* TentangLynnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1D96B326ADCC27003C760B /* TentangLynnViewController.swift */; };
+		6D33518126ADD86D0028700B /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D33518026ADD86D0028700B /* TipsViewController.swift */; };
+		6D33518326ADDE1A0028700B /* BerapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D33518226ADDE1A0028700B /* BerapaViewController.swift */; };
+		6D33518526ADE2060028700B /* MonitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D33518426ADE2060028700B /* MonitorViewController.swift */; };
 		6D635C9226AD8A9D00A5FC9E /* home page.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D635C9126AD8A9D00A5FC9E /* home page.mp3 */; };
 		6D635D0626AD8C2E00A5FC9E /* Lembab.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D635CF626AD8C2E00A5FC9E /* Lembab.gif */; };
 		6D635D0726AD8C2E00A5FC9E /* weak.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D635CF726AD8C2E00A5FC9E /* weak.gif */; };
@@ -52,6 +56,10 @@
 
 /* Begin PBXFileReference section */
 		6D1D96B126ADA20B003C760B /* HomeScreen2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen2ViewController.swift; sourceTree = "<group>"; };
+		6D1D96B326ADCC27003C760B /* TentangLynnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TentangLynnViewController.swift; sourceTree = "<group>"; };
+		6D33518026ADD86D0028700B /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
+		6D33518226ADDE1A0028700B /* BerapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerapaViewController.swift; sourceTree = "<group>"; };
+		6D33518426ADE2060028700B /* MonitorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorViewController.swift; sourceTree = "<group>"; };
 		6D635C9126AD8A9D00A5FC9E /* home page.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "home page.mp3"; sourceTree = SOURCE_ROOT; };
 		6D635CF626AD8C2E00A5FC9E /* Lembab.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Lembab.gif; sourceTree = SOURCE_ROOT; };
 		6D635CF726AD8C2E00A5FC9E /* weak.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = weak.gif; sourceTree = SOURCE_ROOT; };
@@ -182,6 +190,10 @@
 				6DCB4A3D26AD5BFE0009EE7F /* HomeScreenViewController.swift */,
 				6DCB4A6126AD63670009EE7F /* Animasi.swift */,
 				6D1D96B126ADA20B003C760B /* HomeScreen2ViewController.swift */,
+				6D1D96B326ADCC27003C760B /* TentangLynnViewController.swift */,
+				6D33518026ADD86D0028700B /* TipsViewController.swift */,
+				6D33518226ADDE1A0028700B /* BerapaViewController.swift */,
+				6D33518426ADE2060028700B /* MonitorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -305,12 +317,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DCB4A6226AD63670009EE7F /* Animasi.swift in Sources */,
+				6D33518526ADE2060028700B /* MonitorViewController.swift in Sources */,
+				6D1D96B426ADCC27003C760B /* TentangLynnViewController.swift in Sources */,
 				6D9FB36B26AC03C800111D66 /* DataCollectionViewCell.swift in Sources */,
 				6D9FB35B26ABF52700111D66 /* ViewController.swift in Sources */,
 				6D9FB35726ABF52700111D66 /* AppDelegate.swift in Sources */,
 				6D1D96B226ADA20B003C760B /* HomeScreen2ViewController.swift in Sources */,
+				6D33518126ADD86D0028700B /* TipsViewController.swift in Sources */,
 				6D9FB35926ABF52700111D66 /* SceneDelegate.swift in Sources */,
 				6DCB4A3C26AD4A7D0009EE7F /* StartingPageViewController.swift in Sources */,
+				6D33518326ADDE1A0028700B /* BerapaViewController.swift in Sources */,
 				6DCB4A3E26AD5BFE0009EE7F /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

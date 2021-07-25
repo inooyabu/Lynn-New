@@ -9,6 +9,72 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Tentang Lynn View Controller-->
+        <scene sceneID="h8o-n4-wFl">
+            <objects>
+                <viewController storyboardIdentifier="Tentang Lynn" id="jKu-8k-n02" customClass="TentangLynnViewController" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I4e-aW-Phl">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background info" translatesAutoresizingMaskIntoConstraints="NO" id="OjE-Z5-XD6">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5c-Sf-hCJ">
+                                <rect key="frame" x="33" y="0.0" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Home"/>
+                                <connections>
+                                    <action selector="homeButtonTapped:" destination="jKu-8k-n02" eventType="touchUpInside" id="4E7-ZN-QxC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yem-tK-hty">
+                                <rect key="frame" x="366" y="300" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Sefron Kanan"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="jKu-8k-n02" eventType="touchUpInside" id="hr3-il-owg"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sy4-mC-mDL">
+                                <rect key="frame" x="466" y="55" width="265" height="265"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tentang Lynn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="812-Xp-kcq">
+                                <rect key="frame" x="134" y="39" width="226" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="InI-yC-XNo">
+                                <rect key="frame" x="96" y="97" width="317" height="215"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Aplikasi Lynn adalah aplikasi untuk membantu orang tua mengajak anak-anak mereka untuk minum lebih banyak air melalui bermain game dan story telling yang menarik. Karakter Lynn terinpirasi dari tetesan air dengan design yang lucu sehingga anak-anak tertarik untuk melihatnya. </string>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
+                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7or-us-xIa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OjE-Z5-XD6" firstAttribute="leading" secondItem="I4e-aW-Phl" secondAttribute="leading" id="Iu1-ww-MRB"/>
+                            <constraint firstAttribute="bottom" secondItem="OjE-Z5-XD6" secondAttribute="bottom" id="JNr-Qk-nLR"/>
+                            <constraint firstAttribute="trailing" secondItem="OjE-Z5-XD6" secondAttribute="trailing" id="la8-wi-act"/>
+                            <constraint firstItem="OjE-Z5-XD6" firstAttribute="top" secondItem="I4e-aW-Phl" secondAttribute="top" id="vA5-e5-tk3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="heroLynnImageView" destination="sy4-mC-mDL" id="HeQ-HS-Uie"/>
+                        <outlet property="homeButton" destination="N5c-Sf-hCJ" id="37U-KK-Zgv"/>
+                        <outlet property="nextButton" destination="yem-tK-hty" id="tLX-eE-Int"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YxD-Kh-h8z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-736" y="-885"/>
+        </scene>
         <!--Starting Page View Controller-->
         <scene sceneID="BIJ-iK-aFx">
             <objects>
@@ -88,6 +154,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLe-pV-iD1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-703.08056872037912" y="60"/>
+        </scene>
+        <!--Tips View Controller-->
+        <scene sceneID="Dfb-WD-hvc">
+            <objects>
+                <viewController storyboardIdentifier="Tips" id="V3X-8O-D93" customClass="TipsViewController" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tue-bD-4aE">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background info" translatesAutoresizingMaskIntoConstraints="NO" id="e58-0Y-Ddk">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tips untuk Orang Tua" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4l-tl-g6D">
+                                <rect key="frame" x="134" y="40" width="280" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1u-mF-uer">
+                                <rect key="frame" x="33" y="0.0" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Home"/>
+                                <connections>
+                                    <action selector="homeButtonTapped:" destination="V3X-8O-D93" eventType="touchUpInside" id="zDc-bZ-lcT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAp-vn-JZ2">
+                                <rect key="frame" x="333" y="295" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Sefron Kiri"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="V3X-8O-D93" eventType="touchUpInside" id="IOZ-kc-crz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2e-I6-oFg">
+                                <rect key="frame" x="434" y="295" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Sefron Kanan"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="V3X-8O-D93" eventType="touchUpInside" id="Idb-4B-GvA"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4St-xX-TNR">
+                                <rect key="frame" x="521" y="51" width="233" height="233"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tb0-9h-7Sk">
+                                <rect key="frame" x="89" y="107" width="413" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Membiasakan anak minum air putih sangat penting. Orang tua harus menjadi role model untuk minum air putih yang dilakukan sedikit demi sedikit dengan jumlah ± 5 gelas perhari. Gunakan gelas yang menarik atau campur air putih dengan potongan buah kesukaannya. Jadikan pertandingan minum air putih dan berikan si Kecil penghargaan dengan rentang waktu tertentu. Selalu jelaskan dan yakinkan tentang hal baik yang akan didapatnya dengan terbiasa minum air putih.</string>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="14"/>
+                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Lo-Bv-WfW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="e58-0Y-Ddk" secondAttribute="bottom" id="EQh-ey-p5O"/>
+                            <constraint firstItem="e58-0Y-Ddk" firstAttribute="leading" secondItem="tue-bD-4aE" secondAttribute="leading" id="GgS-FH-1wQ"/>
+                            <constraint firstAttribute="trailing" secondItem="e58-0Y-Ddk" secondAttribute="trailing" id="cF7-BS-cCf"/>
+                            <constraint firstItem="e58-0Y-Ddk" firstAttribute="top" secondItem="tue-bD-4aE" secondAttribute="top" id="iDM-gk-dYe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="CAp-vn-JZ2" id="SRB-31-s3L"/>
+                        <outlet property="homeButton" destination="k1u-mF-uer" id="scO-gc-XYC"/>
+                        <outlet property="imageView" destination="4St-xX-TNR" id="QMh-sh-YKH"/>
+                        <outlet property="nextButton" destination="t2e-I6-oFg" id="xYA-gW-sal"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9eq-iY-VYc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-53.317535545023695" y="-889.23076923076917"/>
         </scene>
         <!--Home Screen View Controller-->
         <scene sceneID="TpL-aE-1Dd">
@@ -171,6 +312,166 @@ Siapa namamu?</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zxb-6U-BzH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-50" y="60"/>
+        </scene>
+        <!--Berapa View Controller-->
+        <scene sceneID="4VK-jG-3ws">
+            <objects>
+                <viewController storyboardIdentifier="Berapa" id="BPo-WF-1z5" customClass="BerapaViewController" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W0Y-sc-KYa">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background info" translatesAutoresizingMaskIntoConstraints="NO" id="7ag-sr-j8p">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3be-iK-Kk6">
+                                <rect key="frame" x="113" y="97" width="300" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Ikatan Dokter Anak Indonesia (IDAI) memberi rekomendasi khusus terhadap asupan cairan anak. Disebutkan bahwa anak 4-8 tahun dengan kebutuhan 1.700 ml atau 6 gelas per hari. Faktor jenis kelamin akan berpengaruh ketika anak bertambah dewasa.</string>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="14"/>
+                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ketahui jumlah yang tepat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0l-Xq-j9s">
+                                <rect key="frame" x="134" y="48" width="342" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZW-35-MBO">
+                                <rect key="frame" x="33" y="0.0" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Home"/>
+                                <connections>
+                                    <action selector="homeBUttonTapped:" destination="BPo-WF-1z5" eventType="touchUpInside" id="XmN-gF-p2F"/>
+                                    <action selector="homeButtonTapped:" destination="V3X-8O-D93" eventType="touchUpInside" id="hRR-xd-ktV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnB-ki-PK8">
+                                <rect key="frame" x="310" y="305" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Sefron Kiri"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="V3X-8O-D93" eventType="touchUpInside" id="cge-dD-pKe"/>
+                                    <action selector="backButtontapped:" destination="BPo-WF-1z5" eventType="touchUpInside" id="LAy-NG-DWc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXc-Pm-29x">
+                                <rect key="frame" x="411" y="305" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Sefron Kanan"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="V3X-8O-D93" eventType="touchUpInside" id="Ngq-pb-g2b"/>
+                                    <action selector="nextButtonTapped:" destination="BPo-WF-1z5" eventType="touchUpInside" id="T1Z-R4-rcO"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xQc-3H-2jr">
+                                <rect key="frame" x="498" y="61" width="233" height="233"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kUD-NJ-dhy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="7ag-sr-j8p" secondAttribute="bottom" id="3Bn-CC-gww"/>
+                            <constraint firstItem="7ag-sr-j8p" firstAttribute="leading" secondItem="W0Y-sc-KYa" secondAttribute="leading" id="gZd-rR-yil"/>
+                            <constraint firstItem="7ag-sr-j8p" firstAttribute="top" secondItem="W0Y-sc-KYa" secondAttribute="top" id="med-u9-iVs"/>
+                            <constraint firstAttribute="trailing" secondItem="7ag-sr-j8p" secondAttribute="trailing" id="x3I-Zp-jO0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="nnB-ki-PK8" id="eLc-z1-3a0"/>
+                        <outlet property="homeButton" destination="VZW-35-MBO" id="hZQ-YI-oev"/>
+                        <outlet property="imageView" destination="xQc-3H-2jr" id="VnQ-Mx-iV4"/>
+                        <outlet property="nextButton" destination="NXc-Pm-29x" id="t4h-7Q-ou1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AjH-wc-os3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="659.71563981042652" y="-909.23076923076917"/>
+        </scene>
+        <!--Monitor View Controller-->
+        <scene sceneID="N0f-70-Nju">
+            <objects>
+                <viewController storyboardIdentifier="Monitor" id="XNx-rO-YNp" customClass="MonitorViewController" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dcF-Oa-sSc">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background info" translatesAutoresizingMaskIntoConstraints="NO" id="tmo-q0-s2x">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJz-CP-rao">
+                                <rect key="frame" x="103" y="95" width="627" height="134"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Salah satu cara untuk mengetahui tingkat hidrasi pada anak adalah dengan melihat warna dari urin. Warna urin yang cerah menandakan bahwa anak sudah minum air yang cukup dan terhidrasi dengan baik. Warna urin yang pekat dan gelap menandakan anak kurang terhidrasi dan perlu minum air lebih banyak lagi.</string>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
+                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monitor Hidrasi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="At5-K8-2aE">
+                                <rect key="frame" x="147" y="48" width="226" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ksS-By-7bC">
+                                <rect key="frame" x="33" y="0.0" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Home"/>
+                                <connections>
+                                    <action selector="homeBUttonTapped:" destination="BPo-WF-1z5" eventType="touchUpInside" id="Zkv-9O-qNC"/>
+                                    <action selector="homeButtonTapped:" destination="XNx-rO-YNp" eventType="touchUpInside" id="57d-5a-L5O"/>
+                                    <action selector="homeButtonTapped:" destination="V3X-8O-D93" eventType="touchUpInside" id="AJv-Nk-2p5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BBk-R8-dl9">
+                                <rect key="frame" x="366" y="300" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Sefron Kiri"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="V3X-8O-D93" eventType="touchUpInside" id="2K1-kN-FHW"/>
+                                    <action selector="backButtonTapped:" destination="XNx-rO-YNp" eventType="touchUpInside" id="Owz-L6-a3X"/>
+                                    <action selector="backButtontapped:" destination="BPo-WF-1z5" eventType="touchUpInside" id="mO2-yK-mmD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Terhidrasi baik" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrV-TS-GDz">
+                                <rect key="frame" x="92" y="247" width="86" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="12"/>
+                                <color key="textColor" red="0.93682306999999998" green="0.87465500829999998" blue="0.8666656613" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="urinn" translatesAutoresizingMaskIntoConstraints="NO" id="KRo-Zc-pHf">
+                                <rect key="frame" x="156" y="190" width="480" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kurang terhidrasi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIa-R2-533">
+                                <rect key="frame" x="636" y="252" width="100" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="12"/>
+                                <color key="textColor" red="0.65300780530000002" green="0.2451727688" blue="0.10974098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="27q-cZ-Gyh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="tmo-q0-s2x" secondAttribute="bottom" id="L9e-6M-PXE"/>
+                            <constraint firstAttribute="trailing" secondItem="tmo-q0-s2x" secondAttribute="trailing" id="RgH-19-CWP"/>
+                            <constraint firstItem="tmo-q0-s2x" firstAttribute="leading" secondItem="dcF-Oa-sSc" secondAttribute="leading" id="UGx-ui-Lhl"/>
+                            <constraint firstItem="tmo-q0-s2x" firstAttribute="top" secondItem="dcF-Oa-sSc" secondAttribute="top" id="eL0-eh-geV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="BBk-R8-dl9" id="E3V-Yh-YeZ"/>
+                        <outlet property="homeButton" destination="ksS-By-7bC" id="PW2-0Y-neV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="317-3e-uaj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1306.6350710900474" y="-909.23076923076917"/>
         </scene>
         <!--Home Screen2 View Controller-->
         <scene sceneID="Q4X-od-DXj">
@@ -320,14 +621,17 @@ Siapa namamu?</string>
         </scene>
     </scenes>
     <resources>
+        <image name="Background info" width="577.66668701171875" height="281.66665649414062"/>
         <image name="Bitmap" width="129.33332824707031" height="31"/>
         <image name="Home" width="400" height="400"/>
         <image name="Info" width="400" height="400"/>
         <image name="Lynn Logo" width="666.66668701171875" height="400"/>
         <image name="Quit" width="400" height="400"/>
+        <image name="Sefron Kanan" width="400" height="400"/>
         <image name="Sefron Kiri" width="400" height="400"/>
         <image name="Starting page" width="577.66668701171875" height="281.66665649414062"/>
         <image name="home screen 2" width="1733" height="845"/>
+        <image name="urinn" width="1500" height="400"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

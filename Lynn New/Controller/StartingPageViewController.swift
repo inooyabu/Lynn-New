@@ -28,6 +28,17 @@ class StartingPageViewController: UIViewController {
     
     @IBAction func infoImageButtonTapped(_ sender: Any) {
         print("Info Button Tapped")
+        
+        let tentangLynn = storyboard?.instantiateViewController(identifier: "Tentang Lynn") as! TentangLynnViewController
+        tentangLynn.modalPresentationStyle = .fullScreen
+        
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromTop
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        view.window!.layer.add(transition, forKey: kCATransition)
+        present(tentangLynn, animated: false, completion: nil)
 
     }
     

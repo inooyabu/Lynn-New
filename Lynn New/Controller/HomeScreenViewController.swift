@@ -13,7 +13,6 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet weak var profilImageView: UIImageView!
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var namaTextField: UITextField!
-    
     @IBOutlet weak var simpanButton: UIButton!
     
     let profilGif = UIImage.gif(name: "Profil")
