@@ -17,12 +17,12 @@ class ViewController: UIViewController {
     var backgroundSound = AVAudioPlayer()
     var runCount = 0
     
-    var backgroundImageArray = [UIImage(named: "#1"), UIImage(named: "#2"),
-                                UIImage(named: "#3"), UIImage(named: "#4"),
-                                UIImage(named: "#5"), UIImage(named: "#6"),
-                                UIImage(named: "#7"), UIImage(named: "#8"),
-                                UIImage(named: "#9"), UIImage(named: "#10"),
-                                UIImage(named: "#11")]
+    var backgroundImageArray = [UIImage(named: "1"), UIImage(named: "2"),
+                                UIImage(named: "3"), UIImage(named: "4"),
+                                UIImage(named: "5"), UIImage(named: "6"),
+                                UIImage(named: "7"), UIImage(named: "8"),
+                                UIImage(named: "9"), UIImage(named: "10"),
+                                UIImage(named: "11")]
     
     var voice = ["stortel1", "stortel2", "stortel3 new", "stortel4", "stortel5", "stortel6", "stortel7", "stortel8", "stortel9", "stortel10", "stortel11"]
                                 
@@ -33,12 +33,27 @@ class ViewController: UIViewController {
         collectionView.delegate = self
         
         pageController.numberOfPages = backgroundImageArray.count
+        playSound(number: 0)
+        print("Play Sound on viewDidLoad")
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         collectionView.reloadData()
+    }
+    
+    private func playSound(number: Int) {
+        bgSoundURI = URL(fileURLWithPath: Bundle.main.path(forResource: voice[number], ofType: "mp3")!)
+        do{
+            guard let uri = bgSoundURI else {return}
+            backgroundSound = try AVAudioPlayer(contentsOf: uri)
+            backgroundSound.play()
+            
+        }catch{
+            print(error)
+        }
+        
     }
 
 
@@ -56,21 +71,9 @@ extension ViewController: UICollectionViewDataSource{
 //        return cell!
         
         
-        var number = indexPath.row
-        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? DataCollectionViewCell else { return UICollectionViewCell() }
         cell.loadData(item: backgroundImageArray[indexPath.row]!)
         
-        //Kurang kok ga bisa? 
-        bgSoundURI = URL(fileURLWithPath: Bundle.main.path(forResource: voice[number + 1], ofType: "mp3")!)
-        do{
-            let uri = bgSoundURI
-            backgroundSound = try AVAudioPlayer(contentsOf: uri!)
-            backgroundSound.play()
-            print("Page Sekarang \(indexPath.row), Array Song sekarang \(number + 1)")
-        }catch{
-            print(error)
-        }
         return cell
      }
 }
@@ -81,6 +84,50 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
         let w = scrollView.bounds.size.width
         let currentPage = Int(ceil(x/w))
         self.pageController.currentPage = currentPage
+        
+//        playSound(number: currentPage)
+        switch self.pageController.currentPage {
+        case 0:
+            playSound(number: 0)
+            print("Current Page \(currentPage), Array Sound = \(0)")
+        case 1:
+            playSound(number: 1)
+            print("Current Page \(currentPage), Array Sound = \(1)")
+        case 2:
+            playSound(number: 2)
+            print("Current Page \(currentPage), Array Sound = \(2)")
+        case 3:
+            playSound(number: 3)
+            print("Current Page \(currentPage), Array Sound = \(3)")
+        case 4:
+            playSound(number: 4)
+            print("Current Page \(currentPage), Array Sound = \(4)")
+        case 5:
+            playSound(number: 5)
+            print("Current Page \(currentPage), Array Sound = \(5)")
+        case 6:
+            playSound(number: 6)
+            print("Current Page \(currentPage), Array Sound = \(6)")
+        case 7:
+            playSound(number: 7)
+            print("Current Page \(currentPage), Array Sound = \(7)")
+        case 8:
+            playSound(number: 8)
+            print("Current Page \(currentPage), Array Sound = \(8)")
+        case 9:
+            playSound(number: 9)
+            print("Current Page \(currentPage), Array Sound = \(9)")
+        case 10:
+            playSound(number: 10)
+            print("Current Page \(currentPage), Array Sound = \(10)")
+            //Pas disini, bikin dia stop scroll . Kalau udah bisa, berarti hapus yang case 11
+        case 11:
+            playSound(number: 11)
+            print("Current Page \(currentPage), Array Sound = \(11)")
+        default:
+            playSound(number: 0)
+            print("Default, Current Page \(currentPage), Array Sound = \(0) ")
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
