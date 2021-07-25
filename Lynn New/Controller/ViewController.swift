@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageController: UIPageControl!
+    @IBOutlet weak var homeButton: UIButton!
     
     var bgSoundURI: URL?
     var backgroundSound = AVAudioPlayer()
@@ -56,7 +57,23 @@ class ViewController: UIViewController {
         }
      
     }
-
+    
+    
+    @IBAction func homeButtonTapped(_ sender: Any) {
+        print("Home Button Tapped")
+        backgroundSound.stop()
+        let startingPage = storyboard?.instantiateViewController(identifier: "Starting Page") as! StartingPageViewController
+        startingPage.modalPresentationStyle = .fullScreen
+        
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromBottom
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        view.window!.layer.add(transition, forKey: kCATransition)
+        present(startingPage, animated: false, completion: nil)
+    }
+    
 
 }
 

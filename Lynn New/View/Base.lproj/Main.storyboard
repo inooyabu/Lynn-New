@@ -172,6 +172,73 @@ Siapa namamu?</string>
             </objects>
             <point key="canvasLocation" x="-50" y="60"/>
         </scene>
+        <!--Home Screen2 View Controller-->
+        <scene sceneID="Q4X-od-DXj">
+            <objects>
+                <viewController storyboardIdentifier="Home Screen 2" id="ePa-6F-SqE" customClass="HomeScreen2ViewController" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ri6-9h-vaZ">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home screen 2" translatesAutoresizingMaskIntoConstraints="NO" id="kER-1G-eQx">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6c-jx-rJT">
+                                <rect key="frame" x="33" y="0.0" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Sefron Kiri"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="ePa-6F-SqE" eventType="touchUpInside" id="esQ-9a-DtC"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bitmap" translatesAutoresizingMaskIntoConstraints="NO" id="B4B-YY-waB">
+                                <rect key="frame" x="325" y="96.666666666666657" width="334" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hai, William. Senang bertemu denganmu." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aB-Cd-Otz">
+                                <rect key="frame" x="383" y="100.33333333333333" width="231.33333333333331" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="21"/>
+                                <color key="textColor" red="0.93682306999999998" green="0.87465500829999998" blue="0.8666656613" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdU-Dv-tdm">
+                                <rect key="frame" x="432" y="220.33333333333331" width="121" height="38.333333333333329"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.37173831460000001" green="0.1076812223" blue="0.20784816149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
+                                <state key="normal" title="Lanjut">
+                                    <color key="titleColor" red="0.93682306999999998" green="0.87465500829999998" blue="0.8666656613" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="lanjutButtonTapped:" destination="ePa-6F-SqE" eventType="touchUpInside" id="Bca-Os-ocl"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CKz-cf-AHj">
+                                <rect key="frame" x="120" y="69" width="224" height="224"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="O1C-vx-2lp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kER-1G-eQx" firstAttribute="top" secondItem="Ri6-9h-vaZ" secondAttribute="top" id="5S3-Vf-JDw"/>
+                            <constraint firstAttribute="bottom" secondItem="kER-1G-eQx" secondAttribute="bottom" id="HXS-Hz-j6J"/>
+                            <constraint firstAttribute="trailing" secondItem="kER-1G-eQx" secondAttribute="trailing" id="bw9-vW-PB8"/>
+                            <constraint firstItem="kER-1G-eQx" firstAttribute="leading" secondItem="Ri6-9h-vaZ" secondAttribute="leading" id="kgm-tP-zj1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="Y6c-jx-rJT" id="6f0-Ac-ABY"/>
+                        <outlet property="greetingTextField" destination="5aB-Cd-Otz" id="vHd-53-EFU"/>
+                        <outlet property="lanjutButton" destination="hdU-Dv-tdm" id="l8s-Vw-oNk"/>
+                        <outlet property="profilImageView" destination="CKz-cf-AHj" id="G0s-fA-wCb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9X-5O-ZsS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681" y="71"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -219,6 +286,14 @@ Siapa namamu?</string>
                                 <color key="pageIndicatorTintColor" red="0.8473932743" green="0.89008617400000001" blue="0.89412003760000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="currentPageIndicatorTintColor" red="0.0052541717890000001" green="0.3102771044" blue="0.27450799939999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eel-63-FhH">
+                                <rect key="frame" x="33" y="0.0" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Home"/>
+                                <connections>
+                                    <action selector="homeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JQ7-lz-efs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -234,72 +309,13 @@ Siapa namamu?</string>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="ctX-iK-WpN" id="TBT-vm-4eG"/>
+                        <outlet property="homeButton" destination="eel-63-FhH" id="CsG-p4-DiK"/>
                         <outlet property="pageController" destination="81I-LQ-9Rh" id="d83-rf-Bgk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-736" y="1143"/>
-        </scene>
-        <!--Home Screen2 View Controller-->
-        <scene sceneID="yZK-Jg-qbh">
-            <objects>
-                <viewController storyboardIdentifier="Home Screen 2" id="un3-oc-CGq" customClass="HomeScreen2ViewController" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kL9-SJ-th5">
-                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home screen 2" translatesAutoresizingMaskIntoConstraints="NO" id="sol-GS-x4d">
-                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZI-3H-fu6" userLabel="Profil Image View 2">
-                                <rect key="frame" x="120" y="69" width="224" height="224"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xy-BY-gXY">
-                                <rect key="frame" x="432" y="220.33333333333331" width="121" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.37173831460000001" green="0.1076812223" blue="0.20784816149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
-                                <state key="normal" title="Lanjut">
-                                    <color key="titleColor" red="0.9489546418" green="0.92926537990000002" blue="0.93725687270000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="lanjutButtonTapped:" destination="un3-oc-CGq" eventType="touchUpInside" id="v7m-UX-l63"/>
-                                    <action selector="simpanButtonTapped:" destination="un3-oc-CGq" eventType="touchUpInside" id="iO5-Qf-VGJ"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bitmap" translatesAutoresizingMaskIntoConstraints="NO" id="Xu6-86-ere">
-                                <rect key="frame" x="325" y="96.666666666666657" width="334" height="78"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hai, William. Senang bertemu denganmu." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBH-0D-c7L">
-                                <rect key="frame" x="383" y="98.333333333333314" width="231.33333333333331" height="78"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="21"/>
-                                <color key="textColor" red="0.9489546418" green="0.92926537990000002" blue="0.93725687270000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="BKj-Ep-a1V"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="sol-GS-x4d" firstAttribute="top" secondItem="kL9-SJ-th5" secondAttribute="top" id="1XL-iq-yIR"/>
-                            <constraint firstAttribute="bottom" secondItem="sol-GS-x4d" secondAttribute="bottom" id="49X-48-iPz"/>
-                            <constraint firstAttribute="trailing" secondItem="sol-GS-x4d" secondAttribute="trailing" id="R5a-cP-Ldo"/>
-                            <constraint firstItem="sol-GS-x4d" firstAttribute="leading" secondItem="kL9-SJ-th5" secondAttribute="leading" id="kTz-HU-aFC"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="lanjutButton" destination="6xy-BY-gXY" id="OeN-ky-iWl"/>
-                        <outlet property="profilImageView" destination="bZI-3H-fu6" id="4tw-84-mLM"/>
-                        <outlet property="simpanButton" destination="6xy-BY-gXY" id="WMe-AV-j0Z"/>
-                        <outlet property="textGreeting" destination="tBH-0D-c7L" id="hDb-YU-dua"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t7w-rh-qbs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="605" y="60"/>
         </scene>
     </scenes>
     <resources>
@@ -308,6 +324,7 @@ Siapa namamu?</string>
         <image name="Info" width="400" height="400"/>
         <image name="Lynn Logo" width="666.66668701171875" height="400"/>
         <image name="Quit" width="400" height="400"/>
+        <image name="Sefron Kiri" width="400" height="400"/>
         <image name="Starting page" width="577.66668701171875" height="281.66665649414062"/>
         <image name="home screen 2" width="1733" height="845"/>
         <systemColor name="systemBackgroundColor">

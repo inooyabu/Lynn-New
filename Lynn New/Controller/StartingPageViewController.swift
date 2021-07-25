@@ -23,6 +23,7 @@ class StartingPageViewController: UIViewController {
     
     @IBAction func quitImageButtonTapped(_ sender: Any) {
         print("Quit Button Tapped")
+        UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
     }
     
     @IBAction func infoImageButtonTapped(_ sender: Any) {
