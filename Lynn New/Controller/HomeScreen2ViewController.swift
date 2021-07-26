@@ -14,6 +14,8 @@ class HomeScreen2ViewController: UIViewController {
     @IBOutlet weak var profilImageView: UIImageView!
     @IBOutlet weak var greetingTextField: UILabel!
     
+    var namaInput = String()
+    
     let profilGif = UIImage.gif(name: "Profil")
     let homeScreenVC = HomeScreenViewController()
     
@@ -23,6 +25,8 @@ class HomeScreen2ViewController: UIViewController {
         profilImageView.image = profilGif
         
         lanjutButton.layer.cornerRadius = 15
+        
+        greetingTextField.text = "Hai, \(namaInput). Senang bertemu denganmu."
         
         getNama()
     }

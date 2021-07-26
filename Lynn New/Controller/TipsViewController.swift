@@ -15,12 +15,12 @@ class TipsViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     //Belum ada gif nya
-    let tipsGif = UIImage.gif(name: "Hero Lynn")
+//    let tipsGif = UIImage.gif(name: "Beby")
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        imageView.image = tipsGif
+//        imageView.image = tipsGif
     }
     
     @IBAction func homeButtonTapped(_ sender: Any) {

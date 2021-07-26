@@ -14,12 +14,12 @@ class BerapaViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     //Belum ada gif nya
-    let berapaGif = UIImage.gif(name: "Hero Lynn")
+//    let berapaGif = UIImage.gif(name: "minum anak")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageView.image = berapaGif
+//        imageView.image = berapaGif
 
         
     }

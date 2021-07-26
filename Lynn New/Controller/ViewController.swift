@@ -58,6 +58,21 @@ class ViewController: UIViewController {
      
     }
     
+    @objc func ayoMinum() {
+        backgroundSound.stop()
+        
+        let ayoMinum = storyboard?.instantiateViewController(identifier: "Ayo Minum") as! AyoMinumViewController
+        ayoMinum.modalPresentationStyle = .fullScreen
+        
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromRight
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        view.window!.layer.add(transition, forKey: kCATransition)
+        present(ayoMinum, animated: false, completion: nil)
+    }
+    
     
     @IBAction func homeButtonTapped(_ sender: Any) {
         print("Home Button Tapped")
@@ -139,6 +154,15 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
         case 10:
             playSound(number: 10)
             print("Current Page \(currentPage), Array Sound = \(10)")
+            let image = UIImage(named: "Sefron Kanan") as UIImage?
+            let buttonNext = UIButton(frame: CGRect(x: 712,
+                                                y: 286,
+                                                width: 80,
+                                                height: 80))
+            buttonNext.setImage(image, for: .normal)
+            buttonNext.addTarget(self, action: #selector(ayoMinum), for: .touchDown)
+            self.view.addSubview(buttonNext)
+            
 //            collectionView.isScrollEnabled = false
             //Pas disini, bikin dia stop scroll . Kalau udah bisa, berarti hapus yang case 11
 //        case 11:
