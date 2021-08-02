@@ -53,6 +53,10 @@
 		6DCB4A3C26AD4A7D0009EE7F /* StartingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCB4A3B26AD4A7D0009EE7F /* StartingPageViewController.swift */; };
 		6DCB4A3E26AD5BFE0009EE7F /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCB4A3D26AD5BFE0009EE7F /* HomeScreenViewController.swift */; };
 		6DCB4A6226AD63670009EE7F /* Animasi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCB4A6126AD63670009EE7F /* Animasi.swift */; };
+		E2E4189626B7BC830025AD6A /* poseEstimateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4189526B7BC830025AD6A /* poseEstimateViewController.swift */; };
+		E2E4189826B7BCC60025AD6A /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4189726B7BCC60025AD6A /* VideoCapture.swift */; };
+		E2E4189A26B7BCD50025AD6A /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4189926B7BCD50025AD6A /* Predictor.swift */; };
+		E2E4189C26B7BD220025AD6A /* PoseEstimation.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E2E4189B26B7BD220025AD6A /* PoseEstimation.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +108,10 @@
 		6DCB4A3B26AD4A7D0009EE7F /* StartingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingPageViewController.swift; sourceTree = "<group>"; };
 		6DCB4A3D26AD5BFE0009EE7F /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		6DCB4A6126AD63670009EE7F /* Animasi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animasi.swift; sourceTree = "<group>"; };
+		E2E4189526B7BC830025AD6A /* poseEstimateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poseEstimateViewController.swift; sourceTree = "<group>"; };
+		E2E4189726B7BCC60025AD6A /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		E2E4189926B7BCD50025AD6A /* Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
+		E2E4189B26B7BD220025AD6A /* PoseEstimation.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PoseEstimation.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +160,7 @@
 				6D635CFC26AD8C2E00A5FC9E /* Sweat.gif */,
 				6D635D0126AD8C2E00A5FC9E /* Toksin.gif */,
 				6D635CF726AD8C2E00A5FC9E /* weak.gif */,
+				E2E4189B26B7BD220025AD6A /* PoseEstimation.mlmodel */,
 				6DCB4A3A26AD4A1C0009EE7F /* Base */,
 				6DCB4A3926AD49E80009EE7F /* View */,
 				6DCB4A3826AD49DF0009EE7F /* Controller */,
@@ -197,6 +206,9 @@
 				6D33518226ADDE1A0028700B /* BerapaViewController.swift */,
 				6D33518426ADE2060028700B /* MonitorViewController.swift */,
 				6DAF58A326AF1DCC00199728 /* AyoMinumViewController.swift */,
+				E2E4189526B7BC830025AD6A /* poseEstimateViewController.swift */,
+				E2E4189726B7BCC60025AD6A /* VideoCapture.swift */,
+				E2E4189926B7BCD50025AD6A /* Predictor.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -320,10 +332,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DCB4A6226AD63670009EE7F /* Animasi.swift in Sources */,
+				E2E4189826B7BCC60025AD6A /* VideoCapture.swift in Sources */,
+				E2E4189C26B7BD220025AD6A /* PoseEstimation.mlmodel in Sources */,
 				6D33518526ADE2060028700B /* MonitorViewController.swift in Sources */,
 				6D1D96B426ADCC27003C760B /* TentangLynnViewController.swift in Sources */,
 				6DAF58A426AF1DCC00199728 /* AyoMinumViewController.swift in Sources */,
 				6D9FB36B26AC03C800111D66 /* DataCollectionViewCell.swift in Sources */,
+				E2E4189A26B7BCD50025AD6A /* Predictor.swift in Sources */,
 				6D9FB35B26ABF52700111D66 /* ViewController.swift in Sources */,
 				6D9FB35726ABF52700111D66 /* AppDelegate.swift in Sources */,
 				6D1D96B226ADA20B003C760B /* HomeScreen2ViewController.swift in Sources */,
@@ -331,6 +346,7 @@
 				6D9FB35926ABF52700111D66 /* SceneDelegate.swift in Sources */,
 				6DCB4A3C26AD4A7D0009EE7F /* StartingPageViewController.swift in Sources */,
 				6D33518326ADDE1A0028700B /* BerapaViewController.swift in Sources */,
+				E2E4189626B7BC830025AD6A /* poseEstimateViewController.swift in Sources */,
 				6DCB4A3E26AD5BFE0009EE7F /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,7 +495,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JFAH6YB752;
+				DEVELOPMENT_TEAM = P94HWRYJL7;
 				INFOPLIST_FILE = "Lynn New/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -498,7 +514,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JFAH6YB752;
+				DEVELOPMENT_TEAM = P94HWRYJL7;
 				INFOPLIST_FILE = "Lynn New/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

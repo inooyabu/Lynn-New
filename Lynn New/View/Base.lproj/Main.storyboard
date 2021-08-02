@@ -353,6 +353,7 @@ Siapa namamu?</string>
                                 <connections>
                                     <action selector="lanjutButtonTapped:" destination="ePa-6F-SqE" eventType="touchUpInside" id="cZx-b0-BfQ"/>
                                     <action selector="lihatButtonTapped:" destination="wMt-ul-bHi" eventType="touchUpInside" id="QcY-wB-jPo"/>
+                                    <segue destination="s9J-yA-r5v" kind="show" id="QoE-8B-O15"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -600,6 +601,34 @@ Siapa namamu?</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c9X-5O-ZsS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="681" y="71"/>
+        </scene>
+        <!--Detect Drink-->
+        <scene sceneID="bo5-EY-TQt">
+            <objects>
+                <viewController storyboardIdentifier="Detect Drink" id="s9J-yA-r5v" customClass="DetectDrink" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eHA-MZ-HHn">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI2-7u-PEG">
+                                <rect key="frame" x="354" y="331" width="136" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
+                                <color key="textColor" red="0.1234147921" green="0.30637925859999998" blue="0.2745078802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ot8-zJ-85p"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WBs-pF-qtr"/>
+                    <connections>
+                        <outlet property="label" destination="LI2-7u-PEG" id="Ofv-be-EQS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r1D-rx-DPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="659.71563981042652" y="1156.9230769230769"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

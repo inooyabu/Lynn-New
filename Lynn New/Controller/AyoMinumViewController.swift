@@ -21,7 +21,7 @@ class AyoMinumViewController: UIViewController {
    
     @IBAction func backButtonTapped(_ sender: Any) {
         print("Button Back Tapped")
-        let storyTelling = storyboard?.instantiateViewController(identifier: "Story Telling") as! ViewController
+        let storyTelling = storyboard?.instantiateViewController(identifier: "Detect Drink") as! ViewController
         storyTelling.modalPresentationStyle = .fullScreen
         
         //untuk langsung back ke page terakhir di collectionview, tapi error
