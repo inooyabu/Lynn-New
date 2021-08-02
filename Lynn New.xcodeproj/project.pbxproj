@@ -53,6 +53,10 @@
 		6DCB4A3C26AD4A7D0009EE7F /* StartingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCB4A3B26AD4A7D0009EE7F /* StartingPageViewController.swift */; };
 		6DCB4A3E26AD5BFE0009EE7F /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCB4A3D26AD5BFE0009EE7F /* HomeScreenViewController.swift */; };
 		6DCB4A6226AD63670009EE7F /* Animasi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCB4A6126AD63670009EE7F /* Animasi.swift */; };
+		E29143E126B7F33A005EE609 /* ShareNutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29143E026B7F33A005EE609 /* ShareNutritionViewController.swift */; };
+		E29143E326B7F3AA005EE609 /* ShareNutritionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29143E226B7F3AA005EE609 /* ShareNutritionScene.swift */; };
+		E29143E726B7F5A1005EE609 /* ShareNutritionScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E29143E626B7F5A1005EE609 /* ShareNutritionScene.sks */; };
+		E29143EB26B7F65E005EE609 /* ShareNutritionAction.sks in Resources */ = {isa = PBXBuildFile; fileRef = E29143EA26B7F65E005EE609 /* ShareNutritionAction.sks */; };
 		E2E4189626B7BC830025AD6A /* poseEstimateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4189526B7BC830025AD6A /* poseEstimateViewController.swift */; };
 		E2E4189826B7BCC60025AD6A /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4189726B7BCC60025AD6A /* VideoCapture.swift */; };
 		E2E4189A26B7BCD50025AD6A /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4189926B7BCD50025AD6A /* Predictor.swift */; };
@@ -108,6 +112,10 @@
 		6DCB4A3B26AD4A7D0009EE7F /* StartingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingPageViewController.swift; sourceTree = "<group>"; };
 		6DCB4A3D26AD5BFE0009EE7F /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		6DCB4A6126AD63670009EE7F /* Animasi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animasi.swift; sourceTree = "<group>"; };
+		E29143E026B7F33A005EE609 /* ShareNutritionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareNutritionViewController.swift; sourceTree = "<group>"; };
+		E29143E226B7F3AA005EE609 /* ShareNutritionScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareNutritionScene.swift; sourceTree = "<group>"; };
+		E29143E626B7F5A1005EE609 /* ShareNutritionScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ShareNutritionScene.sks; sourceTree = "<group>"; };
+		E29143EA26B7F65E005EE609 /* ShareNutritionAction.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ShareNutritionAction.sks; sourceTree = "<group>"; };
 		E2E4189526B7BC830025AD6A /* poseEstimateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poseEstimateViewController.swift; sourceTree = "<group>"; };
 		E2E4189726B7BCC60025AD6A /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		E2E4189926B7BCD50025AD6A /* Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
@@ -196,6 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				6D9FB35A26ABF52700111D66 /* ViewController.swift */,
+				E29143E226B7F3AA005EE609 /* ShareNutritionScene.swift */,
+				E29143E026B7F33A005EE609 /* ShareNutritionViewController.swift */,
 				6D9FB36A26AC03C800111D66 /* DataCollectionViewCell.swift */,
 				6DCB4A3B26AD4A7D0009EE7F /* StartingPageViewController.swift */,
 				6DCB4A3D26AD5BFE0009EE7F /* HomeScreenViewController.swift */,
@@ -208,7 +218,9 @@
 				6DAF58A326AF1DCC00199728 /* AyoMinumViewController.swift */,
 				E2E4189526B7BC830025AD6A /* poseEstimateViewController.swift */,
 				E2E4189726B7BCC60025AD6A /* VideoCapture.swift */,
+				E29143EA26B7F65E005EE609 /* ShareNutritionAction.sks */,
 				E2E4189926B7BCD50025AD6A /* Predictor.swift */,
+				E29143E626B7F5A1005EE609 /* ShareNutritionScene.sks */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -295,6 +307,7 @@
 				6D635D0726AD8C2E00A5FC9E /* weak.gif in Resources */,
 				6D635D1426AD8C2E00A5FC9E /* Presence.gif in Resources */,
 				6D9FB39F26AC67CD00111D66 /* stortel3 new.mp3 in Resources */,
+				E29143EB26B7F65E005EE609 /* ShareNutritionAction.sks in Resources */,
 				6D9FB39C26AC67CD00111D66 /* stortel7.mp3 in Resources */,
 				6D9FB39726AC67CD00111D66 /* stortel5.mp3 in Resources */,
 				6D635D1226AD8C2E00A5FC9E /* Organ.gif in Resources */,
@@ -309,6 +322,7 @@
 				6D9FB39A26AC67CD00111D66 /* stortel10.mp3 in Resources */,
 				6D635D0B26AD8C2E00A5FC9E /* Secret.gif in Resources */,
 				6D635D1326AD8C2E00A5FC9E /* more water.gif in Resources */,
+				E29143E726B7F5A1005EE609 /* ShareNutritionScene.sks in Resources */,
 				6D635D0926AD8C2E00A5FC9E /* Hero Lynn.gif in Resources */,
 				6D635D0F26AD8C2E00A5FC9E /* Profil.gif in Resources */,
 				6D9FB3A126AC67CD00111D66 /* stortel3.mp3 in Resources */,
@@ -332,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DCB4A6226AD63670009EE7F /* Animasi.swift in Sources */,
+				E29143E326B7F3AA005EE609 /* ShareNutritionScene.swift in Sources */,
 				E2E4189826B7BCC60025AD6A /* VideoCapture.swift in Sources */,
 				E2E4189C26B7BD220025AD6A /* PoseEstimation.mlmodel in Sources */,
 				6D33518526ADE2060028700B /* MonitorViewController.swift in Sources */,
@@ -346,6 +361,7 @@
 				6D9FB35926ABF52700111D66 /* SceneDelegate.swift in Sources */,
 				6DCB4A3C26AD4A7D0009EE7F /* StartingPageViewController.swift in Sources */,
 				6D33518326ADDE1A0028700B /* BerapaViewController.swift in Sources */,
+				E29143E126B7F33A005EE609 /* ShareNutritionViewController.swift in Sources */,
 				E2E4189626B7BC830025AD6A /* poseEstimateViewController.swift in Sources */,
 				6DCB4A3E26AD5BFE0009EE7F /* HomeScreenViewController.swift in Sources */,
 			);

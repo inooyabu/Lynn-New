@@ -353,7 +353,6 @@ Siapa namamu?</string>
                                 <connections>
                                     <action selector="lanjutButtonTapped:" destination="ePa-6F-SqE" eventType="touchUpInside" id="cZx-b0-BfQ"/>
                                     <action selector="lihatButtonTapped:" destination="wMt-ul-bHi" eventType="touchUpInside" id="QcY-wB-jPo"/>
-                                    <segue destination="s9J-yA-r5v" kind="show" id="QoE-8B-O15"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -629,6 +628,21 @@ Siapa namamu?</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1D-rx-DPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="659.71563981042652" y="1156.9230769230769"/>
+        </scene>
+        <!--Share Nutrition View Controller-->
+        <scene sceneID="h6R-qB-ZOR">
+            <objects>
+                <viewController storyboardIdentifier="Share Nutrition" id="7Io-yd-uSu" customClass="ShareNutritionViewController" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZWM-30-vwE">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Qd0-d9-c5W"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ERb-zw-ipa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1349" y="1157"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
