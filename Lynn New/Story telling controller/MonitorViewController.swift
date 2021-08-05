@@ -11,11 +11,12 @@ class MonitorViewController: UIViewController {
 
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var backgroundImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        backgroundImage.transform = CGAffineTransform(scaleX: -1, y: 1)
     }
     
     @IBAction func homeButtonTapped(_ sender: Any) {

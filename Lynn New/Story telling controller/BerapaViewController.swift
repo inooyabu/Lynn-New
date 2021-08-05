@@ -12,12 +12,15 @@ class BerapaViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var backgroundInfoImage: UIImageView!
     
     //Belum ada gif nya
 //    let berapaGif = UIImage.gif(name: "minum anak")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        backgroundInfoImage.transform = CGAffineTransform(scaleX: -1, y: 1)
         
 //        imageView.image = berapaGif
 

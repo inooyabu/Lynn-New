@@ -16,17 +16,24 @@ class ViewController: UIViewController {
     
     var bgSoundURI: URL?
     var backgroundSound = AVAudioPlayer()
-   
-    var backgroundImageArray = [UIImage(named: "1"), UIImage(named: "2"),
-                                UIImage(named: "3"), UIImage(named: "4"),
-                                UIImage(named: "5"), UIImage(named: "6"),
-                                UIImage(named: "7"), UIImage(named: "8"),
-                                UIImage(named: "9"), UIImage(named: "10"),
-                                UIImage(named: "11")]
     
-    var voice = ["stortel1", "stortel2", "stortel3 new", "stortel4", "stortel5", "stortel6", "stortel7", "stortel8", "stortel9", "stortel10", "stortel11"]
+        var backgroundImageArray = [UIImage(named: "stortel-1"), UIImage(named: "stortel-2"),
+                                    UIImage(named: "3"), UIImage(named: "stortel-4"),
+                                    UIImage(named: "stortel-5"), UIImage(named: "stortel-6"),
+                                    UIImage(named: "7"), UIImage(named: "stortel-8"),
+                                    UIImage(named: "stortel-9"), UIImage(named: "stortel-10"),
+                                    UIImage(named: "stortel-11")]
     
-    var airgif = [UIImage.gif(name: "Hero Lynn"),UIImage.gif(name: "Superman Not Me"),UIImage.gif(name: "Benefit"),UIImage.gif(name: "Secret"),UIImage.gif(name: "contain New"),UIImage.gif(name: "cry New"),UIImage.gif(name: "weak"),UIImage.gif(name: "Sweat"),UIImage.gif(name:"Presence"),UIImage.gif(name: "Child"),UIImage.gif(name: "more water")]
+    var voice = ["stortel1", "stortel2", "stortel3",
+                 "stortel4", "stortel5", "stortel6", "stortel7",
+                 "stortel8", "stortel9", "stortel10", "stortel11"]
+    
+    var airgif = [UIImage.gif(name: "Hero Lynn"), UIImage.gif(name: "Superman Not Me"),
+                  UIImage.gif(name: "Benefit"), UIImage.gif(name: "Secret"),
+                  UIImage.gif(name: "contain New"), UIImage.gif(name: "cry New"),
+                  UIImage.gif(name: "weak"), UIImage.gif(name: "Sweat"),
+                  UIImage.gif(name: "Presence"), UIImage.gif(name: "Child"),
+                  UIImage.gif(name: "more water")]
                                 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,12 +117,83 @@ extension ViewController: UICollectionViewDataSource{
 //        print(imageView.frame.size)
         imageView.contentMode = .scaleAspectFit
         imageView.image = backgroundImageArray[indexPath.row]
-        imageView.backgroundColor = .red
+//        imageView.backgroundColor = .red
         cell.addSubview(imageView)
         
         
+       
         
-//        cell.loadData(item: backgroundImageArray[indexPath.row]!)
+        print("Sekarang indexPath.row \(indexPath.row)")
+
+        switch indexPath.row {
+        case 0:
+            let gifImageView = UIImageView(frame: CGRect(x: 263, y: 8, width: 265, height: 265))
+            gifImageView.contentMode = .scaleAspectFit
+            gifImageView.image = airgif[0]
+            cell.addSubview(gifImageView)
+        case 1:
+            let gifImageView1 = UIImageView(frame: CGRect(x: 197, y: 14, width: 483, height: 232))
+            gifImageView1.contentMode = .scaleAspectFit
+            gifImageView1.image = airgif[1]
+            cell.addSubview(gifImageView1)
+        case 2:
+            let gifImageView2 = UIImageView(frame: CGRect(x: 79.5, y: 22, width: 681, height: 224))
+            gifImageView2.contentMode = .scaleAspectFit
+            gifImageView2.image = airgif[2]
+            cell.addSubview(gifImageView2)
+        case 3:
+            let gifImageView3 = UIImageView(frame: CGRect(x: 264, y: 13, width: 278, height: 278))
+            gifImageView3.contentMode = .scaleAspectFit
+            gifImageView3.image = airgif[3]
+            cell.addSubview(gifImageView3)
+        case 4:
+            let gifImageView4 = UIImageView(frame: CGRect(x: 194.08, y: 81, width: 437.5, height: 210))
+            gifImageView4.contentMode = .scaleAspectFit
+            gifImageView4.image = airgif[4]
+            cell.addSubview(gifImageView4)
+        case 5:
+            let gifImageView5 = UIImageView(frame: CGRect(x: 146.92, y: 0, width: 547.92, height: 263))
+            gifImageView5.contentMode = .scaleAspectFit
+            gifImageView5.image = airgif[5]
+            cell.addSubview(gifImageView5)
+        case 6:
+            let gifImageView6 = UIImageView(frame: CGRect(x: 270.67, y: 116, width: 273.33, height: 164))
+            gifImageView6.contentMode = .scaleAspectFit
+            gifImageView6.image = airgif[6]
+            cell.addSubview(gifImageView6)
+        case 7:
+            let gifImageView7 = UIImageView(frame: CGRect(x: 187.23, y: 19, width: 482.69, height: 251))
+            gifImageView7.contentMode = .scaleAspectFit
+            gifImageView7.image = airgif[7]
+            cell.addSubview(gifImageView7)
+        case 8:
+            let gifImageView8 = UIImageView(frame: CGRect(x: 270, y: 8, width: 275, height: 275))
+            gifImageView8.contentMode = .scaleAspectFit
+            gifImageView8.image = airgif[8]
+            cell.addSubview(gifImageView8)
+        case 9:
+            let gifImageView9 = UIImageView(frame: CGRect(x: 254, y: 80, width: 305, height: 183))
+            gifImageView9.contentMode = .scaleAspectFit
+            gifImageView9.image = airgif[9]
+            cell.addSubview(gifImageView9)
+        case 10:
+            let gifImageView10 = UIImageView(frame: CGRect(x: 282, y: 55, width: 250.67, height: 188))
+            gifImageView10.contentMode = .scaleAspectFit
+            gifImageView10.image = airgif[10]
+            cell.addSubview(gifImageView10)
+            
+            let image = UIImage(named: "Sefron Kanan") as UIImage?
+            let buttonNext = UIButton(frame: CGRect(x: 712,
+                                                y: 286,
+                                                width: 80,
+                                                height: 80))
+            buttonNext.setImage(image, for: .normal)
+            buttonNext.addTarget(self, action: #selector(ayoMinum), for: .touchDown)
+            cell.addSubview(buttonNext)
+           
+        default:
+            print("Default Mode")
+        }
         
         return cell
      }
@@ -127,12 +205,19 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
         let w = scrollView.bounds.size.width
         let currentPage = Int(ceil(x/w))
         self.pageController.currentPage = currentPage
+        
+//        let image = UIImage(named: "Sefron Kanan") as UIImage?
+//        let buttonNext = UIButton(frame: CGRect(x: 712,
+//                                            y: 286,
+//                                            width: 80,
+//                                            height: 80))
+//        buttonNext.setImage(image, for: .normal)
+//        buttonNext.addTarget(self, action: #selector(ayoMinum), for: .touchDown)
+//        self.view.addSubview(buttonNext)
                 
         switch self.pageController.currentPage {
         case 0:
             playSound(number: 0)
-            print("Current Page \(currentPage), Array Sound = \(0)")
-            
             
         case 1:
             playSound(number: 1)
@@ -164,20 +249,15 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
         case 10:
             playSound(number: 10)
             print("Current Page \(currentPage), Array Sound = \(10)")
-            let image = UIImage(named: "Sefron Kanan") as UIImage?
-            let buttonNext = UIButton(frame: CGRect(x: 712,
-                                                y: 286,
-                                                width: 80,
-                                                height: 80))
-            buttonNext.setImage(image, for: .normal)
-            buttonNext.addTarget(self, action: #selector(ayoMinum), for: .touchDown)
-            self.view.addSubview(buttonNext)
+//            let image = UIImage(named: "Sefron Kanan") as UIImage?
+//            let buttonNext = UIButton(frame: CGRect(x: 712,
+//                                                y: 286,
+//                                                width: 80,
+//                                                height: 80))
+//            buttonNext.setImage(image, for: .normal)
+//            buttonNext.addTarget(self, action: #selector(ayoMinum), for: .touchDown)
+//            self.view.addSubview(buttonNext)
             
-//            collectionView.isScrollEnabled = false
-            //Pas disini, bikin dia stop scroll . Kalau udah bisa, berarti hapus yang case 11
-//        case 11:
-//            playSound(number: 11)
-//            print("Current Page \(currentPage), Array Sound = \(11)")
         default:
             playSound(number: 0)
             print("Default, Current Page \(currentPage), Array Sound = \(0) ")

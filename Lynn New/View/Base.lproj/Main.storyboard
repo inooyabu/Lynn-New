@@ -20,52 +20,76 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background info" translatesAutoresizingMaskIntoConstraints="NO" id="OjE-Z5-XD6">
                                 <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5c-Sf-hCJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5c-Sf-hCJ">
                                 <rect key="frame" x="33" y="0.0" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="DgI-dg-CqB"/>
+                                    <constraint firstAttribute="height" constant="80" id="mAP-0I-HnW"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="Home"/>
                                 <connections>
                                     <action selector="homeButtonTapped:" destination="jKu-8k-n02" eventType="touchUpInside" id="4E7-ZN-QxC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yem-tK-hty">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yem-tK-hty">
                                 <rect key="frame" x="366" y="300" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Sefron Kanan"/>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="jKu-8k-n02" eventType="touchUpInside" id="hr3-il-owg"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sy4-mC-mDL">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lynn Page 1" translatesAutoresizingMaskIntoConstraints="NO" id="sy4-mC-mDL">
                                 <rect key="frame" x="466" y="55" width="265" height="265"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="265" id="25d-4C-T9I"/>
+                                    <constraint firstAttribute="width" constant="265" id="jqy-kq-t0g"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tentang Lynn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="812-Xp-kcq">
-                                <rect key="frame" x="134" y="39" width="226" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
-                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tentang Lynn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="812-Xp-kcq">
+                                <rect key="frame" x="110" y="59" width="226" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="226" id="CtI-PD-0I4"/>
+                                    <constraint firstAttribute="height" constant="31" id="oXb-s6-Ejb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                <color key="textColor" red="0.0027373256159999998" green="0.227876246" blue="0.1960763931" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="InI-yC-XNo">
-                                <rect key="frame" x="96" y="97" width="317" height="215"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="21" baselineAdjustment="none" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="InI-yC-XNo">
+                                <rect key="frame" x="110" y="109" width="336" height="173"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="336" id="QuE-Dv-PGH"/>
+                                    <constraint firstAttribute="height" constant="173" id="SiY-EG-nsn"/>
+                                </constraints>
                                 <string key="text">Aplikasi Lynn adalah aplikasi untuk membantu orang tua mengajak anak-anak mereka untuk minum lebih banyak air melalui bermain game dan story telling yang menarik. Karakter Lynn terinpirasi dari tetesan air dengan design yang lucu sehingga anak-anak tertarik untuk melihatnya. </string>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
-                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="15"/>
+                                <color key="textColor" red="0.0027373256159999998" green="0.227876246" blue="0.1960763931" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7or-us-xIa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="sy4-mC-mDL" firstAttribute="top" secondItem="I4e-aW-Phl" secondAttribute="topMargin" constant="55" id="DmO-Le-7hf"/>
+                            <constraint firstItem="InI-yC-XNo" firstAttribute="leading" secondItem="I4e-aW-Phl" secondAttribute="leadingMargin" constant="50" id="FPX-Au-1fA"/>
                             <constraint firstItem="OjE-Z5-XD6" firstAttribute="leading" secondItem="I4e-aW-Phl" secondAttribute="leading" id="Iu1-ww-MRB"/>
                             <constraint firstAttribute="bottom" secondItem="OjE-Z5-XD6" secondAttribute="bottom" id="JNr-Qk-nLR"/>
+                            <constraint firstItem="812-Xp-kcq" firstAttribute="top" secondItem="I4e-aW-Phl" secondAttribute="topMargin" constant="59" id="M73-Sx-l2Q"/>
+                            <constraint firstItem="yem-tK-hty" firstAttribute="leading" secondItem="7or-us-xIa" secondAttribute="leading" constant="322" id="Ngw-i4-8hA"/>
+                            <constraint firstItem="N5c-Sf-hCJ" firstAttribute="top" secondItem="I4e-aW-Phl" secondAttribute="top" id="Ppt-FE-cdu"/>
+                            <constraint firstItem="InI-yC-XNo" firstAttribute="top" secondItem="812-Xp-kcq" secondAttribute="bottom" constant="19" id="T5d-CP-CbN"/>
+                            <constraint firstItem="yem-tK-hty" firstAttribute="trailing" secondItem="InI-yC-XNo" secondAttribute="trailing" id="TIH-0e-AFC"/>
+                            <constraint firstItem="yem-tK-hty" firstAttribute="top" secondItem="InI-yC-XNo" secondAttribute="bottom" constant="18" id="ZfO-qQ-5N4"/>
                             <constraint firstAttribute="trailing" secondItem="OjE-Z5-XD6" secondAttribute="trailing" id="la8-wi-act"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="yem-tK-hty" secondAttribute="bottom" constant="-11" id="m9F-BR-JQq"/>
+                            <constraint firstItem="N5c-Sf-hCJ" firstAttribute="leading" secondItem="I4e-aW-Phl" secondAttribute="leading" constant="33" id="qVQ-mY-EVD"/>
+                            <constraint firstItem="812-Xp-kcq" firstAttribute="leading" secondItem="I4e-aW-Phl" secondAttribute="leadingMargin" constant="50" id="rcp-wW-ZY3"/>
                             <constraint firstItem="OjE-Z5-XD6" firstAttribute="top" secondItem="I4e-aW-Phl" secondAttribute="top" id="vA5-e5-tk3"/>
+                            <constraint firstItem="sy4-mC-mDL" firstAttribute="leading" secondItem="InI-yC-XNo" secondAttribute="trailing" constant="20" id="vwB-Jx-bly"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundInfoImage" destination="OjE-Z5-XD6" id="Reh-hy-BaM"/>
                         <outlet property="heroLynnImageView" destination="sy4-mC-mDL" id="HeQ-HS-Uie"/>
                         <outlet property="homeButton" destination="N5c-Sf-hCJ" id="37U-KK-Zgv"/>
                         <outlet property="nextButton" destination="yem-tK-hty" id="tLX-eE-Int"/>
@@ -73,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YxD-Kh-h8z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-736" y="-885"/>
+            <point key="canvasLocation" x="-736.49289099526061" y="-886.15384615384608"/>
         </scene>
         <!--Starting Page View Controller-->
         <scene sceneID="BIJ-iK-aFx">
@@ -83,41 +107,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Starting page" translatesAutoresizingMaskIntoConstraints="NO" id="Bbi-Sb-WQf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Starting page" translatesAutoresizingMaskIntoConstraints="NO" id="Bbi-Sb-WQf">
                                 <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lynn Logo" translatesAutoresizingMaskIntoConstraints="NO" id="dzy-IH-9v9">
-                                <rect key="frame" x="206" y="82" width="432" height="226"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lynn Logo" translatesAutoresizingMaskIntoConstraints="NO" id="dzy-IH-9v9">
+                                <rect key="frame" x="188.66666666666666" y="76.666666666666657" width="433.66666666666663" height="227.66666666666666"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ew-8Y-fPM">
-                                <rect key="frame" x="27" y="0.0" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="NAs-8a-69X"/>
-                                    <constraint firstAttribute="height" constant="80" id="iVt-jM-cyH"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ew-8Y-fPM">
+                                <rect key="frame" x="22" y="0.0" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Quit"/>
                                 <connections>
                                     <action selector="quitImageButtonTapped:" destination="1Eb-i8-mwy" eventType="touchUpInside" id="qet-Aq-Ibg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jT0-NS-008">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jT0-NS-008">
                                 <rect key="frame" x="737" y="0.0" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="IIZ-4A-7cP"/>
-                                    <constraint firstAttribute="height" constant="80" id="ukj-HF-ptH"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Info"/>
                                 <connections>
                                     <action selector="infoImageButtonTapped:" destination="1Eb-i8-mwy" eventType="touchUpInside" id="jQr-gk-LSJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="S07-RM-8sk">
-                                <rect key="frame" x="362" y="286" width="120" height="38.333333333333314"/>
-                                <color key="backgroundColor" red="0.37173831460000001" green="0.1076812223" blue="0.20784816149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
-                                <state key="normal" title="Mulai">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S07-RM-8sk">
+                                <rect key="frame" x="330.33333333333331" y="270" width="151.66666666666666" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="18"/>
+                                <state key="normal" title="Mulai" backgroundImage="Button">
                                     <color key="titleColor" red="0.9489546418" green="0.92926537990000002" blue="0.93725687270000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="regular"/>
                                 </state>
                                 <connections>
                                     <action selector="mulaiButtonTapped:" destination="1Eb-i8-mwy" eventType="touchUpInside" id="iqH-bW-b8u"/>
@@ -126,24 +146,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vsX-8v-5p2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="vsX-8v-5p2" firstAttribute="bottom" secondItem="S07-RM-8sk" secondAttribute="bottom" constant="44.666666666666686" id="4yV-GR-8a4"/>
-                            <constraint firstItem="S07-RM-8sk" firstAttribute="centerX" secondItem="dzy-IH-9v9" secondAttribute="centerX" id="5Bv-8p-20o"/>
-                            <constraint firstItem="Bbi-Sb-WQf" firstAttribute="top" secondItem="ocu-7N-jtY" secondAttribute="top" id="ICt-RM-Shk"/>
-                            <constraint firstAttribute="trailing" secondItem="Bbi-Sb-WQf" secondAttribute="trailing" id="Nk8-WD-OHc"/>
-                            <constraint firstItem="2ew-8Y-fPM" firstAttribute="leading" secondItem="ocu-7N-jtY" secondAttribute="leading" constant="27" id="Ud1-Sz-0WX"/>
-                            <constraint firstAttribute="bottom" secondItem="Bbi-Sb-WQf" secondAttribute="bottom" id="Y0c-Bx-hfX"/>
-                            <constraint firstItem="S07-RM-8sk" firstAttribute="top" secondItem="vsX-8v-5p2" secondAttribute="top" constant="286" id="eGH-3g-02f"/>
-                            <constraint firstItem="dzy-IH-9v9" firstAttribute="centerX" secondItem="ocu-7N-jtY" secondAttribute="centerX" id="fgX-sB-oXB"/>
-                            <constraint firstItem="dzy-IH-9v9" firstAttribute="centerY" secondItem="ocu-7N-jtY" secondAttribute="centerY" id="gaX-wd-N9B"/>
-                            <constraint firstItem="dzy-IH-9v9" firstAttribute="top" secondItem="ocu-7N-jtY" secondAttribute="top" constant="82" id="oaD-DV-bW6"/>
-                            <constraint firstItem="S07-RM-8sk" firstAttribute="leading" secondItem="vsX-8v-5p2" secondAttribute="leading" constant="318" id="ohl-6r-ShI"/>
-                            <constraint firstItem="2ew-8Y-fPM" firstAttribute="top" secondItem="ocu-7N-jtY" secondAttribute="top" id="paL-ul-wOq"/>
-                            <constraint firstAttribute="trailing" secondItem="jT0-NS-008" secondAttribute="trailing" constant="27" id="quJ-7r-GkW"/>
-                            <constraint firstItem="dzy-IH-9v9" firstAttribute="leading" secondItem="ocu-7N-jtY" secondAttribute="leading" constant="206" id="tKI-bz-b4U"/>
-                            <constraint firstItem="Bbi-Sb-WQf" firstAttribute="leading" secondItem="ocu-7N-jtY" secondAttribute="leading" id="vOD-iO-I1C"/>
-                            <constraint firstItem="jT0-NS-008" firstAttribute="top" secondItem="ocu-7N-jtY" secondAttribute="top" id="wgm-q8-Eab"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="infoButton" destination="jT0-NS-008" id="kTq-Y0-M0I"/>
@@ -166,11 +168,10 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background info" translatesAutoresizingMaskIntoConstraints="NO" id="e58-0Y-Ddk">
                                 <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tips untuk Orang Tua" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4l-tl-g6D">
-                                <rect key="frame" x="134" y="40" width="280" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
-                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tips untuk Orang Tua" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4l-tl-g6D">
+                                <rect key="frame" x="110.00000000000001" y="59" width="220.33333333333337" height="31"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                <color key="textColor" red="0.0027373256159999998" green="0.227876246" blue="0.1960763931" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1u-mF-uer">
@@ -197,30 +198,43 @@
                                     <action selector="nextButtonTapped:" destination="V3X-8O-D93" eventType="touchUpInside" id="Idb-4B-GvA"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Drink Parent" translatesAutoresizingMaskIntoConstraints="NO" id="4St-xX-TNR">
-                                <rect key="frame" x="521" y="51" width="233" height="233"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Drink Parent" translatesAutoresizingMaskIntoConstraints="NO" id="4St-xX-TNR">
+                                <rect key="frame" x="540" y="51" width="233" height="233"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="233" id="QtQ-Yy-AJr"/>
+                                    <constraint firstAttribute="height" constant="233" id="nas-Ac-wWy"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tb0-9h-7Sk">
-                                <rect key="frame" x="89" y="107" width="413" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tb0-9h-7Sk">
+                                <rect key="frame" x="110" y="107" width="404" height="199"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="404" id="Qwo-yA-s6C"/>
+                                    <constraint firstAttribute="height" constant="199" id="i50-Vv-a3U"/>
+                                </constraints>
                                 <string key="text">Membiasakan anak minum air putih sangat penting. Orang tua harus menjadi role model untuk minum air putih yang dilakukan sedikit demi sedikit dengan jumlah ± 5 gelas perhari. Gunakan gelas yang menarik atau campur air putih dengan potongan buah kesukaannya. Jadikan pertandingan minum air putih dan berikan si Kecil penghargaan dengan rentang waktu tertentu. Selalu jelaskan dan yakinkan tentang hal baik yang akan didapatnya dengan terbiasa minum air putih.</string>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="14"/>
-                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="15"/>
+                                <color key="textColor" red="0.0027373256159999998" green="0.227876246" blue="0.1960763931" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2Lo-Bv-WfW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="i4l-tl-g6D" firstAttribute="leading" secondItem="tue-bD-4aE" secondAttribute="leadingMargin" constant="50" id="4et-T6-wTI"/>
+                            <constraint firstItem="i4l-tl-g6D" firstAttribute="top" secondItem="tue-bD-4aE" secondAttribute="topMargin" constant="59" id="4ig-9r-s5J"/>
                             <constraint firstAttribute="bottom" secondItem="e58-0Y-Ddk" secondAttribute="bottom" id="EQh-ey-p5O"/>
                             <constraint firstItem="e58-0Y-Ddk" firstAttribute="leading" secondItem="tue-bD-4aE" secondAttribute="leading" id="GgS-FH-1wQ"/>
+                            <constraint firstItem="Tb0-9h-7Sk" firstAttribute="leading" secondItem="tue-bD-4aE" secondAttribute="leadingMargin" constant="50" id="J7O-lk-D7X"/>
+                            <constraint firstItem="4St-xX-TNR" firstAttribute="leading" secondItem="Tb0-9h-7Sk" secondAttribute="trailing" constant="26" id="K1h-3d-Jka"/>
+                            <constraint firstItem="Tb0-9h-7Sk" firstAttribute="top" secondItem="i4l-tl-g6D" secondAttribute="bottom" constant="17" id="MPH-0z-zz6"/>
                             <constraint firstAttribute="trailing" secondItem="e58-0Y-Ddk" secondAttribute="trailing" id="cF7-BS-cCf"/>
                             <constraint firstItem="e58-0Y-Ddk" firstAttribute="top" secondItem="tue-bD-4aE" secondAttribute="top" id="iDM-gk-dYe"/>
+                            <constraint firstItem="4St-xX-TNR" firstAttribute="top" secondItem="tue-bD-4aE" secondAttribute="topMargin" constant="51" id="jxo-mh-ZMD"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="CAp-vn-JZ2" id="SRB-31-s3L"/>
+                        <outlet property="backgroundInfoImage" destination="e58-0Y-Ddk" id="zwE-9E-skg"/>
                         <outlet property="homeButton" destination="k1u-mF-uer" id="scO-gc-XYC"/>
                         <outlet property="imageView" destination="4St-xX-TNR" id="QMh-sh-YKH"/>
                         <outlet property="nextButton" destination="t2e-I6-oFg" id="xYA-gW-sal"/>
@@ -242,7 +256,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fC3-Tj-lwE">
-                                <rect key="frame" x="27" y="0.0" width="80" height="80"/>
+                                <rect key="frame" x="33" y="0.0" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Home"/>
                                 <connections>
@@ -251,55 +265,55 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hDG-MJ-zBE">
-                                <rect key="frame" x="89" y="43" width="224" height="224"/>
+                                <rect key="frame" x="89" y="60" width="224" height="224"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="224" id="IN9-er-VKj"/>
-                                    <constraint firstAttribute="width" constant="224" id="VCj-xv-jgm"/>
+                                    <constraint firstAttribute="width" constant="224" id="b9U-Wm-kvK"/>
+                                    <constraint firstAttribute="height" constant="224" id="vOg-lT-htu"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlr-nR-amW">
-                                <rect key="frame" x="467" y="277.33333333333331" width="121" height="38.333333333333329"/>
+                                <rect key="frame" x="449.33333333333331" y="272" width="151.66666666666666" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.37173831460000001" green="0.1076812223" blue="0.20784816149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
-                                <state key="normal" title="Simpan">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="18"/>
+                                <state key="normal" title="Simpan" backgroundImage="Button">
                                     <color key="titleColor" red="0.9489546418" green="0.92926537990000002" blue="0.93725687270000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="simpanButtonTapped:" destination="QXZ-CS-ciy" eventType="touchUpInside" id="UOZ-vq-k7d"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bitmap" translatesAutoresizingMaskIntoConstraints="NO" id="az5-Q2-xjT">
-                                <rect key="frame" x="328" y="76.666666666666657" width="387" height="91.666666666666657"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bubble" translatesAutoresizingMaskIntoConstraints="NO" id="az5-Q2-xjT">
+                                <rect key="frame" x="334.66666666666663" y="20" width="380.33333333333331" height="163"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZG5-ry-6jr">
-                                <rect key="frame" x="394" y="88" width="268" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Hai, namaku Lynn.
-Siapa namamu?</string>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="24"/>
-                                <color key="textColor" red="0.9489546418" green="0.92926537990000002" blue="0.93725687270000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7d0-Zl-FUg">
-                                <rect key="frame" x="340" y="187" width="375" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Masukkan namamu" borderStyle="line" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" background="Text Field" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7d0-Zl-FUg">
+                                <rect key="frame" x="342" y="172" width="371.33333333333331" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93682306999999998" green="0.87465500829999998" blue="0.8666656613" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" red="0.37173831460000001" green="0.1076812223" blue="0.20784816149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZG5-ry-6jr">
+                                <rect key="frame" x="394" y="59" width="268" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Hai, namaku Lynn.
+Siapa namamu?</string>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                <color key="textColor" red="0.9489546418" green="0.92926537990000002" blue="0.93725687270000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="S86-NJ-2ml"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="hDG-MJ-zBE" firstAttribute="top" secondItem="d5w-Sf-ewi" secondAttribute="topMargin" constant="60" id="5cq-7c-HPZ"/>
                             <constraint firstItem="hFz-sh-vf7" firstAttribute="leading" secondItem="d5w-Sf-ewi" secondAttribute="leading" id="8uK-gd-lxZ"/>
                             <constraint firstAttribute="bottom" secondItem="hFz-sh-vf7" secondAttribute="bottom" id="LB1-lF-qK1"/>
+                            <constraint firstItem="hDG-MJ-zBE" firstAttribute="leading" secondItem="d5w-Sf-ewi" secondAttribute="leadingMargin" constant="29" id="Mv8-tK-X2e"/>
                             <constraint firstItem="hFz-sh-vf7" firstAttribute="top" secondItem="d5w-Sf-ewi" secondAttribute="top" id="Uxs-Ei-E2A"/>
-                            <constraint firstItem="hDG-MJ-zBE" firstAttribute="leading" secondItem="d5w-Sf-ewi" secondAttribute="leadingMargin" constant="29" id="ldC-uz-ds7"/>
                             <constraint firstAttribute="trailing" secondItem="hFz-sh-vf7" secondAttribute="trailing" id="sut-mS-JXf"/>
-                            <constraint firstItem="hDG-MJ-zBE" firstAttribute="top" secondItem="d5w-Sf-ewi" secondAttribute="topMargin" constant="43" id="ugS-RQ-QOd"/>
                         </constraints>
                     </view>
                     <connections>
@@ -336,23 +350,22 @@ Siapa namamu?</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ayo minum air putih dan lihat apa yang dilakukan Lynn di dalam tubuhmu" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjE-R7-wf1">
-                                <rect key="frame" x="248.66666666666663" y="133.33333333333326" width="316" height="56"/>
+                                <rect key="frame" x="248.66666666666666" y="133.33333333333331" width="316" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.58323973419999997" green="0.25655794139999999" blue="0.37647777799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="wiM-52-e2v">
-                                <rect key="frame" x="352" y="229.33333333333331" width="121" height="38.333333333333329"/>
+                                <rect key="frame" x="336.33333333333331" y="213" width="151.66666666666666" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.37173831460000001" green="0.1076812223" blue="0.20784816149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
-                                <state key="normal" title="Lihat">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <state key="normal" title="Lihat" backgroundImage="Button">
                                     <color key="titleColor" red="0.93682306999999998" green="0.87465500829999998" blue="0.8666656613" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="lanjutButtonTapped:" destination="ePa-6F-SqE" eventType="touchUpInside" id="cZx-b0-BfQ"/>
-                                    <action selector="lihatButtonTapped:" destination="wMt-ul-bHi" eventType="touchUpInside" id="QcY-wB-jPo"/>
+                                    <action selector="lihatButtonTapped:" destination="wMt-ul-bHi" eventType="touchUpInside" id="5ia-pw-QmC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -385,24 +398,29 @@ Siapa namamu?</string>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background info" translatesAutoresizingMaskIntoConstraints="NO" id="7ag-sr-j8p">
                                 <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3be-iK-Kk6">
-                                <rect key="frame" x="113" y="97" width="300" height="192"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3be-iK-Kk6">
+                                <rect key="frame" x="110" y="109" width="317" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="156" id="2TF-Zm-vkH"/>
+                                    <constraint firstAttribute="width" constant="317" id="Q6M-Vo-5MW"/>
+                                </constraints>
                                 <string key="text">Ikatan Dokter Anak Indonesia (IDAI) memberi rekomendasi khusus terhadap asupan cairan anak. Disebutkan bahwa anak 4-8 tahun dengan kebutuhan 1.700 ml atau 6 gelas per hari. Faktor jenis kelamin akan berpengaruh ketika anak bertambah dewasa.</string>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="14"/>
-                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="15"/>
+                                <color key="textColor" red="0.0027373256159999998" green="0.227876246" blue="0.1960763931" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ketahui jumlah yang tepat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0l-Xq-j9s">
-                                <rect key="frame" x="134" y="48" width="342" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
-                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ketahui Jumlah yang Tepat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0l-Xq-j9s">
+                                <rect key="frame" x="110" y="59" width="277" height="31"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                <color key="textColor" red="0.0027373256159999998" green="0.227876246" blue="0.1960763931" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZW-35-MBO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZW-35-MBO">
                                 <rect key="frame" x="33" y="0.0" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="EJW-lC-7lW"/>
+                                    <constraint firstAttribute="height" constant="80" id="qpr-oZ-Ffe"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="Home"/>
                                 <connections>
                                     <action selector="homeBUttonTapped:" destination="BPo-WF-1z5" eventType="touchUpInside" id="XmN-gF-p2F"/>
@@ -410,7 +428,7 @@ Siapa namamu?</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnB-ki-PK8">
-                                <rect key="frame" x="310" y="305" width="80" height="80"/>
+                                <rect key="frame" x="333" y="295" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Sefron Kiri"/>
                                 <connections>
@@ -419,7 +437,7 @@ Siapa namamu?</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXc-Pm-29x">
-                                <rect key="frame" x="411" y="305" width="80" height="80"/>
+                                <rect key="frame" x="434" y="295" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Sefron Kanan"/>
                                 <connections>
@@ -427,22 +445,34 @@ Siapa namamu?</string>
                                     <action selector="nextButtonTapped:" destination="BPo-WF-1z5" eventType="touchUpInside" id="T1Z-R4-rcO"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="minum anak" translatesAutoresizingMaskIntoConstraints="NO" id="xQc-3H-2jr">
-                                <rect key="frame" x="498" y="61" width="233" height="233"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minum anak" translatesAutoresizingMaskIntoConstraints="NO" id="xQc-3H-2jr">
+                                <rect key="frame" x="466" y="71" width="245" height="245"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="A10-Tg-x6q"/>
+                                    <constraint firstAttribute="height" constant="245" id="dqZ-KN-orP"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kUD-NJ-dhy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="3be-iK-Kk6" firstAttribute="leading" secondItem="W0Y-sc-KYa" secondAttribute="leadingMargin" constant="50" id="0hM-b3-zHr"/>
                             <constraint firstAttribute="bottom" secondItem="7ag-sr-j8p" secondAttribute="bottom" id="3Bn-CC-gww"/>
+                            <constraint firstItem="VZW-35-MBO" firstAttribute="leading" secondItem="W0Y-sc-KYa" secondAttribute="leading" constant="33" id="Hrn-i5-KBq"/>
+                            <constraint firstItem="c0l-Xq-j9s" firstAttribute="leading" secondItem="W0Y-sc-KYa" secondAttribute="leadingMargin" constant="50" id="Nee-pj-n0h"/>
+                            <constraint firstItem="xQc-3H-2jr" firstAttribute="top" secondItem="W0Y-sc-KYa" secondAttribute="topMargin" constant="71" id="b9f-9y-TDd"/>
+                            <constraint firstItem="3be-iK-Kk6" firstAttribute="top" secondItem="c0l-Xq-j9s" secondAttribute="bottom" constant="19" id="eXl-jM-AkU"/>
                             <constraint firstItem="7ag-sr-j8p" firstAttribute="leading" secondItem="W0Y-sc-KYa" secondAttribute="leading" id="gZd-rR-yil"/>
+                            <constraint firstItem="c0l-Xq-j9s" firstAttribute="top" secondItem="W0Y-sc-KYa" secondAttribute="topMargin" constant="59" id="haK-Zn-lke"/>
                             <constraint firstItem="7ag-sr-j8p" firstAttribute="top" secondItem="W0Y-sc-KYa" secondAttribute="top" id="med-u9-iVs"/>
+                            <constraint firstItem="xQc-3H-2jr" firstAttribute="leading" secondItem="3be-iK-Kk6" secondAttribute="trailing" constant="39" id="q2u-wT-trm"/>
+                            <constraint firstItem="VZW-35-MBO" firstAttribute="top" secondItem="W0Y-sc-KYa" secondAttribute="top" id="tb4-Mh-RHw"/>
                             <constraint firstAttribute="trailing" secondItem="7ag-sr-j8p" secondAttribute="trailing" id="x3I-Zp-jO0"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="nnB-ki-PK8" id="eLc-z1-3a0"/>
+                        <outlet property="backgroundInfoImage" destination="7ag-sr-j8p" id="Mov-Iu-ftX"/>
                         <outlet property="homeButton" destination="VZW-35-MBO" id="hZQ-YI-oev"/>
                         <outlet property="imageView" destination="xQc-3H-2jr" id="VnQ-Mx-iV4"/>
                         <outlet property="nextButton" destination="NXc-Pm-29x" id="t4h-7Q-ou1"/>
@@ -463,19 +493,22 @@ Siapa namamu?</string>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background info" translatesAutoresizingMaskIntoConstraints="NO" id="tmo-q0-s2x">
                                 <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJz-CP-rao">
-                                <rect key="frame" x="103" y="95" width="627" height="134"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJz-CP-rao">
+                                <rect key="frame" x="110" y="109" width="600" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="006-YA-Fgp"/>
+                                    <constraint firstAttribute="width" constant="600" id="8XP-Gc-ARw"/>
+                                </constraints>
                                 <string key="text">Salah satu cara untuk mengetahui tingkat hidrasi pada anak adalah dengan melihat warna dari urin. Warna urin yang cerah menandakan bahwa anak sudah minum air yang cukup dan terhidrasi dengan baik. Warna urin yang pekat dan gelap menandakan anak kurang terhidrasi dan perlu minum air lebih banyak lagi.</string>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
-                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="15"/>
+                                <color key="textColor" red="0.0027373256159999998" green="0.227876246" blue="0.1960763931" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monitor Hidrasi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="At5-K8-2aE">
-                                <rect key="frame" x="147" y="48" width="226" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Monitor Hidrasi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="At5-K8-2aE">
+                                <rect key="frame" x="110" y="59" width="226" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
-                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                <color key="textColor" red="0.0027373256159999998" green="0.227876246" blue="0.1960763931" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ksS-By-7bC">
@@ -498,19 +531,20 @@ Siapa namamu?</string>
                                     <action selector="backButtontapped:" destination="BPo-WF-1z5" eventType="touchUpInside" id="mO2-yK-mmD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Terhidrasi baik" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrV-TS-GDz">
-                                <rect key="frame" x="92" y="247" width="86" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terhidrasi baik" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrV-TS-GDz">
+                                <rect key="frame" x="99.333333333333314" y="247" width="84.666666666666686" height="17"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="12"/>
-                                <color key="textColor" red="0.93682306999999998" green="0.87465500829999998" blue="0.8666656613" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="1" green="0.99997597930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="urinn" translatesAutoresizingMaskIntoConstraints="NO" id="KRo-Zc-pHf">
-                                <rect key="frame" x="156" y="190" width="480" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="urinn" translatesAutoresizingMaskIntoConstraints="NO" id="KRo-Zc-pHf">
+                                <rect key="frame" x="156" y="190" width="501" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="124" id="G2W-uZ-43H"/>
+                                    <constraint firstAttribute="width" constant="501" id="QBO-76-GSZ"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kurang terhidrasi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIa-R2-533">
-                                <rect key="frame" x="636" y="252" width="100" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Kurang terhidrasi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIa-R2-533">
+                                <rect key="frame" x="652" y="246" width="94" height="17"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="12"/>
                                 <color key="textColor" red="0.65300780530000002" green="0.2451727688" blue="0.10974098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -519,14 +553,24 @@ Siapa namamu?</string>
                         <viewLayoutGuide key="safeArea" id="27q-cZ-Gyh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="bJz-CP-rao" firstAttribute="top" secondItem="At5-K8-2aE" secondAttribute="bottom" constant="19" id="Eao-YQ-KlT"/>
+                            <constraint firstItem="WIa-R2-533" firstAttribute="leading" secondItem="KRo-Zc-pHf" secondAttribute="trailing" constant="-5" id="Hwz-lA-XWd"/>
                             <constraint firstAttribute="bottom" secondItem="tmo-q0-s2x" secondAttribute="bottom" id="L9e-6M-PXE"/>
+                            <constraint firstAttribute="leading" secondItem="At5-K8-2aE" secondAttribute="trailing" constant="109" id="MSa-bE-ZRR"/>
+                            <constraint firstItem="QrV-TS-GDz" firstAttribute="top" secondItem="bJz-CP-rao" secondAttribute="bottom" constant="45" id="Qwn-OG-GM3"/>
                             <constraint firstAttribute="trailing" secondItem="tmo-q0-s2x" secondAttribute="trailing" id="RgH-19-CWP"/>
                             <constraint firstItem="tmo-q0-s2x" firstAttribute="leading" secondItem="dcF-Oa-sSc" secondAttribute="leading" id="UGx-ui-Lhl"/>
+                            <constraint firstItem="bJz-CP-rao" firstAttribute="leading" secondItem="dcF-Oa-sSc" secondAttribute="leadingMargin" constant="50" id="VEJ-31-ygf"/>
+                            <constraint firstItem="WIa-R2-533" firstAttribute="top" secondItem="bJz-CP-rao" secondAttribute="bottom" constant="44" id="dFu-7T-iF7"/>
                             <constraint firstItem="tmo-q0-s2x" firstAttribute="top" secondItem="dcF-Oa-sSc" secondAttribute="top" id="eL0-eh-geV"/>
+                            <constraint firstItem="KRo-Zc-pHf" firstAttribute="leading" secondItem="QrV-TS-GDz" secondAttribute="trailing" constant="-28" id="gWL-Jk-Wzm"/>
+                            <constraint firstItem="tmo-q0-s2x" firstAttribute="leading" secondItem="KRo-Zc-pHf" secondAttribute="trailing" constant="-657" id="jGm-46-dKv"/>
+                            <constraint firstItem="KRo-Zc-pHf" firstAttribute="top" secondItem="bJz-CP-rao" secondAttribute="bottom" constant="-12" id="mbY-MV-N7S"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="BBk-R8-dl9" id="E3V-Yh-YeZ"/>
+                        <outlet property="backgroundImage" destination="tmo-q0-s2x" id="vPW-YI-KcL"/>
                         <outlet property="homeButton" destination="ksS-By-7bC" id="PW2-0Y-neV"/>
                     </connections>
                 </viewController>
@@ -553,23 +597,23 @@ Siapa namamu?</string>
                                     <action selector="backButtonTapped:" destination="ePa-6F-SqE" eventType="touchUpInside" id="esQ-9a-DtC"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bitmap" translatesAutoresizingMaskIntoConstraints="NO" id="B4B-YY-waB">
-                                <rect key="frame" x="325" y="96.666666666666657" width="334" height="78"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bubble" translatesAutoresizingMaskIntoConstraints="NO" id="B4B-YY-waB">
+                                <rect key="frame" x="334.66666666666663" y="46" width="380.33333333333331" height="163"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hai, William. Senang bertemu denganmu." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aB-Cd-Otz">
-                                <rect key="frame" x="383" y="100.33333333333333" width="231.33333333333331" height="78"/>
+                                <rect key="frame" x="394" y="85" width="268" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="21"/>
                                 <color key="textColor" red="0.93682306999999998" green="0.87465500829999998" blue="0.8666656613" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdU-Dv-tdm">
-                                <rect key="frame" x="432" y="220.33333333333331" width="121" height="38.333333333333329"/>
+                                <rect key="frame" x="449.33333333333331" y="221" width="151.66666666666666" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.37173831460000001" green="0.1076812223" blue="0.20784816149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
-                                <state key="normal" title="Lanjut">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="18"/>
+                                <state key="normal" title="Simpan" backgroundImage="Button">
                                     <color key="titleColor" red="0.93682306999999998" green="0.87465500829999998" blue="0.8666656613" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
@@ -627,7 +671,7 @@ Siapa namamu?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1D-rx-DPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577" y="2582"/>
+            <point key="canvasLocation" x="597" y="1158"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="h6R-qB-ZOR">
@@ -677,12 +721,15 @@ Siapa namamu?</string>
                             <pageControl opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="11" translatesAutoresizingMaskIntoConstraints="NO" id="81I-LQ-9Rh">
                                 <rect key="frame" x="316.33333333333331" y="342" width="211.66666666666669" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="pageIndicatorTintColor" red="0.8473932743" green="0.89008617400000001" blue="0.89412003760000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.0052541717890000001" green="0.3102771044" blue="0.27450799939999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eel-63-FhH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eel-63-FhH">
                                 <rect key="frame" x="33" y="0.0" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Rqu-4P-aS9"/>
+                                    <constraint firstAttribute="height" constant="80" id="lew-Fn-N9j"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="Home"/>
                                 <connections>
                                     <action selector="homeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JQ7-lz-efs"/>
@@ -692,7 +739,9 @@ Siapa namamu?</string>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
+                            <constraint firstItem="eel-63-FhH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BLE-1v-qiW"/>
                             <constraint firstItem="ctX-iK-WpN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QSs-AV-TSs"/>
+                            <constraint firstItem="eel-63-FhH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="33" id="Vfq-4s-nGa"/>
                             <constraint firstItem="ctX-iK-WpN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="k0D-FP-UL2"/>
                             <constraint firstAttribute="trailing" secondItem="ctX-iK-WpN" secondAttribute="trailing" id="sic-QP-Fp0"/>
                             <constraint firstAttribute="bottom" secondItem="ctX-iK-WpN" secondAttribute="bottom" id="zVv-mf-0Cs"/>
@@ -711,16 +760,19 @@ Siapa namamu?</string>
     </scenes>
     <resources>
         <image name="Background info" width="577.66668701171875" height="281.66665649414062"/>
-        <image name="Bitmap" width="129.33332824707031" height="31"/>
+        <image name="Bubble" width="207.66667175292969" height="74"/>
+        <image name="Button" width="426.66665649414062" height="197"/>
         <image name="Drink Parent" width="400" height="400"/>
         <image name="Home" width="400" height="400"/>
         <image name="Info" width="400" height="400"/>
         <image name="Lynn Logo" width="666.66668701171875" height="400"/>
+        <image name="Lynn Page 1" width="400" height="400"/>
         <image name="Quit" width="400" height="400"/>
         <image name="Sefron Kanan" width="400" height="400"/>
         <image name="Sefron Kiri" width="400" height="400"/>
         <image name="Starting page" width="577.66668701171875" height="281.66665649414062"/>
-        <image name="home screen 2" width="1733" height="845"/>
+        <image name="Text Field" width="426.66665649414062" height="100"/>
+        <image name="home screen 2" width="577.66668701171875" height="281.66665649414062"/>
         <image name="minum anak" width="400" height="400"/>
         <image name="urinn" width="1500" height="400"/>
         <systemColor name="systemBackgroundColor">

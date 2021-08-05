@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		6D1D96B226ADA20B003C760B /* HomeScreen2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1D96B126ADA20B003C760B /* HomeScreen2ViewController.swift */; };
 		6D1D96B426ADCC27003C760B /* TentangLynnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1D96B326ADCC27003C760B /* TentangLynnViewController.swift */; };
+		6D32277526BBB762009944EA /* contain New.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D32277326BBB762009944EA /* contain New.gif */; };
+		6D32277626BBB762009944EA /* cry New.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D32277426BBB762009944EA /* cry New.gif */; };
+		6D32277826BBC91D009944EA /* stortel3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D32277726BBC91D009944EA /* stortel3.mp3 */; };
 		6D33518126ADD86D0028700B /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D33518026ADD86D0028700B /* TipsViewController.swift */; };
 		6D33518326ADDE1A0028700B /* BerapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D33518226ADDE1A0028700B /* BerapaViewController.swift */; };
 		6D33518526ADE2060028700B /* MonitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D33518426ADE2060028700B /* MonitorViewController.swift */; };
@@ -44,9 +47,7 @@
 		6D9FB39C26AC67CD00111D66 /* stortel7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB38F26AC67CC00111D66 /* stortel7.mp3 */; };
 		6D9FB39D26AC67CD00111D66 /* stortel9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB39026AC67CC00111D66 /* stortel9.mp3 */; };
 		6D9FB39E26AC67CD00111D66 /* stortel8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB39126AC67CC00111D66 /* stortel8.mp3 */; };
-		6D9FB39F26AC67CD00111D66 /* stortel3 new.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB39226AC67CC00111D66 /* stortel3 new.mp3 */; };
 		6D9FB3A026AC67CD00111D66 /* stortel11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB39326AC67CC00111D66 /* stortel11.mp3 */; };
-		6D9FB3A126AC67CD00111D66 /* stortel3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB39426AC67CD00111D66 /* stortel3.mp3 */; };
 		6D9FB3A226AC67CD00111D66 /* sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB39526AC67CD00111D66 /* sound1.mp3 */; };
 		6D9FB3A326AC67CD00111D66 /* stortel1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB39626AC67CD00111D66 /* stortel1.mp3 */; };
 		6DAF58A426AF1DCC00199728 /* AyoMinumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAF58A326AF1DCC00199728 /* AyoMinumViewController.swift */; };
@@ -61,7 +62,7 @@
 		E2D3E57926BB910600A13D11 /* PausePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3E57426BB910600A13D11 /* PausePage.swift */; };
 		E2D3E57A26BB910600A13D11 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3E57526BB910600A13D11 /* PopUp.swift */; };
 		E2D3E57B26BB910600A13D11 /* StartingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3E57626BB910600A13D11 /* StartingPage.swift */; };
-		E2E4189626B7BC830025AD6A /* poseEstimateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4189526B7BC830025AD6A /* poseEstimateViewController.swift */; };
+		E2E4189626B7BC830025AD6A /* DetectDrink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4189526B7BC830025AD6A /* DetectDrink.swift */; };
 		E2E4189826B7BCC60025AD6A /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4189726B7BCC60025AD6A /* VideoCapture.swift */; };
 		E2E4189A26B7BCD50025AD6A /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4189926B7BCD50025AD6A /* Predictor.swift */; };
 		E2E4189C26B7BD220025AD6A /* PoseEstimation.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E2E4189B26B7BD220025AD6A /* PoseEstimation.mlmodel */; };
@@ -70,6 +71,9 @@
 /* Begin PBXFileReference section */
 		6D1D96B126ADA20B003C760B /* HomeScreen2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen2ViewController.swift; sourceTree = "<group>"; };
 		6D1D96B326ADCC27003C760B /* TentangLynnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TentangLynnViewController.swift; sourceTree = "<group>"; };
+		6D32277326BBB762009944EA /* contain New.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "contain New.gif"; sourceTree = "<group>"; };
+		6D32277426BBB762009944EA /* cry New.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "cry New.gif"; sourceTree = "<group>"; };
+		6D32277726BBC91D009944EA /* stortel3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel3.mp3; sourceTree = "<group>"; };
 		6D33518026ADD86D0028700B /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		6D33518226ADDE1A0028700B /* BerapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerapaViewController.swift; sourceTree = "<group>"; };
 		6D33518426ADE2060028700B /* MonitorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorViewController.swift; sourceTree = "<group>"; };
@@ -107,9 +111,7 @@
 		6D9FB38F26AC67CC00111D66 /* stortel7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel7.mp3; sourceTree = "<group>"; };
 		6D9FB39026AC67CC00111D66 /* stortel9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel9.mp3; sourceTree = "<group>"; };
 		6D9FB39126AC67CC00111D66 /* stortel8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel8.mp3; sourceTree = "<group>"; };
-		6D9FB39226AC67CC00111D66 /* stortel3 new.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "stortel3 new.mp3"; sourceTree = "<group>"; };
 		6D9FB39326AC67CC00111D66 /* stortel11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel11.mp3; sourceTree = "<group>"; };
-		6D9FB39426AC67CD00111D66 /* stortel3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel3.mp3; sourceTree = "<group>"; };
 		6D9FB39526AC67CD00111D66 /* sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound1.mp3; sourceTree = "<group>"; };
 		6D9FB39626AC67CD00111D66 /* stortel1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel1.mp3; sourceTree = "<group>"; };
 		6DAF58A326AF1DCC00199728 /* AyoMinumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyoMinumViewController.swift; sourceTree = "<group>"; };
@@ -124,7 +126,7 @@
 		E2D3E57426BB910600A13D11 /* PausePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PausePage.swift; sourceTree = "<group>"; };
 		E2D3E57526BB910600A13D11 /* PopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
 		E2D3E57626BB910600A13D11 /* StartingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartingPage.swift; sourceTree = "<group>"; };
-		E2E4189526B7BC830025AD6A /* poseEstimateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poseEstimateViewController.swift; sourceTree = "<group>"; };
+		E2E4189526B7BC830025AD6A /* DetectDrink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectDrink.swift; sourceTree = "<group>"; };
 		E2E4189726B7BCC60025AD6A /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		E2E4189926B7BCD50025AD6A /* Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
 		E2E4189B26B7BD220025AD6A /* PoseEstimation.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PoseEstimation.mlmodel; sourceTree = "<group>"; };
@@ -178,11 +180,10 @@
 			isa = PBXGroup;
 			children = (
 				6D635C9126AD8A9D00A5FC9E /* home page.mp3 */,
+				6D32277726BBC91D009944EA /* stortel3.mp3 */,
 				6D9FB39526AC67CD00111D66 /* sound1.mp3 */,
 				6D9FB39626AC67CD00111D66 /* stortel1.mp3 */,
 				6D9FB38B26AC67CC00111D66 /* stortel2.mp3 */,
-				6D9FB39226AC67CC00111D66 /* stortel3 new.mp3 */,
-				6D9FB39426AC67CD00111D66 /* stortel3.mp3 */,
 				6D9FB38C26AC67CC00111D66 /* stortel4.mp3 */,
 				6D9FB38A26AC67CC00111D66 /* stortel5.mp3 */,
 				6D9FB38E26AC67CC00111D66 /* stortel6.mp3 */,
@@ -249,7 +250,7 @@
 		E2D3E57D26BB936F00A13D11 /* poseEstimation */ = {
 			isa = PBXGroup;
 			children = (
-				E2E4189526B7BC830025AD6A /* poseEstimateViewController.swift */,
+				E2E4189526B7BC830025AD6A /* DetectDrink.swift */,
 				E2E4189726B7BCC60025AD6A /* VideoCapture.swift */,
 				E2E4189926B7BCD50025AD6A /* Predictor.swift */,
 			);
@@ -261,6 +262,8 @@
 			children = (
 				6D635CF826AD8C2E00A5FC9E /* Benefit.gif */,
 				6D635CFD26AD8C2E00A5FC9E /* Child.gif */,
+				6D32277326BBB762009944EA /* contain New.gif */,
+				6D32277426BBB762009944EA /* cry New.gif */,
 				6D635D0026AD8C2E00A5FC9E /* contain.gif */,
 				6D635CFA26AD8C2E00A5FC9E /* cry.gif */,
 				6D635CF926AD8C2E00A5FC9E /* Hero Lynn.gif */,
@@ -340,9 +343,10 @@
 				6D9FB3A226AC67CD00111D66 /* sound1.mp3 in Resources */,
 				6D9FB3A026AC67CD00111D66 /* stortel11.mp3 in Resources */,
 				6D635D0E26AD8C2E00A5FC9E /* Minum.gif in Resources */,
+				6D32277626BBB762009944EA /* cry New.gif in Resources */,
 				6D635D0726AD8C2E00A5FC9E /* weak.gif in Resources */,
+				6D32277526BBB762009944EA /* contain New.gif in Resources */,
 				6D635D1426AD8C2E00A5FC9E /* Presence.gif in Resources */,
-				6D9FB39F26AC67CD00111D66 /* stortel3 new.mp3 in Resources */,
 				E29143EB26B7F65E005EE609 /* ShareNutritionAction.sks in Resources */,
 				6D9FB39C26AC67CD00111D66 /* stortel7.mp3 in Resources */,
 				6D9FB39726AC67CD00111D66 /* stortel5.mp3 in Resources */,
@@ -353,6 +357,7 @@
 				6D9FB36326ABF52800111D66 /* LaunchScreen.storyboard in Resources */,
 				6D635D0626AD8C2E00A5FC9E /* Lembab.gif in Resources */,
 				6D9FB39E26AC67CD00111D66 /* stortel8.mp3 in Resources */,
+				6D32277826BBC91D009944EA /* stortel3.mp3 in Resources */,
 				6D635D0D26AD8C2E00A5FC9E /* Child.gif in Resources */,
 				6D9FB3A326AC67CD00111D66 /* stortel1.mp3 in Resources */,
 				6D9FB39A26AC67CD00111D66 /* stortel10.mp3 in Resources */,
@@ -361,7 +366,6 @@
 				E29143E726B7F5A1005EE609 /* ShareNutritionScene.sks in Resources */,
 				6D635D0926AD8C2E00A5FC9E /* Hero Lynn.gif in Resources */,
 				6D635D0F26AD8C2E00A5FC9E /* Profil.gif in Resources */,
-				6D9FB3A126AC67CD00111D66 /* stortel3.mp3 in Resources */,
 				6D635D0A26AD8C2E00A5FC9E /* cry.gif in Resources */,
 				6D635D0C26AD8C2E00A5FC9E /* Sweat.gif in Resources */,
 				6D635C9226AD8A9D00A5FC9E /* home page.mp3 in Resources */,
@@ -402,7 +406,7 @@
 				E2D3E57926BB910600A13D11 /* PausePage.swift in Sources */,
 				6DCB4A3C26AD4A7D0009EE7F /* StartingPageViewController.swift in Sources */,
 				6D33518326ADDE1A0028700B /* BerapaViewController.swift in Sources */,
-				E2E4189626B7BC830025AD6A /* poseEstimateViewController.swift in Sources */,
+				E2E4189626B7BC830025AD6A /* DetectDrink.swift in Sources */,
 				6DCB4A3E26AD5BFE0009EE7F /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,7 +555,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P94HWRYJL7;
+				DEVELOPMENT_TEAM = JFAH6YB752;
 				INFOPLIST_FILE = "Lynn New/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -570,7 +574,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P94HWRYJL7;
+				DEVELOPMENT_TEAM = JFAH6YB752;
 				INFOPLIST_FILE = "Lynn New/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
