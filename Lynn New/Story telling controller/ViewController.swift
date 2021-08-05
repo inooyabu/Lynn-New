@@ -16,27 +16,13 @@ class ViewController: UIViewController {
     
     var bgSoundURI: URL?
     var backgroundSound = AVAudioPlayer()
-   
-    var backgroundImageArray = [UIImage(named: "Background-1"), UIImage(named: "Background-2"),
-                                UIImage(named: "Background-3"), UIImage(named: "Background-4"),
-                                UIImage(named: "Background-5"), UIImage(named: "Background-6"),
-                                UIImage(named: "Background-7"), UIImage(named: "Background-8"),
-                                UIImage(named: "Background-9"), UIImage(named: "Background-10"),
-                                UIImage(named: "Background-11")]
     
-//    var backgroundImageArray = [UIImage(named: "1"), UIImage(named: "2"),
-//                                UIImage(named: "3"), UIImage(named: "4"),
-//                                UIImage(named: "5"), UIImage(named: "6"),
-//                                UIImage(named: "7"), UIImage(named: "8"),
-//                                UIImage(named: "9"), UIImage(named: "10"),
-//                                UIImage(named: "11")]
-    
-//    var backgroundImageArray = [UIImage(named: "#1"), UIImage(named: "#2"),
-//                                UIImage(named: "#3"), UIImage(named: "#4"),
-//                                UIImage(named: "#5"), UIImage(named: "#6"),
-//                                UIImage(named: "#7"), UIImage(named: "#8"),
-//                                UIImage(named: "#9"), UIImage(named: "#10"),
-//                                UIImage(named: "#11")]
+        var backgroundImageArray = [UIImage(named: "stortel-1"), UIImage(named: "stortel-2"),
+                                    UIImage(named: "3"), UIImage(named: "stortel-4"),
+                                    UIImage(named: "stortel-5"), UIImage(named: "stortel-6"),
+                                    UIImage(named: "7"), UIImage(named: "stortel-8"),
+                                    UIImage(named: "stortel-9"), UIImage(named: "stortel-10"),
+                                    UIImage(named: "stortel-11")]
     
     var voice = ["stortel1", "stortel2", "stortel3",
                  "stortel4", "stortel5", "stortel6", "stortel7",
@@ -181,7 +167,7 @@ extension ViewController: UICollectionViewDataSource{
             gifImageView7.image = airgif[7]
             cell.addSubview(gifImageView7)
         case 8:
-            let gifImageView8 = UIImageView(frame: CGRect(x: 270, y: 8, width: 287, height: 287))
+            let gifImageView8 = UIImageView(frame: CGRect(x: 270, y: 8, width: 275, height: 275))
             gifImageView8.contentMode = .scaleAspectFit
             gifImageView8.image = airgif[8]
             cell.addSubview(gifImageView8)

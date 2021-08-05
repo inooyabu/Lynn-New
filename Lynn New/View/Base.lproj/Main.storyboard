@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Eb-i8-mwy">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -350,23 +350,22 @@ Siapa namamu?</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ayo minum air putih dan lihat apa yang dilakukan Lynn di dalam tubuhmu" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjE-R7-wf1">
-                                <rect key="frame" x="248.66666666666663" y="133.33333333333326" width="316" height="56"/>
+                                <rect key="frame" x="248.66666666666666" y="133.33333333333331" width="316" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.58323973419999997" green="0.25655794139999999" blue="0.37647777799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="wiM-52-e2v">
-                                <rect key="frame" x="352" y="229.33333333333331" width="121" height="38.333333333333329"/>
+                                <rect key="frame" x="336.33333333333331" y="213" width="151.66666666666666" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.37173831460000001" green="0.1076812223" blue="0.20784816149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
-                                <state key="normal" title="Lihat">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <state key="normal" title="Lihat" backgroundImage="Button">
                                     <color key="titleColor" red="0.93682306999999998" green="0.87465500829999998" blue="0.8666656613" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="lanjutButtonTapped:" destination="ePa-6F-SqE" eventType="touchUpInside" id="cZx-b0-BfQ"/>
-                                    <action selector="lihatButtonTapped:" destination="wMt-ul-bHi" eventType="touchUpInside" id="QcY-wB-jPo"/>
+                                    <action selector="lihatButtonTapped:" destination="wMt-ul-bHi" eventType="touchUpInside" id="5ia-pw-QmC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -672,7 +671,7 @@ Siapa namamu?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1D-rx-DPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577" y="2582"/>
+            <point key="canvasLocation" x="597" y="1158"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="h6R-qB-ZOR">

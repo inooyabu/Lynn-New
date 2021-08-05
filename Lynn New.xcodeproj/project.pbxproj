@@ -62,7 +62,7 @@
 		E2D3E57926BB910600A13D11 /* PausePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3E57426BB910600A13D11 /* PausePage.swift */; };
 		E2D3E57A26BB910600A13D11 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3E57526BB910600A13D11 /* PopUp.swift */; };
 		E2D3E57B26BB910600A13D11 /* StartingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3E57626BB910600A13D11 /* StartingPage.swift */; };
-		E2E4189626B7BC830025AD6A /* poseEstimateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4189526B7BC830025AD6A /* poseEstimateViewController.swift */; };
+		E2E4189626B7BC830025AD6A /* DetectDrink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4189526B7BC830025AD6A /* DetectDrink.swift */; };
 		E2E4189826B7BCC60025AD6A /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4189726B7BCC60025AD6A /* VideoCapture.swift */; };
 		E2E4189A26B7BCD50025AD6A /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4189926B7BCD50025AD6A /* Predictor.swift */; };
 		E2E4189C26B7BD220025AD6A /* PoseEstimation.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E2E4189B26B7BD220025AD6A /* PoseEstimation.mlmodel */; };
@@ -126,7 +126,7 @@
 		E2D3E57426BB910600A13D11 /* PausePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PausePage.swift; sourceTree = "<group>"; };
 		E2D3E57526BB910600A13D11 /* PopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
 		E2D3E57626BB910600A13D11 /* StartingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartingPage.swift; sourceTree = "<group>"; };
-		E2E4189526B7BC830025AD6A /* poseEstimateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poseEstimateViewController.swift; sourceTree = "<group>"; };
+		E2E4189526B7BC830025AD6A /* DetectDrink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectDrink.swift; sourceTree = "<group>"; };
 		E2E4189726B7BCC60025AD6A /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		E2E4189926B7BCD50025AD6A /* Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
 		E2E4189B26B7BD220025AD6A /* PoseEstimation.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PoseEstimation.mlmodel; sourceTree = "<group>"; };
@@ -250,7 +250,7 @@
 		E2D3E57D26BB936F00A13D11 /* poseEstimation */ = {
 			isa = PBXGroup;
 			children = (
-				E2E4189526B7BC830025AD6A /* poseEstimateViewController.swift */,
+				E2E4189526B7BC830025AD6A /* DetectDrink.swift */,
 				E2E4189726B7BCC60025AD6A /* VideoCapture.swift */,
 				E2E4189926B7BCD50025AD6A /* Predictor.swift */,
 			);
@@ -406,7 +406,7 @@
 				E2D3E57926BB910600A13D11 /* PausePage.swift in Sources */,
 				6DCB4A3C26AD4A7D0009EE7F /* StartingPageViewController.swift in Sources */,
 				6D33518326ADDE1A0028700B /* BerapaViewController.swift in Sources */,
-				E2E4189626B7BC830025AD6A /* poseEstimateViewController.swift in Sources */,
+				E2E4189626B7BC830025AD6A /* DetectDrink.swift in Sources */,
 				6DCB4A3E26AD5BFE0009EE7F /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
