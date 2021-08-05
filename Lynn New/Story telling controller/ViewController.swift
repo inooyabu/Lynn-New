@@ -17,12 +17,26 @@ class ViewController: UIViewController {
     var bgSoundURI: URL?
     var backgroundSound = AVAudioPlayer()
    
-    var backgroundImageArray = [UIImage(named: "1"), UIImage(named: "2"),
-                                UIImage(named: "3"), UIImage(named: "4"),
-                                UIImage(named: "5"), UIImage(named: "6"),
-                                UIImage(named: "7"), UIImage(named: "8"),
-                                UIImage(named: "9"), UIImage(named: "10"),
-                                UIImage(named: "11")]
+    var backgroundImageArray = [UIImage(named: "Background-1"), UIImage(named: "Background-2"),
+                                UIImage(named: "Background-3"), UIImage(named: "Background-4"),
+                                UIImage(named: "Background-5"), UIImage(named: "Background-6"),
+                                UIImage(named: "Background-7"), UIImage(named: "Background-8"),
+                                UIImage(named: "Background-9"), UIImage(named: "Background-10"),
+                                UIImage(named: "Background-11")]
+    
+//    var backgroundImageArray = [UIImage(named: "1"), UIImage(named: "2"),
+//                                UIImage(named: "3"), UIImage(named: "4"),
+//                                UIImage(named: "5"), UIImage(named: "6"),
+//                                UIImage(named: "7"), UIImage(named: "8"),
+//                                UIImage(named: "9"), UIImage(named: "10"),
+//                                UIImage(named: "11")]
+    
+//    var backgroundImageArray = [UIImage(named: "#1"), UIImage(named: "#2"),
+//                                UIImage(named: "#3"), UIImage(named: "#4"),
+//                                UIImage(named: "#5"), UIImage(named: "#6"),
+//                                UIImage(named: "#7"), UIImage(named: "#8"),
+//                                UIImage(named: "#9"), UIImage(named: "#10"),
+//                                UIImage(named: "#11")]
     
     var voice = ["stortel1", "stortel2", "stortel3",
                  "stortel4", "stortel5", "stortel6", "stortel7",
@@ -124,8 +138,9 @@ extension ViewController: UICollectionViewDataSource{
         let gifImageView = UIImageView(frame: CGRect(x: 263, y: 8, width: 265, height: 265))
         gifImageView.contentMode = .scaleAspectFit
         gifImageView.image = airgif[indexPath.row]
-        gifImageView.backgroundColor = .blue
         cell.addSubview(gifImageView)
+        
+        print("Sekarang indexPath.row \(indexPath.row)")
 
         
 //        cell.loadData(item: backgroundImageArray[indexPath.row]!)
@@ -144,7 +159,7 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
         switch self.pageController.currentPage {
         case 0:
             playSound(number: 0)
-            print("Current Page \(currentPage), Array Sound = \(0)")
+//            print("Current Page \(currentPage), Array Sound = \(0)")
             
             
         case 1:
