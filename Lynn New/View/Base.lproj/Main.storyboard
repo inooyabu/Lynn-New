@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Eb-i8-mwy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -652,8 +652,8 @@ Siapa namamu?</string>
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ctX-iK-WpN">
-                                <rect key="frame" x="0.0" y="35" width="773" height="299"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ctX-iK-WpN">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rfz-hV-HrH">
                                     <size key="itemSize" width="782" height="338.66666666666669"/>
@@ -663,32 +663,19 @@ Siapa namamu?</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="aia-6F-cdx" customClass="DataCollectionViewCell" customModule="Lynn_New" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-20" width="782" height="338.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="25.666666666666668" width="782" height="338.66666666666669"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AWf-Yv-Tpt">
                                             <rect key="frame" x="0.0" y="0.0" width="782" height="338.66666666666669"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mpA-BH-QTB">
-                                                    <rect key="frame" x="275" y="86" width="240" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hqu-pj-O5Q">
-                                                    <rect key="frame" x="58" y="8" width="774" height="339"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                            <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="782" height="338.66666666666669"/>
-                                        <connections>
-                                            <outlet property="backgroundImage" destination="Hqu-pj-O5Q" id="zjj-vK-Xrm"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <pageControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="11" translatesAutoresizingMaskIntoConstraints="NO" id="81I-LQ-9Rh">
+                            <pageControl opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="11" translatesAutoresizingMaskIntoConstraints="NO" id="81I-LQ-9Rh">
                                 <rect key="frame" x="316.33333333333331" y="342" width="211.66666666666669" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="pageIndicatorTintColor" red="0.8473932743" green="0.89008617400000001" blue="0.89412003760000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="currentPageIndicatorTintColor" red="0.0052541717890000001" green="0.3102771044" blue="0.27450799939999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </pageControl>
@@ -702,15 +689,12 @@ Siapa namamu?</string>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
-                            <constraint firstItem="ctX-iK-WpN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9jX-6H-e24"/>
-                            <constraint firstItem="ctX-iK-WpN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="UIS-9o-12i"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ctX-iK-WpN" secondAttribute="trailing" constant="27" id="VJt-VW-RqR"/>
-                            <constraint firstItem="81I-LQ-9Rh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="0.16666666666662877" id="XjB-vU-aee"/>
-                            <constraint firstItem="81I-LQ-9Rh" firstAttribute="top" secondItem="ctX-iK-WpN" secondAttribute="bottom" constant="8" symbolic="YES" id="aEc-ut-b6D"/>
-                            <constraint firstItem="81I-LQ-9Rh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wTu-r2-KSt"/>
-                            <constraint firstItem="81I-LQ-9Rh" firstAttribute="top" secondItem="ctX-iK-WpN" secondAttribute="bottom" constant="8" symbolic="YES" id="wei-sI-1hF"/>
+                            <constraint firstItem="ctX-iK-WpN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QSs-AV-TSs"/>
+                            <constraint firstItem="ctX-iK-WpN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="k0D-FP-UL2"/>
+                            <constraint firstAttribute="trailing" secondItem="ctX-iK-WpN" secondAttribute="trailing" id="sic-QP-Fp0"/>
+                            <constraint firstAttribute="bottom" secondItem="ctX-iK-WpN" secondAttribute="bottom" id="zVv-mf-0Cs"/>
                         </constraints>
                     </view>
                     <connections>
@@ -740,6 +724,9 @@ Siapa namamu?</string>
         <image name="urinn" width="1500" height="400"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
