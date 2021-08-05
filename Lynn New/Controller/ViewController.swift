@@ -105,7 +105,17 @@ extension ViewController: UICollectionViewDataSource{
         
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? DataCollectionViewCell else { return UICollectionViewCell() }
-        cell.loadData(item: backgroundImageArray[indexPath.row]!)
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: collectionView.frame.size.width, height: collectionView.frame.size.height))
+//        print(imageView.frame.size)
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = backgroundImageArray[indexPath.row]
+        imageView.backgroundColor = .red
+        cell.addSubview(imageView)
+        
+        
+        
+//        cell.loadData(item: backgroundImageArray[indexPath.row]!)
         
         return cell
      }
@@ -183,13 +193,14 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemWidth = collectionView.frame.size.width
-        let itemHeight = (collectionView.frame.size.height)
+        let itemHeight = collectionView.frame.size.height
         return CGSize(width: itemWidth, height: itemHeight)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+    
 }
 
 
