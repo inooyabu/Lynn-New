@@ -195,6 +195,16 @@ extension ViewController: UICollectionViewDataSource{
             gifImageView10.contentMode = .scaleAspectFit
             gifImageView10.image = airgif[10]
             cell.addSubview(gifImageView10)
+            
+            let image = UIImage(named: "Sefron Kanan") as UIImage?
+            let buttonNext = UIButton(frame: CGRect(x: 712,
+                                                y: 286,
+                                                width: 80,
+                                                height: 80))
+            buttonNext.setImage(image, for: .normal)
+            buttonNext.addTarget(self, action: #selector(ayoMinum), for: .touchDown)
+            cell.addSubview(buttonNext)
+           
         default:
             print("Default Mode")
         }
@@ -209,10 +219,20 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
         let w = scrollView.bounds.size.width
         let currentPage = Int(ceil(x/w))
         self.pageController.currentPage = currentPage
+        
+//        let image = UIImage(named: "Sefron Kanan") as UIImage?
+//        let buttonNext = UIButton(frame: CGRect(x: 712,
+//                                            y: 286,
+//                                            width: 80,
+//                                            height: 80))
+//        buttonNext.setImage(image, for: .normal)
+//        buttonNext.addTarget(self, action: #selector(ayoMinum), for: .touchDown)
+//        self.view.addSubview(buttonNext)
                 
         switch self.pageController.currentPage {
         case 0:
             playSound(number: 0)
+            
         case 1:
             playSound(number: 1)
             print("Current Page \(currentPage), Array Sound = \(1)")
@@ -243,14 +263,14 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
         case 10:
             playSound(number: 10)
             print("Current Page \(currentPage), Array Sound = \(10)")
-            let image = UIImage(named: "Sefron Kanan") as UIImage?
-            let buttonNext = UIButton(frame: CGRect(x: 712,
-                                                y: 286,
-                                                width: 80,
-                                                height: 80))
-            buttonNext.setImage(image, for: .normal)
-            buttonNext.addTarget(self, action: #selector(ayoMinum), for: .touchDown)
-            self.view.addSubview(buttonNext)
+//            let image = UIImage(named: "Sefron Kanan") as UIImage?
+//            let buttonNext = UIButton(frame: CGRect(x: 712,
+//                                                y: 286,
+//                                                width: 80,
+//                                                height: 80))
+//            buttonNext.setImage(image, for: .normal)
+//            buttonNext.addTarget(self, action: #selector(ayoMinum), for: .touchDown)
+//            self.view.addSubview(buttonNext)
             
         default:
             playSound(number: 0)
