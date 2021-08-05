@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Io-yd-uSu">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -627,18 +627,19 @@ Siapa namamu?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1D-rx-DPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="659.71563981042652" y="1156.9230769230769"/>
+            <point key="canvasLocation" x="577" y="2582"/>
         </scene>
-        <!--Share Nutrition View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="h6R-qB-ZOR">
             <objects>
-                <viewController storyboardIdentifier="Share Nutrition" id="7Io-yd-uSu" customClass="ShareNutritionViewController" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZWM-30-vwE">
+                <viewController storyboardIdentifier="Share Nutrition" id="7Io-yd-uSu" customClass="GameViewController" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZWM-30-vwE" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Qd0-d9-c5W"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="36p-FW-Rai"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERb-zw-ipa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
