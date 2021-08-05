@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Eb-i8-mwy">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -135,6 +135,7 @@
                                 <rect key="frame" x="330.33333333333331" y="270" width="151.66666666666666" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="18"/>
                                 <state key="normal" title="Mulai" backgroundImage="Button">
                                     <color key="titleColor" red="0.9489546418" green="0.92926537990000002" blue="0.93725687270000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -271,7 +272,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlr-nR-amW">
-                                <rect key="frame" x="494.33333333333331" y="272" width="151.66666666666666" height="70"/>
+                                <rect key="frame" x="449.33333333333331" y="272" width="151.66666666666666" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="18"/>
@@ -721,12 +722,15 @@ Siapa namamu?</string>
                             <pageControl opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="11" translatesAutoresizingMaskIntoConstraints="NO" id="81I-LQ-9Rh">
                                 <rect key="frame" x="316.33333333333331" y="342" width="211.66666666666669" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="pageIndicatorTintColor" red="0.8473932743" green="0.89008617400000001" blue="0.89412003760000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.0052541717890000001" green="0.3102771044" blue="0.27450799939999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eel-63-FhH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eel-63-FhH">
                                 <rect key="frame" x="33" y="0.0" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Rqu-4P-aS9"/>
+                                    <constraint firstAttribute="height" constant="80" id="lew-Fn-N9j"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="Home"/>
                                 <connections>
                                     <action selector="homeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JQ7-lz-efs"/>
@@ -736,7 +740,9 @@ Siapa namamu?</string>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
+                            <constraint firstItem="eel-63-FhH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BLE-1v-qiW"/>
                             <constraint firstItem="ctX-iK-WpN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QSs-AV-TSs"/>
+                            <constraint firstItem="eel-63-FhH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="33" id="Vfq-4s-nGa"/>
                             <constraint firstItem="ctX-iK-WpN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="k0D-FP-UL2"/>
                             <constraint firstAttribute="trailing" secondItem="ctX-iK-WpN" secondAttribute="trailing" id="sic-QP-Fp0"/>
                             <constraint firstAttribute="bottom" secondItem="ctX-iK-WpN" secondAttribute="bottom" id="zVv-mf-0Cs"/>

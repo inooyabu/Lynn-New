@@ -20,9 +20,16 @@ class AyoMinumViewController: UIViewController {
     }
    
     @IBAction func backButtonTapped(_ sender: Any) {
-        print("Button Back Tapped")
-        //untuk langsung back ke page terakhir di collectionview, tapi error
-        //storyTelling.pageController.currentPage = 10
+        let storyTelling = storyboard?.instantiateViewController(identifier: "Story Telling") as! ViewController
+                storyTelling.modalPresentationStyle = .fullScreen
+                
+                let transition = CATransition()
+                transition.duration = 0.5
+                transition.type = CATransitionType.push
+                transition.subtype = CATransitionSubtype.fromLeft
+                transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+                view.window!.layer.add(transition, forKey: kCATransition)
+                present(storyTelling, animated: false, completion: nil)
 
     }
     
