@@ -24,9 +24,16 @@ class ViewController: UIViewController {
                                 UIImage(named: "9"), UIImage(named: "10"),
                                 UIImage(named: "11")]
     
-    var voice = ["stortel1", "stortel2", "stortel3 new", "stortel4", "stortel5", "stortel6", "stortel7", "stortel8", "stortel9", "stortel10", "stortel11"]
+    var voice = ["stortel1", "stortel2", "stortel3",
+                 "stortel4", "stortel5", "stortel6", "stortel7",
+                 "stortel8", "stortel9", "stortel10", "stortel11"]
     
-    var airgif = [UIImage.gif(name: "Hero Lynn"),UIImage.gif(name: "Superman Not Me"),UIImage.gif(name: "Benefit"),UIImage.gif(name: "Secret"),UIImage.gif(name: "contain New"),UIImage.gif(name: "cry New"),UIImage.gif(name: "weak"),UIImage.gif(name: "Sweat"),UIImage.gif(name:"Presence"),UIImage.gif(name: "Child"),UIImage.gif(name: "more water")]
+    var airgif = [UIImage.gif(name: "Hero Lynn"), UIImage.gif(name: "Superman Not Me"),
+                  UIImage.gif(name: "Benefit"), UIImage.gif(name: "Secret"),
+                  UIImage.gif(name: "contain New"), UIImage.gif(name: "cry New"),
+                  UIImage.gif(name: "weak"), UIImage.gif(name: "Sweat"),
+                  UIImage.gif(name: "Presence"), UIImage.gif(name: "Child"),
+                  UIImage.gif(name: "more water")]
                                 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -114,6 +121,12 @@ extension ViewController: UICollectionViewDataSource{
         cell.addSubview(imageView)
         
         
+        let gifImageView = UIImageView(frame: CGRect(x: 263, y: 8, width: 265, height: 265))
+        gifImageView.contentMode = .scaleAspectFit
+        gifImageView.image = airgif[indexPath.row]
+        gifImageView.backgroundColor = .blue
+        cell.addSubview(gifImageView)
+
         
 //        cell.loadData(item: backgroundImageArray[indexPath.row]!)
         

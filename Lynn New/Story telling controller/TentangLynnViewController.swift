@@ -12,13 +12,17 @@ class TentangLynnViewController: UIViewController {
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var heroLynnImageView: UIImageView!
+    @IBOutlet weak var backgroundInfoImage: UIImageView!
     
     let heroLynnGif = UIImage.gif(name: "Hero Lynn")
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        heroLynnImageView.image = heroLynnGif
+//        heroLynnImageView.image = heroLynnGif
+        
+        //flip image vertically
+        backgroundInfoImage.transform = CGAffineTransform(scaleX: -1, y: 1)
     }
     
     @IBAction func homeButtonTapped(_ sender: Any) {

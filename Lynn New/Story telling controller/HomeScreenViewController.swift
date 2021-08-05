@@ -25,12 +25,12 @@ class HomeScreenViewController: UIViewController {
         
         profilImageView.image = profilGif
         
-        simpanButton.layer.cornerRadius = 15
+//        simpanButton.layer.cornerRadius = 15
         
-        namaTextField.layer.cornerRadius = 15.0
-        namaTextField.layer.borderWidth = 2.0
-        namaTextField.layer.borderColor = UIColor(red: 95.0/255.0, green: 28.0/255.0, blue: 53.0/255.0, alpha: 100.0).cgColor
-        namaTextField.layer.masksToBounds = true
+//        namaTextField.layer.cornerRadius = 15.0
+//        namaTextField.layer.borderWidth = 2.0
+//        namaTextField.layer.borderColor = UIColor(red: 95.0/255.0, green: 28.0/255.0, blue: 53.0/255.0, alpha: 100.0).cgColor
+//        namaTextField.layer.masksToBounds = true
         namaTextField.placeholder = "Masukkan namamu"
         
         playSound()

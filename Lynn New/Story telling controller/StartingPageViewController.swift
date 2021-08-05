@@ -17,7 +17,7 @@ class StartingPageViewController: UIViewController {
         super.viewDidLoad()
         
         //corner radius Button Mulai
-        mulaiButton.layer.cornerRadius = 15
+        //mulaiButton.layer.cornerRadius = 15
         
     }
     

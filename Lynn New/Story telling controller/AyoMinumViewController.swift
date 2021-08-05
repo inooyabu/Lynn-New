@@ -30,9 +30,7 @@ class AyoMinumViewController: UIViewController {
         print("Button Lihat Tapped")
         let storyTelling = storyboard?.instantiateViewController(identifier: "Share Nutrition") as! ViewController
         storyTelling.modalPresentationStyle = .fullScreen
-        
-        
-        
+    
         let transition = CATransition()
         transition.duration = 0.5
         transition.type = CATransitionType.push
