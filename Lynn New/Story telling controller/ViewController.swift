@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     var backgroundSound = AVAudioPlayer()
     
         var backgroundImageArray = [UIImage(named: "stortel-1"), UIImage(named: "stortel-2"),
-                                    UIImage(named: "3"), UIImage(named: "stortel-4"),
+                                    UIImage(named: "stortel-3"), UIImage(named: "stortel-4"),
                                     UIImage(named: "stortel-5"), UIImage(named: "stortel-6"),
                                     UIImage(named: "7"), UIImage(named: "stortel-8"),
                                     UIImage(named: "stortel-9"), UIImage(named: "stortel-10"),
