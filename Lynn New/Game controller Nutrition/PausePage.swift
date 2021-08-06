@@ -71,7 +71,7 @@ let close = SKSpriteNode (imageNamed: "Quit")
         print("touched point: \(touchLocation)")
         
         if touchLocation.x >= close.position.x && touchLocation.x < (close.position.x) + 60 && touchLocation.y >= close.position.y {
-            let scene = GameScene(size: CGSize(width: self.size.width, height: self.size.height))
+            let scene = GameScene2(size: CGSize(width: self.size.width, height: self.size.height))
             scene.scaleMode = self.scaleMode
                // Set the scale mode to scale to fit the window
              let sKView = self.view as! SKView

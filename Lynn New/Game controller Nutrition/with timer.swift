@@ -28,6 +28,7 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
     var timer : SKLabelNode = SKLabelNode()
     let nutritionImage = SKSpriteNode (imageNamed: "Lynn move depan 1")
     var nutritionLabel = SKLabelNode (fontNamed: "Chalkboard SE")
+    var count = 5
    
     
 let playerContact : UInt32 = 0x1 << -2
@@ -159,31 +160,31 @@ let playerContact : UInt32 = 0x1 << -2
         requestBrain.size = CGSize(width: 123, height: 53)
         requestBrain.zPosition = 1
         requestBrain.position = CGPoint(x: brain.position.x + 100, y: brain.position.y + 80)
-        
+        requestBrain.isHidden = true
         addChild(requestBrain)
    
         requestKidney.size = CGSize(width: 123, height: 53)
         requestKidney.zPosition = 1
         requestKidney.position = CGPoint(x: kidney.position.x - 40, y: kidney.position.y + 80)
-       
+        requestKidney.isHidden = true
         addChild(requestKidney)
         
         requestHeart.size = CGSize(width: 123, height: 53)
         requestHeart.zPosition = 1
         requestHeart.position = CGPoint(x: heart.position.x + 100, y: heart.position.y + 80)
-       
+        requestHeart.isHidden = true
         addChild(requestHeart)
         
         requestLungs.size = CGSize(width: 123, height: 53)
         requestLungs.zPosition = 1
         requestLungs.position = CGPoint(x: lungs.position.x + 100, y: lungs.position.y + 80)
-        
+        requestLungs.isHidden = true
         addChild(requestLungs)
         
         requestMuscle.size = CGSize(width: 123, height: 53)
         requestMuscle.zPosition = 1
         requestMuscle.position = CGPoint(x: muscle.position.x - 40, y: muscle.position.y + 80)
-       
+        requestMuscle.isHidden = true
         addChild(requestMuscle)
         
         
@@ -199,12 +200,16 @@ let playerContact : UInt32 = 0x1 << -2
     
        
 }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else{return}
         let touchLocation = touch.location(in: self)
         print("touched point: \(touchLocation)")
-        
-       
+        if count <= 0 && second >= 5 {
+            print ("Menang")
+        }
+        requestBrain.isHidden = false
+        count -= 1
         
 if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.x) + 70 && touchLocation.y >= (kidney.position.y) {
     lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((kidney.position.y) - 20) - (lynn.position.y)))
@@ -225,9 +230,11 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         self.lynn.isHidden = true
         self.lynn.position = CGPoint(x: self.size.width/2, y: 30)
         self.pinkForward()
+        self.requestKidney.isHidden = true
     })
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(8), execute: {
         self.lynn.isHidden = false
+        self.requestMuscle.isHidden = false
       
     })
     
@@ -251,11 +258,13 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
         self.lynn.physicsBody?.velocity = (CGVector(dx: ((self.lungs.position.x) + 80) - (self.lynn.position.x), dy:0))
         self.pinkLeft()
+        self.requestLungs.isHidden = true
     })
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6), execute: {
     self.lungsHappy()
         self.lynn.isHidden = true
         self.lynn.position = CGPoint(x: (self.size.width/2), y: 30)
+        self.requestKidney.isHidden = false
     })
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(9), execute: {
         self.lynn.isHidden = false
@@ -275,9 +284,11 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
             self.lynn.isHidden = true
             self.lynn.position = CGPoint(x: (self.size.width/2) + 10, y: 30)
             self.brainHappy()
+            //self.requestBrain.isHidden = true
         })
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
         self.lynn.isHidden = false
+        self.requestLungs.isHidden = false
     })
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
     
@@ -303,6 +314,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         self.lynn.isHidden = true
         self.heartmoved2()
         self.lynn.position = CGPoint(x: (self.size.width/2) + 10, y: 30)
+        self.requestHeart.isHidden = true
         
     })
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6), execute: {
@@ -327,10 +339,12 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         self.muscleHappy()
         self.lynn.isHidden = true
         self.lynn.position = CGPoint(x: (self.size.width/2) + 10, y: 30)
+        self.requestMuscle.isHidden = true
     })
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6),  execute: {
         self.pinkForward()
         self.lynn.isHidden = false
+        self.requestHeart.isHidden = false
    
     })
 }else if touchLocation.x >= pauseButton.position.x && touchLocation.x < (pauseButton.position.x) + 60 && touchLocation.y >= pauseButton.position.y && touchLocation.y < (pauseButton.position.y) + 60{
@@ -528,7 +542,16 @@ lynn.run(animateAction)
 //        }
 //    }
         
+
+       
     
+    startBackgroundMusic()
+    
+    }
+    func startBackgroundMusic(){
+        let backgroundMusic = SKAudioNode(fileNamed: "backgroundSound.mp3")
+        backgroundMusic.autoplayLooped = true
+        addChild(backgroundMusic)
     }
     
     func startCounter () {
