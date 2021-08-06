@@ -184,6 +184,41 @@ let playerContact : UInt32 = 0x1 << -2
         timer.position = CGPoint (x: 40, y: (size.height - 40))
         timer.text = "0.0"
        // addChild(timer)
+        
+        brainPop.size = CGSize(width: 510, height: 340)
+        brainPop.position = CGPoint(x: size.width/2, y: size.height/2)
+        brainPop.anchorPoint = CGPoint (x: 0.5, y: 0.5)
+        brainPop.zPosition = 3
+        brainPop.isHidden = true
+        addChild(brainPop)
+        
+        brainPop.size = CGSize(width: 510, height: 340)
+        brainPop.position = CGPoint(x: size.width/2, y: size.height/2)
+        brainPop.anchorPoint = CGPoint (x: 0.5, y: 0.5)
+        brainPop.zPosition = 3
+        brainPop.isHidden = true
+        addChild(brainPop)
+        
+        brainPop.size = CGSize(width: 510, height: 340)
+        brainPop.position = CGPoint(x: size.width/2, y: size.height/2)
+        brainPop.anchorPoint = CGPoint (x: 0.5, y: 0.5)
+        brainPop.zPosition = 3
+        brainPop.isHidden = true
+        addChild(brainPop)
+        
+        brainPop.size = CGSize(width: 510, height: 340)
+        brainPop.position = CGPoint(x: size.width/2, y: size.height/2)
+        brainPop.anchorPoint = CGPoint (x: 0.5, y: 0.5)
+        brainPop.zPosition = 3
+        brainPop.isHidden = true
+        addChild(brainPop)
+        
+        brainPop.size = CGSize(width: 510, height: 340)
+        brainPop.position = CGPoint(x: size.width/2, y: size.height/2)
+        brainPop.anchorPoint = CGPoint (x: 0.5, y: 0.5)
+        brainPop.zPosition = 3
+        brainPop.isHidden = true
+        addChild(brainPop)
     
        // startCounter()
         
@@ -217,7 +252,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     })
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(8), execute: {
         self.lynn.isHidden = false
-        self.kidneyUp()
+        
     })
     
            
@@ -249,7 +284,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(9), execute: {
         self.lynn.isHidden = false
         self.pinkForward()
-        self.lungsUp()
+       
     })
 }else if  touchLocation.x >= (brain.position.x) && touchLocation.x < (brain.position.x) + 95 && touchLocation.y >= (brain.position.y) && touchLocation.y < (brain.position.y) + 95 {
     
@@ -269,7 +304,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         self.lynn.isHidden = false
     })
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
-        self.brainUp()
+       
     })
     
 } else if  touchLocation.x >= (heart.position.x) && touchLocation.x < (heart.position.x) + 95 && touchLocation.y >= (heart.position.y) && touchLocation.y < (heart.position.y) + 95{
@@ -298,7 +333,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     
         self.lynn.isHidden = false
         self.pinkForward()
-        self.heartUp()
+      
     })
 }else if   touchLocation.x >= (muscle.position.x) && touchLocation.x < (muscle.position.x) + 100 && touchLocation.y >= (muscle.position.y) && touchLocation.y < (muscle.position.y) + 100 {
     requestMuscle.isHidden = true
@@ -320,7 +355,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6),  execute: {
         self.pinkForward()
         self.lynn.isHidden = false
-        self.muscleUp()
+        
     })
 }else if touchLocation.x >= pauseButton.position.x && touchLocation.x < (pauseButton.position.x) + 60 && touchLocation.y >= pauseButton.position.y && touchLocation.y < (pauseButton.position.y) + 60{
    brainHappy()
@@ -351,85 +386,85 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         sKView.showsNodeCount = true
 }
     }
-    func brainUp() {
-
-    let scene = brainPop(size: CGSize(width: self.size.width, height: self.size.height))
-    scene.scaleMode = self.scaleMode
-       // Set the scale mode to scale to fit the window
-     let sKView = self.view as! SKView
-        // Load the SKScene from 'GameScene.sks'
-            // Present the scene
-
-        sKView.presentScene(scene)
-        sKView.ignoresSiblingOrder = true
-        sKView.showsFPS = true
-        sKView.showsNodeCount = true
-
- }
-    func kidneyUp() {
-
-    let scene = kidneyPop(size: CGSize(width: self.size.width, height: self.size.height))
-    scene.scaleMode = self.scaleMode
-       // Set the scale mode to scale to fit the window
-     let sKView = self.view as! SKView
-        // Load the SKScene from 'GameScene.sks'
-            // Present the scene
-
-        sKView.presentScene(scene)
-        sKView.ignoresSiblingOrder = true
-        sKView.showsFPS = true
-        sKView.showsNodeCount = true
-
- }
-    func heartUp() {
-
-    let scene = heartPop(size: CGSize(width: self.size.width, height: self.size.height))
-    scene.scaleMode = self.scaleMode
-       // Set the scale mode to scale to fit the window
-     let sKView = self.view as! SKView
-        // Load the SKScene from 'GameScene.sks'
-            // Present the scene
-
-        sKView.presentScene(scene)
-        sKView.ignoresSiblingOrder = true
-        sKView.showsFPS = true
-        sKView.showsNodeCount = true
-            self.removeAllActions()
-       
-
- }
-    func lungsUp() {
-
-    let scene = lungsPop(size: CGSize(width: self.size.width, height: self.size.height))
-    scene.scaleMode = self.scaleMode
-       // Set the scale mode to scale to fit the window
-     let sKView = self.view as! SKView
-        // Load the SKScene from 'GameScene.sks'
-            // Present the scene
-
-        sKView.presentScene(scene)
-        sKView.ignoresSiblingOrder = true
-        sKView.showsFPS = true
-        sKView.showsNodeCount = true
-
- }
-    func muscleUp() {
-
-    let scene = musclePop(size: CGSize(width: self.size.width, height: self.size.height))
-    scene.scaleMode = self.scaleMode
-       // Set the scale mode to scale to fit the window
-        let sKView = self.view as! SKView
-        // Load the SKScene from 'GameScene.sks'
-            // Present the scene
-
-        sKView.presentScene(scene)
-        sKView.ignoresSiblingOrder = true
-        sKView.showsFPS = true
-        sKView.showsNodeCount = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
-            self.removeFromParent()
-        })
- }
+//    func brainUp() {
+//
+//    let scene = brainPop(size: CGSize(width: self.size.width, height: self.size.height))
+//    scene.scaleMode = self.scaleMode
+//       // Set the scale mode to scale to fit the window
+//     let sKView = self.view as! SKView
+//        // Load the SKScene from 'GameScene.sks'
+//            // Present the scene
+//
+//        sKView.presentScene(scene)
+//        sKView.ignoresSiblingOrder = true
+//        sKView.showsFPS = true
+//        sKView.showsNodeCount = true
+//
+// }
+//    func kidneyUp() {
+//
+//    let scene = kidneyPop(size: CGSize(width: self.size.width, height: self.size.height))
+//    scene.scaleMode = self.scaleMode
+//       // Set the scale mode to scale to fit the window
+//     let sKView = self.view as! SKView
+//        // Load the SKScene from 'GameScene.sks'
+//            // Present the scene
+//
+//        sKView.presentScene(scene)
+//        sKView.ignoresSiblingOrder = true
+//        sKView.showsFPS = true
+//        sKView.showsNodeCount = true
+//
+// }
+//    func heartUp() {
+//
+//    let scene = heartPop(size: CGSize(width: self.size.width, height: self.size.height))
+//    scene.scaleMode = self.scaleMode
+//       // Set the scale mode to scale to fit the window
+//     let sKView = self.view as! SKView
+//        // Load the SKScene from 'GameScene.sks'
+//            // Present the scene
+//
+//        sKView.presentScene(scene)
+//        sKView.ignoresSiblingOrder = true
+//        sKView.showsFPS = true
+//        sKView.showsNodeCount = true
+//            self.removeAllActions()
+//
+//
+// }
+//    func lungsUp() {
+//
+//    let scene = lungsPop(size: CGSize(width: self.size.width, height: self.size.height))
+//    scene.scaleMode = self.scaleMode
+//       // Set the scale mode to scale to fit the window
+//     let sKView = self.view as! SKView
+//        // Load the SKScene from 'GameScene.sks'
+//            // Present the scene
+//
+//        sKView.presentScene(scene)
+//        sKView.ignoresSiblingOrder = true
+//        sKView.showsFPS = true
+//        sKView.showsNodeCount = true
+//
+// }
+//    func muscleUp() {
+//
+//    let scene = musclePop(size: CGSize(width: self.size.width, height: self.size.height))
+//    scene.scaleMode = self.scaleMode
+//       // Set the scale mode to scale to fit the window
+//        let sKView = self.view as! SKView
+//        // Load the SKScene from 'GameScene.sks'
+//            // Present the scene
+//
+//        sKView.presentScene(scene)
+//        sKView.ignoresSiblingOrder = true
+//        sKView.showsFPS = true
+//        sKView.showsNodeCount = true
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+//            self.removeFromParent()
+//        })
+// }
     
 func pinkLeft(){
 let textureAtlas = SKTextureAtlas(named: "Lynn")
