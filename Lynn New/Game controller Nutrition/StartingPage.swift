@@ -53,7 +53,7 @@ class MainMenuScene: SKScene {
         button.text = "Sentuh layar untuk memulai"
         addChild(button)
         
-        
+        startBackgroundMusic()
         
     }
     
@@ -88,5 +88,10 @@ class MainMenuScene: SKScene {
         
         let transition = SKTransition.fade(withDuration: 3.0)
         view?.presentScene(gameScene, transition: transition)
+    }
+    func startBackgroundMusic(){
+        let backgroundMusic = SKAudioNode(fileNamed: "game nutrisi.mp3")
+        backgroundMusic.autoplayLooped = true
+        addChild(backgroundMusic)
     }
 }

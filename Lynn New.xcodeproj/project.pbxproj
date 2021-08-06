@@ -55,6 +55,7 @@
 		6DCB4A3E26AD5BFE0009EE7F /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCB4A3D26AD5BFE0009EE7F /* HomeScreenViewController.swift */; };
 		6DCB4A6226AD63670009EE7F /* Animasi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCB4A6126AD63670009EE7F /* Animasi.swift */; };
 		6DCE2BDA26BD153F001D419B /* backgroundSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6DCE2BD926BD153F001D419B /* backgroundSound.mp3 */; };
+		E244625026BE012C00425BE6 /* game nutrisi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E244624F26BE012C00425BE6 /* game nutrisi.mp3 */; };
 		E29143E726B7F5A1005EE609 /* ShareNutritionScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E29143E626B7F5A1005EE609 /* ShareNutritionScene.sks */; };
 		E29143EB26B7F65E005EE609 /* ShareNutritionAction.sks in Resources */ = {isa = PBXBuildFile; fileRef = E29143EA26B7F65E005EE609 /* ShareNutritionAction.sks */; };
 		E29D605F26BC97BD00A7B070 /* with timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29D605E26BC97BC00A7B070 /* with timer.swift */; };
@@ -121,6 +122,7 @@
 		6DCB4A3D26AD5BFE0009EE7F /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		6DCB4A6126AD63670009EE7F /* Animasi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animasi.swift; sourceTree = "<group>"; };
 		6DCE2BD926BD153F001D419B /* backgroundSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundSound.mp3; sourceTree = "<group>"; };
+		E244624F26BE012C00425BE6 /* game nutrisi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "game nutrisi.mp3"; sourceTree = "<group>"; };
 		E29143E626B7F5A1005EE609 /* ShareNutritionScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ShareNutritionScene.sks; sourceTree = "<group>"; };
 		E29143EA26B7F65E005EE609 /* ShareNutritionAction.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ShareNutritionAction.sks; sourceTree = "<group>"; };
 		E29D605E26BC97BC00A7B070 /* with timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "with timer.swift"; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				6D9FB39026AC67CC00111D66 /* stortel9.mp3 */,
 				6D9FB38D26AC67CC00111D66 /* stortel10.mp3 */,
 				6D9FB39326AC67CC00111D66 /* stortel11.mp3 */,
+				E244624F26BE012C00425BE6 /* game nutrisi.mp3 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				6D9FB39A26AC67CD00111D66 /* stortel10.mp3 in Resources */,
 				6D635D0B26AD8C2E00A5FC9E /* Secret.gif in Resources */,
 				6D635D1326AD8C2E00A5FC9E /* more water.gif in Resources */,
+				E244625026BE012C00425BE6 /* game nutrisi.mp3 in Resources */,
 				E29143E726B7F5A1005EE609 /* ShareNutritionScene.sks in Resources */,
 				6D635D0926AD8C2E00A5FC9E /* Hero Lynn.gif in Resources */,
 				6D635D0F26AD8C2E00A5FC9E /* Profil.gif in Resources */,
