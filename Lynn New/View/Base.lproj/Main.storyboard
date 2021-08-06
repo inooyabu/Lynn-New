@@ -687,7 +687,7 @@ Siapa namamu?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERb-zw-ipa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1349" y="1157"/>
+            <point key="canvasLocation" x="1348.5781990521327" y="1156.9230769230769"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

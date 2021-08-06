@@ -8,9 +8,13 @@ class MainMenuScene: SKScene {
     let bubble = SKSpriteNode(imageNamed: "Bubble")
     let lynn1 = SKSpriteNode(imageNamed: "Lynn move depan 1")
     var label = SKLabelNode (fontNamed: "Chalkboard SE")
-    let button = SKSpriteNode (imageNamed: "Group")
+    let button = SKLabelNode (fontNamed: "Chalkboard SE")
+   
     
     override func didMove(to view: SKView) {
+        
+       
+        
         background.size = CGSize(width: frame.maxX, height: frame.maxY)
         background.position = CGPoint(x: size.width/2,
                                           y: size.height/2)
@@ -43,10 +47,13 @@ class MainMenuScene: SKScene {
         
         addChild(label)
         
-        button.position = CGPoint (x: (size.width/2) + 20, y: size.height - 320)
-        button.size = CGSize(width: 200, height: 100)
-        button.anchorPoint = CGPoint (x: 0.5, y: 0.5)
+        button.position = CGPoint (x: (size.width/2) + 20, y: size.height - 350)
+        button.fontSize = 15
+        button.fontColor = .white
+        button.text = "Sentuh layar untuk memulai"
         addChild(button)
+        
+        
         
     }
     
@@ -58,7 +65,14 @@ class MainMenuScene: SKScene {
 //                  if touchedNode.name == "HelloButton" {
 //                       // Call the function here.
                     sceneTapped()
-               //   }
+               //   } override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else{return}
+        let touchLocation = touch.location(in: self)
+        print("touched point: \(touchLocation)")
+        if touchLocation.x <= 55 && touchLocation.y <= 55 {
+            self.removeFromParent()
+            StartingPageViewController()
+        }
         
     }
     #else

@@ -26,12 +26,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var minute = 0
     var counterTimer = Timer()
     var timer : SKLabelNode = SKLabelNode()
-    let next1 = SKSpriteNode (imageNamed: "Sefron Kanan")
     let brainPop = SKSpriteNode (imageNamed: "brainPop")
     let kidneyPop = SKSpriteNode (imageNamed: "kidneyPop")
     let lungsPop = SKSpriteNode (imageNamed: "lungsPop")
     let heartPop = SKSpriteNode (imageNamed: "heartPop")
     let musclePop = SKSpriteNode (imageNamed: "musclePop")
+    let button = SKSpriteNode (imageNamed: "startgame")
+    let level2 = SKSpriteNode (imageNamed: "level2")
     
 let playerContact : UInt32 = 0x1 << -2
 
@@ -43,11 +44,21 @@ let playerContact : UInt32 = 0x1 << -2
     override init(size: CGSize) {
         super.init(size: size)
         
+        level2.size = CGSize(width: 510, height: 340)
+        level2.position = CGPoint (x: size.width/2, y: size.height/2)
+        level2.anchorPoint = CGPoint (x: 0.5, y: 0.5)
+        level2.zPosition = 4
+        level2.isHidden = true
+        addChild(level2)
         
-        next1.size = CGSize (width: 30, height: 30)
-        next1.position = CGPoint (x: size.width - 30, y: size.height - 360)
-        addChild(next1)
         
+        button.size = CGSize (width: size.width, height: size.height)
+        button.position = CGPoint (x: size.width/2, y: size.height/2)
+        button.anchorPoint = CGPoint (x: 0.5, y: 0.5)
+        button.zPosition = 3
+        addChild(button)
+        
+    
         //self.view?.bounds.size = background.size
         physicsWorld.contactDelegate = self
         physicsWorld.gravity = .zero
@@ -156,26 +167,31 @@ let playerContact : UInt32 = 0x1 << -2
         requestBrain.size = CGSize(width: 123, height: 53)
         requestBrain.zPosition = 3
         requestBrain.position = CGPoint(x: brain.position.x + 100, y: brain.position.y + 80)
+        requestBrain.isHidden = true
         addChild(requestBrain)
    
         requestKidney.size = CGSize(width: 123, height: 53)
         requestKidney.zPosition = 3
         requestKidney.position = CGPoint(x: kidney.position.x - 40, y: kidney.position.y + 80)
+        requestKidney.isHidden = true
         addChild(requestKidney)
         
         requestHeart.size = CGSize(width: 123, height: 53)
         requestHeart.zPosition = 3
         requestHeart.position = CGPoint(x: heart.position.x + 100, y: heart.position.y + 80)
+        requestHeart.isHidden = true
         addChild(requestHeart)
         
         requestLungs.size = CGSize(width: 123, height: 53)
         requestLungs.zPosition = 3
         requestLungs.position = CGPoint(x: lungs.position.x + 100, y: lungs.position.y + 80)
+        requestLungs.isHidden = true
         addChild(requestLungs)
         
         requestMuscle.size = CGSize(width: 123, height: 53)
         requestMuscle.zPosition = 3
         requestMuscle.position = CGPoint(x: muscle.position.x - 40, y: muscle.position.y + 80)
+        requestMuscle.isHidden = true
         addChild(requestMuscle)
         
         
@@ -240,183 +256,184 @@ let playerContact : UInt32 = 0x1 << -2
         
       
    
-if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.x) + 70 && touchLocation.y >= (kidney.position.y) {
-    lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((kidney.position.y) - 20) - (lynn.position.y)))
-    pinkForward()
-    call1 = "Kidney"
-    
-    
-    DispatchQueue.main.async {
-            AudioServicesPlayAlertSound(SystemSoundID(1151) )
-        }
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
-    self.lynn.physicsBody?.velocity = CGVector(dx: ((self.kidney.position.x)-(self.lynn.position.x)) + 20 , dy: 0)
-    self.pinkRight()
-    })
-    
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(7), execute: {
-    self.player2moved2()
-        self.lynn.isHidden = true
-        self.lynn.position = CGPoint(x: self.size.width/2, y: 30)
-        self.pinkForward()
-        self.requestKidney.isHidden = true
-    })
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(8), execute: {
-        self.lynn.isHidden = false
-        self.kidneyPop.isHidden = false
-        
-    })
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(18), execute: {
-        self.kidneyPop.isHidden = true
-    })
-    
-           
-}else if touchLocation.x > (lungs.position.x) && touchLocation.x <= (lungs.position.x) + 75 &&  touchLocation.y >= (lungs.position.y) && touchLocation.y < (lungs.position.y) + 75 {
-    requestLungs.isHidden = true
-    lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((heart.position.y) - (lynn.position.y)) + 77))
-     pinkForward()
-        DispatchQueue.main.async {
-            AudioServicesPlayAlertSound(SystemSoundID(1311) )
-        }
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-        self.lynn.physicsBody?.velocity = (CGVector(dx: ((self.lungs.position.x) - (self.lynn.position.x)) + 200, dy:0))
-        self.pinkLeft()
-    })
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
-        self.lynn.physicsBody?.velocity = (CGVector(dx: 0, dy:((self.lungs.position.y) - (self.lynn.position.y)) + 67 ))
-        self.pinkForward()
-    
-    })
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
-        self.lynn.physicsBody?.velocity = (CGVector(dx: ((self.lungs.position.x) + 80) - (self.lynn.position.x), dy:0))
-        self.pinkLeft()
-    })
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6), execute: {
-    self.lungsHappy()
-        self.lynn.isHidden = true
-        self.lynn.position = CGPoint(x: (self.size.width/2), y: 30)
-    })
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(9), execute: {
-        self.lynn.isHidden = false
-        self.pinkForward()
-        self.lungsPop.isHidden = false
-        
-    })
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(19), execute: {
-        self.lungsPop.isHidden = true
-    })
-    
-}else if  touchLocation.x >= (brain.position.x) && touchLocation.x < (brain.position.x) + 95 && touchLocation.y >= (brain.position.y) && touchLocation.y < (brain.position.y) + 95 {
-    
-    requestBrain.isHidden = true
-    lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: (brain.position.y) - (lynn.position.y)))
-           pinkForward()
-            DispatchQueue.main.async {
-                AudioServicesPlayAlertSound(SystemSoundID(1322) )
-
-            }
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
-            self.lynn.isHidden = true
-            self.lynn.position = CGPoint(x: (self.size.width/2) + 10, y: 30)
-            self.brainHappy()
-        })
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
-        self.lynn.isHidden = false
-        
-        self.brainPop.isHidden = false
-        
-    })
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(14), execute: {
-        self.brainPop.isHidden = true
-    })
-    
-} else if  touchLocation.x >= (heart.position.x) && touchLocation.x < (heart.position.x) + 95 && touchLocation.y >= (heart.position.y) && touchLocation.y < (heart.position.y) + 95{
-    requestHeart.isHidden = true
-    
-        lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((heart.position.y)-(lynn.position.y)) + 60))
-           pinkForward()
-        DispatchQueue.main.async {
-            AudioServicesPlayAlertSound(SystemSoundID(1309) )
-
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-        
-            self.lynn.physicsBody?.velocity = (CGVector(dx:((self.heart.position.x) - (self.lynn.position.x)) + 58, dy:0 ))
-            self.pinkLeft()
+        if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.x) + 70 && touchLocation.y >= (kidney.position.y) {
+            lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((kidney.position.y) - 20) - (lynn.position.y)))
+            pinkForward()
             
-        })
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
-    
-        self.lynn.isHidden = true
-        self.heartmoved2()
-        self.lynn.position = CGPoint(x: (self.size.width/2) + 10, y: 30)
         
-    })
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6), execute: {
-    
-        self.lynn.isHidden = false
-        self.pinkForward()
-        self.heartPop.isHidden = false
-        
-    })
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(16), execute: {
-        self.heartPop.isHidden = true
-    })
-}else if   touchLocation.x >= (muscle.position.x) && touchLocation.x < (muscle.position.x) + 100 && touchLocation.y >= (muscle.position.y) && touchLocation.y < (muscle.position.y) + 100 {
-    requestMuscle.isHidden = true
-    lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((muscle.position.y) - (muscle.position.y)) + 60 ))
-
-//            DispatchQueue.main.async {
-//                AudioServicesPlayAlertSound(SystemSoundID(1324) )
-//                self.pinkForward()
-//            }
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-            self.lynn.physicsBody?.velocity = (CGVector(dx: (self.muscle.position.x) - (self.lynn.position.x), dy: 0 ))
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
+            self.lynn.physicsBody?.velocity = CGVector(dx: ((self.kidney.position.x)-(self.lynn.position.x)) + 20 , dy: 0)
             self.pinkRight()
-        })
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
-        self.muscleHappy()
-        self.lynn.isHidden = true
-        self.lynn.position = CGPoint(x: (self.size.width/2) + 10, y: 30)
-    })
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6),  execute: {
-        self.pinkForward()
-        self.lynn.isHidden = false
-        self.musclePop.isHidden = false
-        
-    })
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(16), execute: {
-        self.musclePop.isHidden = true
-    })
-}else if touchLocation.x >= pauseButton.position.x && touchLocation.x < (pauseButton.position.x) + 60 && touchLocation.y >= pauseButton.position.y && touchLocation.y < (pauseButton.position.y) + 60{
-   brainHappy()
-    let scene = PausePage(size: CGSize(width: self.size.width, height: self.size.height))
-    scene.scaleMode = self.scaleMode
-       // Set the scale mode to scale to fit the window
-     let sKView = self.view as! SKView
-        // Load the SKScene from 'GameScene.sks'
-            // Present the scene
+            })
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(7), execute: {
+            self.player2moved2()
+                self.lynn.isHidden = true
+                self.lynn.position = CGPoint(x: self.size.width/2, y: 30)
+                self.pinkForward()
+                self.requestKidney.isHidden = true
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(8), execute: {
+                self.lynn.isHidden = false
+               
+                self.kidneyPop.isHidden = false
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(18), execute: {
+                self.kidneyPop.isHidden = true
+                self.requestMuscle.isHidden = false
+            })
+                   
+        }else if touchLocation.x > (lungs.position.x) && touchLocation.x <= (lungs.position.x) + 75 &&  touchLocation.y >= (lungs.position.y) && touchLocation.y < (lungs.position.y) + 75 {
+            
+            lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((heart.position.y) - (lynn.position.y)) + 77))
+             pinkForward()
+               
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                self.lynn.physicsBody?.velocity = (CGVector(dx: ((self.lungs.position.x) - (self.lynn.position.x)) + 200, dy:0))
+                self.pinkLeft()
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
+                self.lynn.physicsBody?.velocity = (CGVector(dx: 0, dy:((self.lungs.position.y) - (self.lynn.position.y)) + 67 ))
+                self.pinkForward()
+            
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
+                self.lynn.physicsBody?.velocity = (CGVector(dx: ((self.lungs.position.x) + 80) - (self.lynn.position.x), dy:0))
+                self.pinkLeft()
+                self.requestLungs.isHidden = true
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6), execute: {
+            self.lungsHappy()
+                self.lynn.isHidden = true
+                self.lynn.position = CGPoint(x: (self.size.width/2), y: 30)
+                
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(9), execute: {
+                self.lynn.isHidden = false
+                self.pinkForward()
+                
+                self.lungsPop.isHidden = false
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(19), execute: {
+                self.lungsPop.isHidden = true
+                self.level2.isHidden = false
+            })
+        }else if  touchLocation.x >= (brain.position.x) && touchLocation.x < (brain.position.x) + 95 && touchLocation.y >= (brain.position.y) && touchLocation.y < (brain.position.y) + 95 {
+            
+           
+            lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: (brain.position.y) - (lynn.position.y)))
+                   pinkForward()
+                    DispatchQueue.main.async {
+                        AudioServicesPlayAlertSound(SystemSoundID(1322) )
 
-        sKView.presentScene(scene)
-        sKView.ignoresSiblingOrder = true
-        sKView.showsFPS = true
-        sKView.showsNodeCount = true
+                    }
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
+                    self.lynn.isHidden = true
+                    self.lynn.position = CGPoint(x: (self.size.width/2) + 10, y: 30)
+                    self.brainHappy()
+                   self.requestBrain.isHidden = true
+                })
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
+                self.lynn.isHidden = false
+                self.brainPop.isHidden = false
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(14), execute: {
+                self.brainPop.isHidden = true
+                self.requestHeart.isHidden = false
+            })
+            
+        } else if  touchLocation.x >= (heart.position.x) && touchLocation.x < (heart.position.x) + 95 && touchLocation.y >= (heart.position.y) && touchLocation.y < (heart.position.y) + 95{
+            
+            
+                lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((heart.position.y)-(lynn.position.y)) + 60))
+                   pinkForward()
+              
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                
+                    self.lynn.physicsBody?.velocity = (CGVector(dx:((self.heart.position.x) - (self.lynn.position.x)) + 58, dy:0 ))
+                    self.pinkLeft()
+                    
+                })
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
+            
+                self.lynn.isHidden = true
+                self.heartmoved2()
+                self.lynn.position = CGPoint(x: (self.size.width/2) + 10, y: 30)
+                self.requestHeart.isHidden = true
+                
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6), execute: {
+            
+                self.lynn.isHidden = false
+                self.pinkForward()
+                
+               
+                self.heartPop.isHidden = false
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(16), execute: {
+                self.heartPop.isHidden = true
+                self.requestKidney.isHidden = false
+            })
+        }else if   touchLocation.x >= (muscle.position.x) && touchLocation.x < (muscle.position.x) + 100 && touchLocation.y >= (muscle.position.y) && touchLocation.y < (muscle.position.y) + 100 {
+            
+            lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((muscle.position.y) - (muscle.position.y)) + 60 ))
 
-    
-}else if touchLocation.x >= 800 && touchLocation.y <= 40{
-    let scene = GameScene2(size: CGSize(width: self.size.width, height: self.size.height))
-    scene.scaleMode = self.scaleMode
-       // Set the scale mode to scale to fit the window
-     let sKView = self.view as! SKView
-        // Load the SKScene from 'GameScene.sks'
-            // Present the scene
+        //            DispatchQueue.main.async {
+        //                AudioServicesPlayAlertSound(SystemSoundID(1324) )
+        //                self.pinkForward()
+        //            }
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                    self.lynn.physicsBody?.velocity = (CGVector(dx: (self.muscle.position.x) - (self.lynn.position.x), dy: 0 ))
+                    self.pinkRight()
+                })
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
+                self.muscleHappy()
+                self.lynn.isHidden = true
+                self.lynn.position = CGPoint(x: (self.size.width/2) + 10, y: 30)
+                self.requestMuscle.isHidden = true
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6),  execute: {
+                self.pinkForward()
+                self.lynn.isHidden = false
+              
+                self.musclePop.isHidden = false
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(16), execute: {
+                self.musclePop.isHidden = true
+                self.requestLungs.isHidden = false
+            })
+        }else if touchLocation.x >= pauseButton.position.x && touchLocation.x < (pauseButton.position.x) + 60 && touchLocation.y >= pauseButton.position.y && touchLocation.y < (pauseButton.position.y) + 60{
+           brainHappy()
+            let scene = PausePage(size: CGSize(width: self.size.width, height: self.size.height))
+            scene.scaleMode = self.scaleMode
+               // Set the scale mode to scale to fit the window
+             let sKView = self.view as! SKView
+                // Load the SKScene from 'GameScene.sks'
+                    // Present the scene
 
-        sKView.presentScene(scene)
-        sKView.ignoresSiblingOrder = true
-        sKView.showsFPS = true
-        sKView.showsNodeCount = true
+                sKView.presentScene(scene)
+                sKView.ignoresSiblingOrder = true
+                sKView.showsFPS = true
+                sKView.showsNodeCount = true
 
-}
+            
+        } else if touchLocation.x >= (button.position.x) - 100 && touchLocation.x < (button.position.x) + 100 && touchLocation.y >= (button.position.y) - 50 && touchLocation.y < (button.position.y) + 50 {
+            requestBrain.isHidden = false
+            button.isHidden = true
+        } else if touchLocation.x >= (level2.position.x) - 260 && touchLocation.x < (level2.position.x) + 260 && touchLocation.y <= (level2.position.y) - 100 {
+            let scene = GameScene2(size: CGSize(width: self.size.width, height: self.size.height))
+            scene.scaleMode = self.scaleMode
+               // Set the scale mode to scale to fit the window
+             let sKView = self.view as! SKView
+                // Load the SKScene from 'GameScene.sks'
+                    // Present the scene
+
+                sKView.presentScene(scene)
+                sKView.ignoresSiblingOrder = true
+                sKView.showsFPS = true
+                sKView.showsNodeCount = true
+
+        }
     }
 //    func brainUp() {
 //

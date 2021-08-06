@@ -29,7 +29,11 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
     let nutritionImage = SKSpriteNode (imageNamed: "Lynn move depan 1")
     var nutritionLabel = SKLabelNode (fontNamed: "Chalkboard SE")
     var count = 5
-    let button = SKSpriteNode (imageNamed: "Group")
+    let button = SKSpriteNode (imageNamed: "startgame")
+    let oneStar = SKSpriteNode (imageNamed: "bintang 1")
+    let twostars = SKSpriteNode (imageNamed: "bintang 2")
+    let threestars = SKSpriteNode (imageNamed: "bintang 3")
+    let lose = SKSpriteNode (imageNamed: "kalah")
    
     
 let playerContact : UInt32 = 0x1 << -2
@@ -42,7 +46,7 @@ let playerContact : UInt32 = 0x1 << -2
     override init(size: CGSize) {
         super.init(size: size)
         
-        button.size = CGSize (width: 200, height: 100)
+        button.size = CGSize (width: size.width, height: size.height)
         button.position = CGPoint (x: size.width/2, y: size.height/2)
         button.anchorPoint = CGPoint (x: 0.5, y: 0.5)
         button.zPosition = 3
@@ -193,6 +197,36 @@ let playerContact : UInt32 = 0x1 << -2
         requestMuscle.isHidden = true
         addChild(requestMuscle)
         
+        oneStar.size = CGSize(width: 510, height: 340)
+        oneStar.position = CGPoint(x: size.width/2, y: size.height/2)
+        oneStar.anchorPoint = CGPoint (x: 0.5, y: 0.5)
+        oneStar.zPosition = 4
+        oneStar.isHidden = true
+        addChild(oneStar)
+    
+        twostars.size = CGSize(width: 510, height: 340)
+        twostars.position = CGPoint(x: size.width/2, y: size.height/2)
+        twostars.anchorPoint = CGPoint (x: 0.5, y: 0.5)
+        twostars.zPosition = 4
+        twostars.isHidden = true
+        addChild(twostars)
+    
+        threestars.size = CGSize(width: 510, height: 340)
+        threestars.position = CGPoint(x: size.width/2, y: size.height/2)
+        threestars.anchorPoint = CGPoint (x: 0.5, y: 0.5)
+        threestars.zPosition = 4
+        threestars.isHidden = true
+        addChild(threestars)
+    
+        lose.size = CGSize(width: 510, height: 340)
+        lose.position = CGPoint(x: size.width/2, y: size.height/2)
+        lose.anchorPoint = CGPoint (x: 0.5, y: 0.5)
+        lose.zPosition = 4
+        lose.isHidden = true
+        addChild(lose)
+    
+        
+        
         
         timer.fontName = "Chalkboard SE"
         timer.fontSize = 14
@@ -218,12 +252,8 @@ let playerContact : UInt32 = 0x1 << -2
 if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.x) + 70 && touchLocation.y >= (kidney.position.y) {
     lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((kidney.position.y) - 20) - (lynn.position.y)))
     pinkForward()
-    call1 = "Kidney"
     
     
-    DispatchQueue.main.async {
-            AudioServicesPlayAlertSound(SystemSoundID(1151) )
-        }
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
     self.lynn.physicsBody?.velocity = CGVector(dx: ((self.kidney.position.x)-(self.lynn.position.x)) + 20 , dy: 0)
     self.pinkRight()
@@ -247,9 +277,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     
     lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((heart.position.y) - (lynn.position.y)) + 77))
      pinkForward()
-        DispatchQueue.main.async {
-            AudioServicesPlayAlertSound(SystemSoundID(1311) )
-        }
+        
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
         self.lynn.physicsBody?.velocity = (CGVector(dx: ((self.lungs.position.x) - (self.lynn.position.x)) + 200, dy:0))
         self.pinkLeft()
@@ -268,22 +296,31 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     self.lungsHappy()
         self.lynn.isHidden = true
         self.lynn.position = CGPoint(x: (self.size.width/2), y: 30)
-        self.requestKidney.isHidden = false
+        
     })
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(9), execute: {
         self.lynn.isHidden = false
         self.pinkForward()
-     
+        if self.count <= 0 && self.second >= 7 {
+            print ("Bintang 3")
+            self.threestars.isHidden = false
+           
+        } else if self.count <= 0 && self.second >= 3 {
+            print("bintang 2")
+            self.twostars.isHidden = false
+        }else if self.count <= 0 && self.second < 3 {
+            print("bintang 1")
+            self.oneStar.isHidden = false
+        }else if self.count > 0 && self.second <= 0 {
+            print("kalah")
+            self.lose.isHidden = false
+        }
     })
 }else if  touchLocation.x >= (brain.position.x) && touchLocation.x < (brain.position.x) + 95 && touchLocation.y >= (brain.position.y) && touchLocation.y < (brain.position.y) + 95 {
     
    
     lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: (brain.position.y) - (lynn.position.y)))
            pinkForward()
-            DispatchQueue.main.async {
-                AudioServicesPlayAlertSound(SystemSoundID(1322) )
-
-            }
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
             self.lynn.isHidden = true
             self.lynn.position = CGPoint(x: (self.size.width/2) + 10, y: 30)
@@ -292,7 +329,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         })
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
         self.lynn.isHidden = false
-        self.requestLungs.isHidden = false
+        self.requestHeart.isHidden = false
     })
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
     
@@ -303,10 +340,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     
         lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((heart.position.y)-(lynn.position.y)) + 60))
            pinkForward()
-        DispatchQueue.main.async {
-            AudioServicesPlayAlertSound(SystemSoundID(1309) )
-
-        }
+      
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
         
             self.lynn.physicsBody?.velocity = (CGVector(dx:((self.heart.position.x) - (self.lynn.position.x)) + 58, dy:0 ))
@@ -325,9 +359,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     
         self.lynn.isHidden = false
         self.pinkForward()
-        if self.count <= 0 && self.second >= 5 {
-            print ("Menang")
-        }
+        self.requestKidney.isHidden = false
        
     })
 }else if   touchLocation.x >= (muscle.position.x) && touchLocation.x < (muscle.position.x) + 100 && touchLocation.y >= (muscle.position.y) && touchLocation.y < (muscle.position.y) + 100 {
@@ -351,7 +383,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6),  execute: {
         self.pinkForward()
         self.lynn.isHidden = false
-        self.requestHeart.isHidden = false
+        self.requestLungs.isHidden = false
    
     })
 }else if touchLocation.x >= pauseButton.position.x && touchLocation.x < (pauseButton.position.x) + 60 && touchLocation.y >= pauseButton.position.y && touchLocation.y < (pauseButton.position.y) + 60{
@@ -372,6 +404,32 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
 } else if touchLocation.x >= (button.position.x) - 100 && touchLocation.x < (button.position.x) + 100 && touchLocation.y >= (button.position.y) - 50 && touchLocation.y < (button.position.y) + 50 {
     requestBrain.isHidden = false
     button.isHidden = true
+}else
+if touchLocation.x >= (self.threestars.position.x) - 260 && touchLocation.x <  (self.threestars.position.x) - 200 && touchLocation.y >= (self.threestars.position.y) + 100 {
+    let scene = MainMenuScene(size: CGSize(width: self.size.width, height: self.size.height))
+    scene.scaleMode = self.scaleMode
+       // Set the scale mode to scale to fit the window
+     let sKView = self.view as! SKView
+        // Load the SKScene from 'GameScene.sks'
+            // Present the scene
+
+        sKView.presentScene(scene)
+        sKView.ignoresSiblingOrder = true
+        sKView.showsFPS = true
+        sKView.showsNodeCount = true
+
+} else if touchLocation.x >= (self.threestars.position.x) + 220  && touchLocation.x <  (self.threestars.position.x) + 260 && touchLocation.y <= (self.threestars.position.y) - 100 {
+    let scene = GameScene2(size: CGSize(width: self.size.width, height: self.size.height))
+    scene.scaleMode = self.scaleMode
+       // Set the scale mode to scale to fit the window
+     let sKView = self.view as! SKView
+        // Load the SKScene from 'GameScene.sks'
+            // Present the scene
+
+        sKView.presentScene(scene)
+        sKView.ignoresSiblingOrder = true
+        sKView.showsFPS = true
+        sKView.showsNodeCount = true
 }
     }
     
