@@ -29,6 +29,7 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
     let nutritionImage = SKSpriteNode (imageNamed: "Lynn move depan 1")
     var nutritionLabel = SKLabelNode (fontNamed: "Chalkboard SE")
     var count = 5
+    let button = SKSpriteNode (imageNamed: "Group")
    
     
 let playerContact : UInt32 = 0x1 << -2
@@ -41,6 +42,11 @@ let playerContact : UInt32 = 0x1 << -2
     override init(size: CGSize) {
         super.init(size: size)
         
+        button.size = CGSize (width: 200, height: 100)
+        button.position = CGPoint (x: size.width/2, y: size.height/2)
+        button.anchorPoint = CGPoint (x: 0.5, y: 0.5)
+        button.zPosition = 3
+        addChild(button)
         
         nutritionLabel.fontSize = 14
         nutritionLabel.position = CGPoint(x: 50, y: size.height - 40)
@@ -205,10 +211,8 @@ let playerContact : UInt32 = 0x1 << -2
         guard let touch = touches.first else{return}
         let touchLocation = touch.location(in: self)
         print("touched point: \(touchLocation)")
-        if count <= 0 && second >= 5 {
-            print ("Menang")
-        }
-        requestBrain.isHidden = false
+       
+        
         count -= 1
         
 if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.x) + 70 && touchLocation.y >= (kidney.position.y) {
@@ -284,7 +288,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
             self.lynn.isHidden = true
             self.lynn.position = CGPoint(x: (self.size.width/2) + 10, y: 30)
             self.brainHappy()
-            //self.requestBrain.isHidden = true
+           self.requestBrain.isHidden = true
         })
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
         self.lynn.isHidden = false
@@ -321,6 +325,9 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     
         self.lynn.isHidden = false
         self.pinkForward()
+        if self.count <= 0 && self.second >= 5 {
+            print ("Menang")
+        }
        
     })
 }else if   touchLocation.x >= (muscle.position.x) && touchLocation.x < (muscle.position.x) + 100 && touchLocation.y >= (muscle.position.y) && touchLocation.y < (muscle.position.y) + 100 {
@@ -362,6 +369,9 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         sKView.showsNodeCount = true
 
     
+} else if touchLocation.x >= (button.position.x) - 100 && touchLocation.x < (button.position.x) + 100 && touchLocation.y >= (button.position.y) - 50 && touchLocation.y < (button.position.y) + 50 {
+    requestBrain.isHidden = false
+    button.isHidden = true
 }
     }
     
