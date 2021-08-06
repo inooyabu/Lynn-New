@@ -27,6 +27,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var counterTimer = Timer()
     var timer : SKLabelNode = SKLabelNode()
     let next1 = SKSpriteNode (imageNamed: "Sefron Kanan")
+    let brainPop = SKSpriteNode (imageNamed: "brainPop")
+    let kidneyPop = SKSpriteNode (imageNamed: "kidneyPop")
+    let lungsPop = SKSpriteNode (imageNamed: "lungsPop")
+    let heartPop = SKSpriteNode (imageNamed: "heartPop")
+    let musclePop = SKSpriteNode (imageNamed: "musclePop")
     
 let playerContact : UInt32 = 0x1 << -2
 
