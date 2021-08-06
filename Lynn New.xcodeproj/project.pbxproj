@@ -56,6 +56,7 @@
 		6DCB4A6226AD63670009EE7F /* Animasi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCB4A6126AD63670009EE7F /* Animasi.swift */; };
 		E29143E726B7F5A1005EE609 /* ShareNutritionScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E29143E626B7F5A1005EE609 /* ShareNutritionScene.sks */; };
 		E29143EB26B7F65E005EE609 /* ShareNutritionAction.sks in Resources */ = {isa = PBXBuildFile; fileRef = E29143EA26B7F65E005EE609 /* ShareNutritionAction.sks */; };
+		E29D605F26BC97BD00A7B070 /* with timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29D605E26BC97BC00A7B070 /* with timer.swift */; };
 		E2D3E57126BB90F000A13D11 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3E57026BB90F000A13D11 /* GameScene.swift */; };
 		E2D3E57726BB910600A13D11 /* HelpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3E57226BB910500A13D11 /* HelpPage.swift */; };
 		E2D3E57826BB910600A13D11 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3E57326BB910500A13D11 /* GameViewController.swift */; };
@@ -120,6 +121,7 @@
 		6DCB4A6126AD63670009EE7F /* Animasi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animasi.swift; sourceTree = "<group>"; };
 		E29143E626B7F5A1005EE609 /* ShareNutritionScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ShareNutritionScene.sks; sourceTree = "<group>"; };
 		E29143EA26B7F65E005EE609 /* ShareNutritionAction.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ShareNutritionAction.sks; sourceTree = "<group>"; };
+		E29D605E26BC97BC00A7B070 /* with timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "with timer.swift"; sourceTree = "<group>"; };
 		E2D3E57026BB90F000A13D11 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		E2D3E57226BB910500A13D11 /* HelpPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpPage.swift; sourceTree = "<group>"; };
 		E2D3E57326BB910500A13D11 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				E2D3E57626BB910600A13D11 /* StartingPage.swift */,
 				E2D3E57026BB90F000A13D11 /* GameScene.swift */,
 				E2D3E57326BB910500A13D11 /* GameViewController.swift */,
+				E29D605E26BC97BC00A7B070 /* with timer.swift */,
 			);
 			path = "Game controller Nutrition";
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				6D33518526ADE2060028700B /* MonitorViewController.swift in Sources */,
 				6D1D96B426ADCC27003C760B /* TentangLynnViewController.swift in Sources */,
 				6DAF58A426AF1DCC00199728 /* AyoMinumViewController.swift in Sources */,
+				E29D605F26BC97BD00A7B070 /* with timer.swift in Sources */,
 				6D9FB36B26AC03C800111D66 /* DataCollectionViewCell.swift in Sources */,
 				E2E4189A26B7BCD50025AD6A /* Predictor.swift in Sources */,
 				6D9FB35B26ABF52700111D66 /* ViewController.swift in Sources */,

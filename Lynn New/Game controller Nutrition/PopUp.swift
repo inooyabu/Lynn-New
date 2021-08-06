@@ -62,17 +62,17 @@ class brainPop: SKScene {
         
         if touchLocation.x >= close.position.x && touchLocation.x < (close.position.x) + 60 && touchLocation.y >= close.position.y {
             
-//            let scene = GameScene(size: CGSize(width: self.size.width, height: self.size.height))
-//            scene.scaleMode = self.scaleMode
-//               // Set the scale mode to scale to fit the window
-//             let sKView = self.view as! SKView
-//                // Load the SKScene from 'GameScene.sks'
-//                    // Present the scene
-//
-//                sKView.presentScene(scene)
-//                sKView.ignoresSiblingOrder = true
-//                sKView.showsFPS = true
-//                sKView.showsNodeCount = true
+            let scene = GameScene(size: CGSize(width: self.size.width, height: self.size.height))
+            scene.scaleMode = self.scaleMode
+               // Set the scale mode to scale to fit the window
+             let sKView = self.view as! SKView
+                // Load the SKScene from 'GameScene.sks'
+                    // Present the scene
+
+                sKView.presentScene(scene)
+                sKView.ignoresSiblingOrder = true
+                sKView.showsFPS = true
+                sKView.showsNodeCount = true
         }
     }
 }
@@ -140,6 +140,7 @@ class kidneyPop: SKScene {
                 sKView.ignoresSiblingOrder = true
                 sKView.showsFPS = true
                 sKView.showsNodeCount = true
+            
         }
     }
 }

@@ -36,7 +36,7 @@ let close = SKSpriteNode (imageNamed: "Quit")
         
         labelHelp.fontSize = 36
         labelHelp.fontColor = .white
-        labelHelp.position = CGPoint (x: (size.width/2) + 40, y: (size.height/2) + 57)
+        labelHelp.position = CGPoint (x: (size.width/2) + 50, y: (size.height/2) + 57)
         labelHelp.text = "Bantuan"
         labelHelp.zPosition = 2
         addChild(labelHelp)
