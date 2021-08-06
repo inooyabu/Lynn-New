@@ -371,6 +371,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     })
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6),  execute: {
         self.pinkForward()
+        self.lynn.isHidden = false
         self.musclePop.isHidden = false
         
     })

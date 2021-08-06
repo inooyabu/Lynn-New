@@ -8,6 +8,7 @@ class MainMenuScene: SKScene {
     let bubble = SKSpriteNode(imageNamed: "Bubble")
     let lynn1 = SKSpriteNode(imageNamed: "Lynn move depan 1")
     var label = SKLabelNode (fontNamed: "Chalkboard SE")
+    let button = SKSpriteNode (imageNamed: "Group")
     
     override func didMove(to view: SKView) {
         background.size = CGSize(width: frame.maxX, height: frame.maxY)
@@ -38,9 +39,14 @@ class MainMenuScene: SKScene {
         label.preferredMaxLayoutWidth = 470
         label.numberOfLines = 0
         
-        label.text = "Setiap hari, manusia membutuhkan makanan yang bergizi untuk memenuhi nutrisi yang diperlukan oleh organ di dalam tubuh. Agar nutrisi dapat terserap dengan baik, aku bisa membantumu untuk mengantarkannya. Ayo berpetualang bersamaku! Sentuh layar untuk memulai"
+        label.text = "Setiap hari, manusia membutuhkan makanan yang bergizi untuk memenuhi nutrisi yang diperlukan oleh organ di dalam tubuh. Agar nutrisi dapat terserap dengan baik, aku bisa membantumu untuk mengantarkannya. Ayo berpetualang bersamaku!"
         
         addChild(label)
+        
+        button.position = CGPoint (x: (size.width/2) + 20, y: size.height - 320)
+        button.size = CGSize(width: 200, height: 100)
+        button.anchorPoint = CGPoint (x: 0.5, y: 0.5)
+        addChild(button)
         
     }
     
