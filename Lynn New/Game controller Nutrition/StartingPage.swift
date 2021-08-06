@@ -72,7 +72,7 @@ class MainMenuScene: SKScene {
         let gameScene = GameScene(size: size)
         gameScene.scaleMode = scaleMode
         
-        let transition = SKTransition.doorway(withDuration: 1.5)
+        let transition = SKTransition.fade(withDuration: 3.0)
         view?.presentScene(gameScene, transition: transition)
     }
 }

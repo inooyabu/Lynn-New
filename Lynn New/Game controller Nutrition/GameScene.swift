@@ -154,27 +154,27 @@ let playerContact : UInt32 = 0x1 << -2
         addChild(muscle)
     
         requestBrain.size = CGSize(width: 123, height: 53)
-        requestBrain.zPosition = 1
+        requestBrain.zPosition = 3
         requestBrain.position = CGPoint(x: brain.position.x + 100, y: brain.position.y + 80)
         addChild(requestBrain)
    
         requestKidney.size = CGSize(width: 123, height: 53)
-        requestKidney.zPosition = 1
+        requestKidney.zPosition = 3
         requestKidney.position = CGPoint(x: kidney.position.x - 40, y: kidney.position.y + 80)
         addChild(requestKidney)
         
         requestHeart.size = CGSize(width: 123, height: 53)
-        requestHeart.zPosition = 1
+        requestHeart.zPosition = 3
         requestHeart.position = CGPoint(x: heart.position.x + 100, y: heart.position.y + 80)
         addChild(requestHeart)
         
         requestLungs.size = CGSize(width: 123, height: 53)
-        requestLungs.zPosition = 1
+        requestLungs.zPosition = 3
         requestLungs.position = CGPoint(x: lungs.position.x + 100, y: lungs.position.y + 80)
         addChild(requestLungs)
         
         requestMuscle.size = CGSize(width: 123, height: 53)
-        requestMuscle.zPosition = 1
+        requestMuscle.zPosition = 3
         requestMuscle.position = CGPoint(x: muscle.position.x - 40, y: muscle.position.y + 80)
         addChild(requestMuscle)
         
@@ -188,35 +188,35 @@ let playerContact : UInt32 = 0x1 << -2
         brainPop.size = CGSize(width: 510, height: 340)
         brainPop.position = CGPoint(x: size.width/2, y: size.height/2)
         brainPop.anchorPoint = CGPoint (x: 0.5, y: 0.5)
-        brainPop.zPosition = 3
+        brainPop.zPosition = 4
         brainPop.isHidden = true
         addChild(brainPop)
         
         heartPop.size = CGSize(width: 510, height: 340)
         heartPop.position = CGPoint(x: size.width/2, y: size.height/2)
         heartPop.anchorPoint = CGPoint (x: 0.5, y: 0.5)
-        heartPop.zPosition = 3
+        heartPop.zPosition = 4
         heartPop.isHidden = true
         addChild(heartPop)
         
         musclePop.size = CGSize(width: 510, height: 340)
         musclePop.position = CGPoint(x: size.width/2, y: size.height/2)
         musclePop.anchorPoint = CGPoint (x: 0.5, y: 0.5)
-        musclePop.zPosition = 3
+        musclePop.zPosition = 4
         musclePop.isHidden = true
         addChild(musclePop)
         
         lungsPop.size = CGSize(width: 510, height: 340)
         lungsPop.position = CGPoint(x: size.width/2, y: size.height/2)
         lungsPop.anchorPoint = CGPoint (x: 0.5, y: 0.5)
-        lungsPop.zPosition = 3
+        lungsPop.zPosition = 4
         lungsPop.isHidden = true
         addChild(lungsPop)
         
         kidneyPop.size = CGSize(width: 510, height: 340)
         kidneyPop.position = CGPoint(x: size.width/2, y: size.height/2)
         kidneyPop.anchorPoint = CGPoint (x: 0.5, y: 0.5)
-        kidneyPop.zPosition = 3
+        kidneyPop.zPosition = 4
         kidneyPop.isHidden = true
         addChild(kidneyPop)
     
@@ -256,7 +256,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         self.kidneyPop.isHidden = false
         
     })
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(12), execute: {
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(18), execute: {
         self.kidneyPop.isHidden = true
     })
     
@@ -292,7 +292,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         self.lungsPop.isHidden = false
         
     })
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(13), execute: {
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(19), execute: {
         self.lungsPop.isHidden = true
     })
     
@@ -316,7 +316,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         self.brainPop.isHidden = false
         
     })
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(8), execute: {
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(14), execute: {
         self.brainPop.isHidden = true
     })
     
@@ -349,7 +349,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         self.heartPop.isHidden = false
         
     })
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(10), execute: {
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(16), execute: {
         self.heartPop.isHidden = true
     })
 }else if   touchLocation.x >= (muscle.position.x) && touchLocation.x < (muscle.position.x) + 100 && touchLocation.y >= (muscle.position.y) && touchLocation.y < (muscle.position.y) + 100 {
@@ -375,7 +375,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         self.musclePop.isHidden = false
         
     })
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(10), execute: {
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(16), execute: {
         self.musclePop.isHidden = true
     })
 }else if touchLocation.x >= pauseButton.position.x && touchLocation.x < (pauseButton.position.x) + 60 && touchLocation.y >= pauseButton.position.y && touchLocation.y < (pauseButton.position.y) + 60{

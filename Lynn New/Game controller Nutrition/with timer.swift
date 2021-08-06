@@ -23,7 +23,7 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
     var renderTime : TimeInterval = 0.0
     var changeTime : TimeInterval = 1
     var second = 0
-    var minute = 0
+    var minute = 1
     var counterTimer = Timer()
     var timer : SKLabelNode = SKLabelNode()
     let nutritionImage = SKSpriteNode (imageNamed: "Lynn move depan 1")
@@ -41,12 +41,13 @@ let playerContact : UInt32 = 0x1 << -2
         super.init(size: size)
         
         
-        nutritionLabel.fontSize = 12
-        nutritionLabel.position = CGPoint(x: nutritionImage.position.x + 30, y: size.height - 40)
+        nutritionLabel.fontSize = 14
+        nutritionLabel.position = CGPoint(x: 50, y: size.height - 40)
+        nutritionLabel.text = "5"
         addChild(nutritionLabel)
         
         nutritionImage.size = CGSize (width: 30, height: 30)
-        nutritionImage.position = CGPoint (x: 10, y: size.height - 40)
+        nutritionImage.position = CGPoint (x: 20, y: size.height - 50)
         nutritionImage.anchorPoint = CGPoint (x: 0, y: 0)
         addChild(nutritionImage)
         
@@ -187,45 +188,15 @@ let playerContact : UInt32 = 0x1 << -2
         
         
         timer.fontName = "Chalkboard SE"
-        timer.fontSize = 12
-        timer.position = CGPoint (x: 80, y: (size.height - 40))
+        timer.fontSize = 14
+        timer.position = CGPoint (x: 40, y: (size.height - 60))
         timer.text = "0.0"
         addChild(timer)
     
        startCounter()
         
         
-        
-        
-   
-        if second == 60{
-            requestMuscle.isHidden = false
-            requestLungs.isHidden = true
-            requestHeart.isHidden = true
-            requestKidney.isHidden = true
-            requestBrain.isHidden = true
-        }
-        else if second <= 57 && second > 52  {
-            requestLungs.isHidden = false
-            requestMuscle.isHidden = true
-            requestHeart.isHidden = true
-            requestKidney.isHidden = true
-            requestBrain.isHidden = true
-            
-        }else if second <= 52 && second > 47 {
-            requestHeart.isHidden = false
-            requestKidney.isHidden = true
-            requestBrain.isHidden = true
-            requestMuscle.isHidden = true
-            requestLungs.isHidden = true
-            
-        }else if second <= 47 && second > 42{
-            requestKidney.isHidden = false
-        }else if second <= 42 && second > 37{
-            requestMuscle.isHidden = false
-        }else if second <= 37 {
-            requestBrain.isHidden = false
-        }
+    
        
 }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -571,7 +542,7 @@ lynn.run(animateAction)
 
     @objc func decrementCounter() {
         second -= 1
-        timer.text = "0\(minute) : \(second)"
+        timer.text = "\(minute) : \(second)"
         print(second)
     }
    
