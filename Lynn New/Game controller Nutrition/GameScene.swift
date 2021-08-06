@@ -192,33 +192,33 @@ let playerContact : UInt32 = 0x1 << -2
         brainPop.isHidden = true
         addChild(brainPop)
         
-        brainPop.size = CGSize(width: 510, height: 340)
-        brainPop.position = CGPoint(x: size.width/2, y: size.height/2)
-        brainPop.anchorPoint = CGPoint (x: 0.5, y: 0.5)
-        brainPop.zPosition = 3
-        brainPop.isHidden = true
-        addChild(brainPop)
+        heartPop.size = CGSize(width: 510, height: 340)
+        heartPop.position = CGPoint(x: size.width/2, y: size.height/2)
+        heartPop.anchorPoint = CGPoint (x: 0.5, y: 0.5)
+        heartPop.zPosition = 3
+        heartPop.isHidden = true
+        addChild(heartPop)
         
-        brainPop.size = CGSize(width: 510, height: 340)
-        brainPop.position = CGPoint(x: size.width/2, y: size.height/2)
-        brainPop.anchorPoint = CGPoint (x: 0.5, y: 0.5)
-        brainPop.zPosition = 3
-        brainPop.isHidden = true
-        addChild(brainPop)
+        musclePop.size = CGSize(width: 510, height: 340)
+        musclePop.position = CGPoint(x: size.width/2, y: size.height/2)
+        musclePop.anchorPoint = CGPoint (x: 0.5, y: 0.5)
+        musclePop.zPosition = 3
+        musclePop.isHidden = true
+        addChild(musclePop)
         
-        brainPop.size = CGSize(width: 510, height: 340)
-        brainPop.position = CGPoint(x: size.width/2, y: size.height/2)
-        brainPop.anchorPoint = CGPoint (x: 0.5, y: 0.5)
-        brainPop.zPosition = 3
-        brainPop.isHidden = true
-        addChild(brainPop)
+        lungsPop.size = CGSize(width: 510, height: 340)
+        lungsPop.position = CGPoint(x: size.width/2, y: size.height/2)
+        lungsPop.anchorPoint = CGPoint (x: 0.5, y: 0.5)
+        lungsPop.zPosition = 3
+        lungsPop.isHidden = true
+        addChild(lungsPop)
         
-        brainPop.size = CGSize(width: 510, height: 340)
-        brainPop.position = CGPoint(x: size.width/2, y: size.height/2)
-        brainPop.anchorPoint = CGPoint (x: 0.5, y: 0.5)
-        brainPop.zPosition = 3
-        brainPop.isHidden = true
-        addChild(brainPop)
+        kidneyPop.size = CGSize(width: 510, height: 340)
+        kidneyPop.position = CGPoint(x: size.width/2, y: size.height/2)
+        kidneyPop.anchorPoint = CGPoint (x: 0.5, y: 0.5)
+        kidneyPop.zPosition = 3
+        kidneyPop.isHidden = true
+        addChild(kidneyPop)
     
        // startCounter()
         
@@ -234,7 +234,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((kidney.position.y) - 20) - (lynn.position.y)))
     pinkForward()
     call1 = "Kidney"
-    requestKidney.isHidden = true
+    
     
     DispatchQueue.main.async {
             AudioServicesPlayAlertSound(SystemSoundID(1151) )
@@ -249,10 +249,15 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         self.lynn.isHidden = true
         self.lynn.position = CGPoint(x: self.size.width/2, y: 30)
         self.pinkForward()
+        self.requestKidney.isHidden = true
     })
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(8), execute: {
         self.lynn.isHidden = false
+        self.kidneyPop.isHidden = false
         
+    })
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(12), execute: {
+        self.kidneyPop.isHidden = true
     })
     
            
@@ -284,8 +289,13 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(9), execute: {
         self.lynn.isHidden = false
         self.pinkForward()
-       
+        self.lungsPop.isHidden = false
+        
     })
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(13), execute: {
+        self.lungsPop.isHidden = true
+    })
+    
 }else if  touchLocation.x >= (brain.position.x) && touchLocation.x < (brain.position.x) + 95 && touchLocation.y >= (brain.position.y) && touchLocation.y < (brain.position.y) + 95 {
     
     requestBrain.isHidden = true
@@ -302,9 +312,12 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         })
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
         self.lynn.isHidden = false
+        
+        self.brainPop.isHidden = false
+        
     })
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
-       
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(8), execute: {
+        self.brainPop.isHidden = true
     })
     
 } else if  touchLocation.x >= (heart.position.x) && touchLocation.x < (heart.position.x) + 95 && touchLocation.y >= (heart.position.y) && touchLocation.y < (heart.position.y) + 95{
@@ -333,7 +346,11 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     
         self.lynn.isHidden = false
         self.pinkForward()
-      
+        self.heartPop.isHidden = false
+        
+    })
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(10), execute: {
+        self.heartPop.isHidden = true
     })
 }else if   touchLocation.x >= (muscle.position.x) && touchLocation.x < (muscle.position.x) + 100 && touchLocation.y >= (muscle.position.y) && touchLocation.y < (muscle.position.y) + 100 {
     requestMuscle.isHidden = true
@@ -354,8 +371,11 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     })
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6),  execute: {
         self.pinkForward()
-        self.lynn.isHidden = false
+        self.musclePop.isHidden = false
         
+    })
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(10), execute: {
+        self.musclePop.isHidden = true
     })
 }else if touchLocation.x >= pauseButton.position.x && touchLocation.x < (pauseButton.position.x) + 60 && touchLocation.y >= pauseButton.position.y && touchLocation.y < (pauseButton.position.y) + 60{
    brainHappy()
@@ -384,6 +404,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         sKView.ignoresSiblingOrder = true
         sKView.showsFPS = true
         sKView.showsNodeCount = true
+
 }
     }
 //    func brainUp() {
