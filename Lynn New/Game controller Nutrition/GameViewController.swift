@@ -27,9 +27,10 @@ class GameViewController: UIViewController {
             sKView.ignoresSiblingOrder = true
             sKView.showsFPS = true
             sKView.showsNodeCount = true
+        
+        
         }
     
-
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
             return .allButUpsideDown

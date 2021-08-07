@@ -8,8 +8,13 @@ class MainMenuScene: SKScene {
     let bubble = SKSpriteNode(imageNamed: "Bubble")
     let lynn1 = SKSpriteNode(imageNamed: "Lynn move depan 1")
     var label = SKLabelNode (fontNamed: "Chalkboard SE")
+    let button = SKLabelNode (fontNamed: "Chalkboard SE")
+   
     
     override func didMove(to view: SKView) {
+        
+       
+        
         background.size = CGSize(width: frame.maxX, height: frame.maxY)
         background.position = CGPoint(x: size.width/2,
                                           y: size.height/2)
@@ -38,9 +43,17 @@ class MainMenuScene: SKScene {
         label.preferredMaxLayoutWidth = 470
         label.numberOfLines = 0
         
-        label.text = "Setiap hari, manusia membutuhkan makanan yang bergizi untuk memenuhi nutrisi yang diperlukan oleh organ di dalam tubuh. Agar nutrisi dapat terserap dengan baik, aku bisa membantumu untuk mengantarkannya. Ayo berpetualang bersamaku! Sentuh layar untuk memulai"
+        label.text = "Setiap hari, manusia membutuhkan makanan yang bergizi untuk memenuhi nutrisi yang diperlukan oleh organ di dalam tubuh. Agar nutrisi dapat terserap dengan baik, aku bisa membantumu untuk mengantarkannya. Ayo berpetualang bersamaku!"
         
         addChild(label)
+        
+        button.position = CGPoint (x: (size.width/2) + 20, y: size.height - 350)
+        button.fontSize = 15
+        button.fontColor = .white
+        button.text = "Sentuh layar untuk memulai"
+        addChild(button)
+        
+        startBackgroundMusic()
         
     }
     
@@ -52,7 +65,14 @@ class MainMenuScene: SKScene {
 //                  if touchedNode.name == "HelloButton" {
 //                       // Call the function here.
                     sceneTapped()
-               //   }
+               //   } override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else{return}
+        let touchLocation = touch.location(in: self)
+        print("touched point: \(touchLocation)")
+        if touchLocation.x <= 55 && touchLocation.y <= 55 {
+            self.removeFromParent()
+            StartingPageViewController()
+        }
         
     }
     #else
@@ -66,7 +86,12 @@ class MainMenuScene: SKScene {
         let gameScene = GameScene(size: size)
         gameScene.scaleMode = scaleMode
         
-        let transition = SKTransition.doorway(withDuration: 1.5)
+        let transition = SKTransition.fade(withDuration: 3.0)
         view?.presentScene(gameScene, transition: transition)
+    }
+    func startBackgroundMusic(){
+        let backgroundMusic = SKAudioNode(fileNamed: "game nutrisi.mp3")
+        backgroundMusic.autoplayLooped = true
+        addChild(backgroundMusic)
     }
 }

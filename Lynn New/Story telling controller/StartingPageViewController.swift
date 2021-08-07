@@ -18,6 +18,7 @@ class StartingPageViewController: UIViewController {
         
         //corner radius Button Mulai
         //mulaiButton.layer.cornerRadius = 15
+        quitButton.isHidden = true
         
     }
     

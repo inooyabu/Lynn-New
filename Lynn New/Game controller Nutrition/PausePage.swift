@@ -28,16 +28,16 @@ let close = SKSpriteNode (imageNamed: "Quit")
         addChild(close)
         
         labelOut.fontSize = 36
-        labelOut.fontColor = .white
         labelOut.position = CGPoint (x: (size.width/2) + 40, y: (size.height/2) - 70)
         labelOut.text = "Keluar"
+        labelOut.fontColor = SKColor(red: 129, green: 38, blue: 71, alpha: 100)
         labelOut.zPosition = 2
         addChild(labelOut)
         
         labelHelp.fontSize = 36
-        labelHelp.fontColor = .white
-        labelHelp.position = CGPoint (x: (size.width/2) + 40, y: (size.height/2) + 57)
+        labelHelp.position = CGPoint (x: (size.width/2) + 50, y: (size.height/2) + 47)
         labelHelp.text = "Bantuan"
+        labelHelp.fontColor = UIColor(red: 129, green: 38, blue: 71, alpha: 100)
         labelHelp.zPosition = 2
         addChild(labelHelp)
         
@@ -71,7 +71,7 @@ let close = SKSpriteNode (imageNamed: "Quit")
         print("touched point: \(touchLocation)")
         
         if touchLocation.x >= close.position.x && touchLocation.x < (close.position.x) + 60 && touchLocation.y >= close.position.y {
-            let scene = GameScene(size: CGSize(width: self.size.width, height: self.size.height))
+            let scene = GameScene2(size: CGSize(width: self.size.width, height: self.size.height))
             scene.scaleMode = self.scaleMode
                // Set the scale mode to scale to fit the window
              let sKView = self.view as! SKView
