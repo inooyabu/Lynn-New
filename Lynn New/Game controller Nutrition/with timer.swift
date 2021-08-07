@@ -28,7 +28,7 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
     var timer : SKLabelNode = SKLabelNode()
     let nutritionImage = SKSpriteNode (imageNamed: "Lynn move depan 1")
     var nutritionLabel = SKLabelNode (fontNamed: "Chalkboard SE")
-    var count = 5
+    var count = 6
     let button = SKSpriteNode (imageNamed: "startgame")
     let oneStar = SKSpriteNode (imageNamed: "bintang 1")
     let twostars = SKSpriteNode (imageNamed: "bintang 2")
