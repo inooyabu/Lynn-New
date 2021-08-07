@@ -652,26 +652,43 @@ Siapa namamu?</string>
                     <view key="view" contentMode="scaleToFill" id="eHA-MZ-HHn">
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI2-7u-PEG">
-                                <rect key="frame" x="354" y="331" width="136" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
-                                <color key="textColor" red="0.1234147921" green="0.30637925859999998" blue="0.2745078802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ot8-zJ-85p"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="WBs-pF-qtr"/>
-                    <connections>
-                        <outlet property="label" destination="LI2-7u-PEG" id="Ofv-be-EQS"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1D-rx-DPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="597" y="1158"/>
+        </scene>
+        <!--Minum View Controller-->
+        <scene sceneID="THI-Ne-wer">
+            <objects>
+                <viewController storyboardIdentifier="animasi minum" id="OUL-ei-rUy" customClass="minumViewController" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EAO-yz-zXg">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Minum.gif" translatesAutoresizingMaskIntoConstraints="NO" id="ohU-Am-ocA">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c3u-Rs-dUz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ohU-Am-ocA" firstAttribute="centerX" secondItem="EAO-yz-zXg" secondAttribute="centerX" id="3Vb-l7-5Jg"/>
+                            <constraint firstItem="ohU-Am-ocA" firstAttribute="top" secondItem="c3u-Rs-dUz" secondAttribute="top" id="3dY-3k-xUr"/>
+                            <constraint firstItem="ohU-Am-ocA" firstAttribute="centerY" secondItem="EAO-yz-zXg" secondAttribute="centerY" id="jrv-a5-4ZJ"/>
+                            <constraint firstItem="ohU-Am-ocA" firstAttribute="leading" secondItem="EAO-yz-zXg" secondAttribute="leadingMargin" constant="-60" id="t8i-vS-IYX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="drink" destination="ohU-Am-ocA" id="F3p-3j-OSk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ixb-pz-F9b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980.33175355450237" y="1856.9230769230769"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="h6R-qB-ZOR">
@@ -687,7 +704,7 @@ Siapa namamu?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERb-zw-ipa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1348.5781990521327" y="1156.9230769230769"/>
+            <point key="canvasLocation" x="1656" y="1142"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -767,6 +784,7 @@ Siapa namamu?</string>
         <image name="Info" width="400" height="400"/>
         <image name="Lynn Logo" width="666.66668701171875" height="400"/>
         <image name="Lynn Page 1" width="400" height="400"/>
+        <image name="Minum.gif" width="1471" height="679"/>
         <image name="Quit" width="400" height="400"/>
         <image name="Sefron Kanan" width="400" height="400"/>
         <image name="Sefron Kiri" width="400" height="400"/>

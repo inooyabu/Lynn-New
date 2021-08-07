@@ -21,8 +21,6 @@ class DetectDrink: UIViewController {
     var isMinumdetected = false
     
    
-    @IBOutlet weak var label: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -75,13 +73,13 @@ extension DetectDrink: PredictorDelegate{
             }
         }
             else {
-                label.text = "None"
+               
             }
         
     }
     
     func moveToGame(){
-        let shareNutrition = storyboard?.instantiateViewController(identifier: "Share Nutrition") as! GameViewController
+        let shareNutrition = storyboard?.instantiateViewController(identifier: "animasi minum") as! UIViewController
         shareNutrition.modalPresentationStyle = .fullScreen
 
         let transition = CATransition()

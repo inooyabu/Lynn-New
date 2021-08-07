@@ -56,6 +56,7 @@
 		6DCB4A6226AD63670009EE7F /* Animasi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCB4A6126AD63670009EE7F /* Animasi.swift */; };
 		6DCE2BDA26BD153F001D419B /* backgroundSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6DCE2BD926BD153F001D419B /* backgroundSound.mp3 */; };
 		E244625026BE012C00425BE6 /* game nutrisi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E244624F26BE012C00425BE6 /* game nutrisi.mp3 */; };
+		E244625226BE03FE00425BE6 /* minumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244625126BE03FE00425BE6 /* minumViewController.swift */; };
 		E29143E726B7F5A1005EE609 /* ShareNutritionScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E29143E626B7F5A1005EE609 /* ShareNutritionScene.sks */; };
 		E29143EB26B7F65E005EE609 /* ShareNutritionAction.sks in Resources */ = {isa = PBXBuildFile; fileRef = E29143EA26B7F65E005EE609 /* ShareNutritionAction.sks */; };
 		E29D605F26BC97BD00A7B070 /* with timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29D605E26BC97BC00A7B070 /* with timer.swift */; };
@@ -123,6 +124,7 @@
 		6DCB4A6126AD63670009EE7F /* Animasi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animasi.swift; sourceTree = "<group>"; };
 		6DCE2BD926BD153F001D419B /* backgroundSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundSound.mp3; sourceTree = "<group>"; };
 		E244624F26BE012C00425BE6 /* game nutrisi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "game nutrisi.mp3"; sourceTree = "<group>"; };
+		E244625126BE03FE00425BE6 /* minumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minumViewController.swift; sourceTree = "<group>"; };
 		E29143E626B7F5A1005EE609 /* ShareNutritionScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ShareNutritionScene.sks; sourceTree = "<group>"; };
 		E29143EA26B7F65E005EE609 /* ShareNutritionAction.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ShareNutritionAction.sks; sourceTree = "<group>"; };
 		E29D605E26BC97BC00A7B070 /* with timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "with timer.swift"; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				E2E4189526B7BC830025AD6A /* DetectDrink.swift */,
 				E2E4189726B7BCC60025AD6A /* VideoCapture.swift */,
 				E2E4189926B7BCD50025AD6A /* Predictor.swift */,
+				E244625126BE03FE00425BE6 /* minumViewController.swift */,
 			);
 			path = poseEstimation;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				E2D3E57126BB90F000A13D11 /* GameScene.swift in Sources */,
 				6D9FB35926ABF52700111D66 /* SceneDelegate.swift in Sources */,
 				E2D3E57926BB910600A13D11 /* PausePage.swift in Sources */,
+				E244625226BE03FE00425BE6 /* minumViewController.swift in Sources */,
 				6DCB4A3C26AD4A7D0009EE7F /* StartingPageViewController.swift in Sources */,
 				6D33518326ADDE1A0028700B /* BerapaViewController.swift in Sources */,
 				E2E4189626B7BC830025AD6A /* DetectDrink.swift in Sources */,
