@@ -323,10 +323,7 @@ let playerContact : UInt32 = 0x1 << -2
            
             lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: (brain.position.y) - (lynn.position.y)))
                    pinkForward()
-                    DispatchQueue.main.async {
-                        AudioServicesPlayAlertSound(SystemSoundID(1322) )
-
-                    }
+                    
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
                     self.lynn.isHidden = true
                     self.lynn.position = CGPoint(x: (self.size.width/2) + 10, y: 30)

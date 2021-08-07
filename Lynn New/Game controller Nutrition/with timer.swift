@@ -54,7 +54,7 @@ let playerContact : UInt32 = 0x1 << -2
         
         nutritionLabel.fontSize = 14
         nutritionLabel.position = CGPoint(x: 50, y: size.height - 40)
-        nutritionLabel.text = "5"
+        nutritionLabel.text = "\(count)"
         addChild(nutritionLabel)
         
         nutritionImage.size = CGSize (width: 30, height: 30)
@@ -621,11 +621,6 @@ lynn.run(animateAction)
     
     startBackgroundMusic()
     
-    }
-    func startBackgroundMusic(){
-        let backgroundMusic = SKAudioNode(fileNamed: "backgroundSound.mp3")
-        backgroundMusic.autoplayLooped = true
-        addChild(backgroundMusic)
     }
     
     func startCounter () {

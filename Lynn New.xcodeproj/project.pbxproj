@@ -35,7 +35,6 @@
 		6D9FB35726ABF52700111D66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9FB35626ABF52700111D66 /* AppDelegate.swift */; };
 		6D9FB35926ABF52700111D66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9FB35826ABF52700111D66 /* SceneDelegate.swift */; };
 		6D9FB35B26ABF52700111D66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9FB35A26ABF52700111D66 /* ViewController.swift */; };
-		6D9FB35E26ABF52700111D66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB35C26ABF52700111D66 /* Main.storyboard */; };
 		6D9FB36026ABF52800111D66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB35F26ABF52800111D66 /* Assets.xcassets */; };
 		6D9FB36326ABF52800111D66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FB36126ABF52800111D66 /* LaunchScreen.storyboard */; };
 		6D9FB36B26AC03C800111D66 /* DataCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9FB36A26AC03C800111D66 /* DataCollectionViewCell.swift */; };
@@ -57,6 +56,7 @@
 		6DCE2BDA26BD153F001D419B /* backgroundSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6DCE2BD926BD153F001D419B /* backgroundSound.mp3 */; };
 		E244625026BE012C00425BE6 /* game nutrisi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E244624F26BE012C00425BE6 /* game nutrisi.mp3 */; };
 		E244625226BE03FE00425BE6 /* minumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244625126BE03FE00425BE6 /* minumViewController.swift */; };
+		E2889FB026BE0B010034F2B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2889FAF26BE0B010034F2B8 /* Main.storyboard */; };
 		E29143E726B7F5A1005EE609 /* ShareNutritionScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E29143E626B7F5A1005EE609 /* ShareNutritionScene.sks */; };
 		E29143EB26B7F65E005EE609 /* ShareNutritionAction.sks in Resources */ = {isa = PBXBuildFile; fileRef = E29143EA26B7F65E005EE609 /* ShareNutritionAction.sks */; };
 		E29D605F26BC97BD00A7B070 /* with timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29D605E26BC97BC00A7B070 /* with timer.swift */; };
@@ -102,7 +102,6 @@
 		6D9FB35626ABF52700111D66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D9FB35826ABF52700111D66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6D9FB35A26ABF52700111D66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6D9FB35D26ABF52700111D66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D9FB35F26ABF52800111D66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D9FB36226ABF52800111D66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D9FB36426ABF52800111D66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -125,6 +124,7 @@
 		6DCE2BD926BD153F001D419B /* backgroundSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundSound.mp3; sourceTree = "<group>"; };
 		E244624F26BE012C00425BE6 /* game nutrisi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "game nutrisi.mp3"; sourceTree = "<group>"; };
 		E244625126BE03FE00425BE6 /* minumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minumViewController.swift; sourceTree = "<group>"; };
+		E2889FAF26BE0B010034F2B8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E29143E626B7F5A1005EE609 /* ShareNutritionScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ShareNutritionScene.sks; sourceTree = "<group>"; };
 		E29143EA26B7F65E005EE609 /* ShareNutritionAction.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ShareNutritionAction.sks; sourceTree = "<group>"; };
 		E29D605E26BC97BC00A7B070 /* with timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "with timer.swift"; sourceTree = "<group>"; };
@@ -229,7 +229,7 @@
 		6DCB4A3926AD49E80009EE7F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6D9FB35C26ABF52700111D66 /* Main.storyboard */,
+				E2889FAF26BE0B010034F2B8 /* Main.storyboard */,
 				6D9FB36126ABF52800111D66 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -368,6 +368,7 @@
 				6D9FB39826AC67CD00111D66 /* stortel2.mp3 in Resources */,
 				6D9FB36326ABF52800111D66 /* LaunchScreen.storyboard in Resources */,
 				6D635D0626AD8C2E00A5FC9E /* Lembab.gif in Resources */,
+				E2889FB026BE0B010034F2B8 /* Main.storyboard in Resources */,
 				6D9FB39E26AC67CD00111D66 /* stortel8.mp3 in Resources */,
 				6D32277826BBC91D009944EA /* stortel3.mp3 in Resources */,
 				6D635D0D26AD8C2E00A5FC9E /* Child.gif in Resources */,
@@ -387,7 +388,6 @@
 				6D9FB39D26AC67CD00111D66 /* stortel9.mp3 in Resources */,
 				6D9FB39B26AC67CD00111D66 /* stortel6.mp3 in Resources */,
 				6D9FB36026ABF52800111D66 /* Assets.xcassets in Resources */,
-				6D9FB35E26ABF52700111D66 /* Main.storyboard in Resources */,
 				6D635D1026AD8C2E00A5FC9E /* contain.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,14 +430,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6D9FB35C26ABF52700111D66 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6D9FB35D26ABF52700111D66 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6D9FB36126ABF52800111D66 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
