@@ -241,6 +241,12 @@ let playerContact : UInt32 = 0x1 << -2
        
 }
     
+    func startBackgroundMusic(){
+        let backgroundMusic = SKAudioNode(fileNamed: "backgroundSound.mp3")
+        backgroundMusic.autoplayLooped = true
+        addChild(backgroundMusic)
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else{return}
         let touchLocation = touch.location(in: self)
