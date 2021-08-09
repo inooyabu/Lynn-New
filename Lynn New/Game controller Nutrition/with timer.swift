@@ -34,6 +34,7 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
     let twostars = SKSpriteNode (imageNamed: "bintang 2")
     let threestars = SKSpriteNode (imageNamed: "bintang 3")
     let lose = SKSpriteNode (imageNamed: "kalah")
+    let quit = SKSpriteNode (imageNamed: "keluar")
    
     
 let playerContact : UInt32 = 0x1 << -2
@@ -45,6 +46,15 @@ let playerContact : UInt32 = 0x1 << -2
    
     override init(size: CGSize) {
         super.init(size: size)
+        
+        
+        quit.size = CGSize(width: 530, height: 353)
+        quit.position = CGPoint(x: size.width/2, y: size.height/2)
+        quit.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        quit.zPosition = 4
+        quit.isHidden = true
+        addChild(quit)
+        
         
         button.size = CGSize (width: size.width, height: size.height)
         button.position = CGPoint (x: size.width/2, y: size.height/2)
@@ -412,18 +422,13 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     button.isHidden = true
 }else
 if touchLocation.x >= (self.threestars.position.x) - 260 && touchLocation.x <  (self.threestars.position.x) - 200 && touchLocation.y >= (self.threestars.position.y) + 100 {
-    let scene = MainMenuScene(size: CGSize(width: self.size.width, height: self.size.height))
-    scene.scaleMode = self.scaleMode
-       // Set the scale mode to scale to fit the window
-     let sKView = self.view as! SKView
-        // Load the SKScene from 'GameScene.sks'
-            // Present the scene
-
-        sKView.presentScene(scene)
-        sKView.ignoresSiblingOrder = true
-        sKView.showsFPS = true
-        sKView.showsNodeCount = true
-
+    quit.isHidden = false
+    threestars.isHidden = true
+    twostars.isHidden = true
+    oneStar.isHidden = true
+    lose.isHidden = true
+    
+   
 } else if touchLocation.x >= (self.threestars.position.x) + 220  && touchLocation.x <  (self.threestars.position.x) + 260 && touchLocation.y <= (self.threestars.position.y) - 100 {
     let scene = GameScene2(size: CGSize(width: self.size.width, height: self.size.height))
     scene.scaleMode = self.scaleMode
@@ -436,7 +441,26 @@ if touchLocation.x >= (self.threestars.position.x) - 260 && touchLocation.x <  (
         sKView.ignoresSiblingOrder = true
         sKView.showsFPS = true
         sKView.showsNodeCount = true
-}
+} else  if touchLocation.x <= (quit.position.x) - 30 && touchLocation.y <= size.height - 130 {
+    
+    let scene = MainMenuScene(size: CGSize(width: self.size.width, height: self.size.height))
+    scene.scaleMode = self.scaleMode
+   //     Set the scale mode to scale to fit the window
+     let sKView = self.view as! SKView
+        // Load the SKScene from 'GameScene.sks'
+            // Present the scene
+
+        sKView.presentScene(scene)
+        sKView.ignoresSiblingOrder = true
+        sKView.showsFPS = true
+        sKView.showsNodeCount = true
+    }else if touchLocation.x >= (quit.position.x) + 30 && touchLocation.y <= size.height - 130 {
+        quit.isHidden = true
+        threestars.isHidden = false
+        twostars.isHidden = false
+        oneStar.isHidden = false
+        lose.isHidden = false
+    }
     }
     
 func pinkLeft(){
