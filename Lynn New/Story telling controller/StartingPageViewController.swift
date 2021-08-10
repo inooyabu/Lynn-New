@@ -30,8 +30,11 @@ class StartingPageViewController: UIViewController {
     @IBAction func infoImageButtonTapped(_ sender: Any) {
         print("Info Button Tapped")
         
-        let tentangLynn = storyboard?.instantiateViewController(identifier: "Tentang Lynn") as! TentangLynnViewController
-        tentangLynn.modalPresentationStyle = .fullScreen
+//        let tentangLynn = storyboard?.instantiateViewController(identifier: "Tentang Lynn") as! TentangLynnViewController
+//        tentangLynn.modalPresentationStyle = .fullScreen
+        
+        let info = storyboard?.instantiateViewController(identifier: "Info") as! InfoViewController
+        info.modalPresentationStyle = .fullScreen
         
         let transition = CATransition()
         transition.duration = 0.5
@@ -39,7 +42,7 @@ class StartingPageViewController: UIViewController {
         transition.subtype = CATransitionSubtype.fromTop
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         view.window!.layer.add(transition, forKey: kCATransition)
-        present(tentangLynn, animated: false, completion: nil)
+        present(info, animated: false, completion: nil)
 
     }
     
