@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pm0-8M-QaW">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -773,6 +773,74 @@ Siapa namamu?</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-736.49289099526061" y="1141.5384615384614"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="JyX-GW-2hM">
+            <objects>
+                <viewController storyboardIdentifier="Info" id="Pm0-8M-QaW" customClass="InfoViewController" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QIK-zp-8se">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ciH-Uh-AsF">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7gm-AK-Zdf">
+                                    <size key="itemSize" width="782" height="338.66666666666669"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell2" id="b2W-Uh-Bde" customClass="InfoCollectionViewCell" customModule="Lynn_New" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="25.666666666666668" width="782" height="338.66666666666669"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AUO-yN-AY7">
+                                            <rect key="frame" x="0.0" y="0.0" width="782" height="338.66666666666669"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="782" height="338.66666666666669"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="11" translatesAutoresizingMaskIntoConstraints="NO" id="Qap-mO-RmR">
+                                <rect key="frame" x="316.33333333333331" y="342" width="211.66666666666669" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="0.0052541717890000001" green="0.3102771044" blue="0.27450799939999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2c-pO-Gnr">
+                                <rect key="frame" x="33" y="0.0" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="2Rb-Sf-8RO"/>
+                                    <constraint firstAttribute="width" constant="80" id="Jzh-rh-E2I"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Home"/>
+                                <connections>
+                                    <action selector="homeButtonTapped:" destination="Pm0-8M-QaW" eventType="touchUpInside" id="GRM-2s-Kom"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pmD-wo-AhV"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ciH-Uh-AsF" secondAttribute="trailing" id="81I-Ks-Law"/>
+                            <constraint firstItem="ciH-Uh-AsF" firstAttribute="leading" secondItem="QIK-zp-8se" secondAttribute="leading" id="EpA-Ws-h7B"/>
+                            <constraint firstItem="W2c-pO-Gnr" firstAttribute="leading" secondItem="QIK-zp-8se" secondAttribute="leading" constant="33" id="KCq-Lp-RUS"/>
+                            <constraint firstItem="ciH-Uh-AsF" firstAttribute="top" secondItem="QIK-zp-8se" secondAttribute="top" id="kzi-oQ-S20"/>
+                            <constraint firstAttribute="bottom" secondItem="ciH-Uh-AsF" secondAttribute="bottom" id="m2J-13-tt7"/>
+                            <constraint firstItem="W2c-pO-Gnr" firstAttribute="top" secondItem="pmD-wo-AhV" secondAttribute="top" id="uSU-fM-ID2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="ciH-Uh-AsF" id="cEV-sd-hl2"/>
+                        <outlet property="homeButton" destination="W2c-pO-Gnr" id="8rd-gU-1q6"/>
+                        <outlet property="pageController" destination="Qap-mO-RmR" id="kdW-o1-BBR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7tX-aO-7Je" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-736" y="1857"/>
         </scene>
     </scenes>
     <resources>
