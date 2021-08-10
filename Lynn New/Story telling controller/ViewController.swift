@@ -131,7 +131,7 @@ extension ViewController: UICollectionViewDataSource{
 
         switch indexPath.row {
         case 0:
-            let gifImageView = UIImageView(frame: CGRect(x: 263, y: 8, width: 265, height: 265))
+            let gifImageView = UIImageView(frame: CGRect(x: view.frame.width/3, y: view.frame.height/9, width: 265, height: 265))
             gifImageView.contentMode = .scaleAspectFit
             gifImageView.image = airgif[0]
             cell.addSubview(gifImageView)
