@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OUL-ei-rUy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -385,7 +385,7 @@ Siapa namamu?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5WQ-23-Yww" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-32" y="1159"/>
+            <point key="canvasLocation" x="-53" y="1157"/>
         </scene>
         <!--Berapa View Controller-->
         <scene sceneID="4VK-jG-3ws">
@@ -643,7 +643,7 @@ Siapa namamu?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c9X-5O-ZsS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="681" y="71"/>
+            <point key="canvasLocation" x="660" y="60"/>
         </scene>
         <!--Detect Drink-->
         <scene sceneID="bo5-EY-TQt">
@@ -659,7 +659,7 @@ Siapa namamu?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1D-rx-DPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="597" y="1158"/>
+            <point key="canvasLocation" x="660" y="1157"/>
         </scene>
         <!--Minum View Controller-->
         <scene sceneID="THI-Ne-wer">

@@ -17,12 +17,13 @@ class ViewController: UIViewController {
     var bgSoundURI: URL?
     var backgroundSound = AVAudioPlayer()
     
-        var backgroundImageArray = [UIImage(named: "stortel-1"), UIImage(named: "stortel-2"),
+        var backgroundImageArray = [UIImage(named: "stortel-1 new"), UIImage(named: "stortel-2"),
                                     UIImage(named: "Background-3"), UIImage(named: "stortel-4"),
                                     UIImage(named: "stortel-5"), UIImage(named: "stortel-6"),
                                     UIImage(named: "7"), UIImage(named: "stortel-8"),
                                     UIImage(named: "stortel-9"), UIImage(named: "stortel-10"),
-                                    UIImage(named: "stortel-11")]
+                                    UIImage(named: "stortel-11"),
+                                    UIImage(named: "ayo minum")]
     
     var voice = ["stortel1", "stortel2", "stortel3",
                  "stortel4", "stortel5", "stortel6", "stortel7",
@@ -65,19 +66,22 @@ class ViewController: UIViewController {
      
     }
     
-    @objc func ayoMinum() {
+    @objc func detectDrink() {
         backgroundSound.stop()
         
-        let ayoMinum = storyboard?.instantiateViewController(identifier: "Ayo Minum") as! AyoMinumViewController
-        ayoMinum.modalPresentationStyle = .fullScreen
+        print("Button Lihat Tapped")
+        
+        let detectDrink = storyboard?.instantiateViewController(identifier: "Detect Drink") as! DetectDrink
+        detectDrink.modalPresentationStyle = .fullScreen
         
         let transition = CATransition()
         transition.duration = 0.5
         transition.type = CATransitionType.push
-        transition.subtype = CATransitionSubtype.fromRight
+        transition.subtype = CATransitionSubtype.fromBottom
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         view.window!.layer.add(transition, forKey: kCATransition)
-        present(ayoMinum, animated: false, completion: nil)
+        present(detectDrink, animated: false, completion: nil)
+        
     }
     
     
@@ -182,14 +186,25 @@ extension ViewController: UICollectionViewDataSource{
             gifImageView10.image = airgif[10]
             cell.addSubview(gifImageView10)
             
-            let image = UIImage(named: "Sefron Kanan") as UIImage?
-            let buttonNext = UIButton(frame: CGRect(x: 712,
-                                                y: 286,
-                                                width: 80,
-                                                height: 80))
-            buttonNext.setImage(image, for: .normal)
-            buttonNext.addTarget(self, action: #selector(ayoMinum), for: .touchDown)
-            cell.addSubview(buttonNext)
+//            let image = UIImage(named: "Sefron Kanan") as UIImage?
+//            let buttonNext = UIButton(frame: CGRect(x: 712,
+//                                                y: 286,
+//                                                width: 80,
+//                                                height: 80))
+//            buttonNext.setImage(image, for: .normal)
+//            buttonNext.addTarget(self, action: #selector(ayoMinum), for: .touchDown)
+//            cell.addSubview(buttonNext)
+        case 11:
+            let image = UIImage(named: "Button") as UIImage?
+            let buttonLook = UIButton(frame: CGRect(x: 336.44,
+                                                y: 213,
+                                                width: 151.61,
+                                                height: 70))
+            buttonLook.setBackgroundImage(image, for: .normal)
+            buttonLook.setTitle("Lihat", for: .normal)
+            buttonLook.titleLabel?.font = UIFont(name: "Chalkboard SE", size: 17.0)
+            buttonLook.addTarget(self, action: #selector(detectDrink), for: .touchDown)
+            cell.addSubview(buttonLook)
            
         default:
             print("Default Mode")
@@ -259,8 +274,8 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
 //            self.view.addSubview(buttonNext)
             
         default:
-            playSound(number: 0)
-            print("Default, Current Page \(currentPage), Array Sound = \(0) ")
+            backgroundSound.stop()
+            print("Default Mode")
         }
     }
 //

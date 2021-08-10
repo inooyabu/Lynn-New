@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-class HomeScreenViewController: UIViewController {
+class HomeScreenViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var profilImageView: UIImageView!
     @IBOutlet weak var homeButton: UIButton!
@@ -20,17 +20,14 @@ class HomeScreenViewController: UIViewController {
     var backgroundSound = AVAudioPlayer()
     var nama: String = ""
     
+    var activeTextField : UITextField? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        namaTextField.delegate = self
         profilImageView.image = profilGif
-        
-//        simpanButton.layer.cornerRadius = 15
-        
-//        namaTextField.layer.cornerRadius = 15.0
-//        namaTextField.layer.borderWidth = 2.0
-//        namaTextField.layer.borderColor = UIColor(red: 95.0/255.0, green: 28.0/255.0, blue: 53.0/255.0, alpha: 100.0).cgColor
-//        namaTextField.layer.masksToBounds = true
+
         namaTextField.placeholder = "Masukkan namamu"
         
         playSound()
@@ -38,12 +35,47 @@ class HomeScreenViewController: UIViewController {
         //Dismiss keyboard when tap anywhere
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(HomeScreenViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(HomeScreenViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     
-   
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+            
+            return
+        }
+        
+        var shouldMoveViewUp = false
+        
+        let bottomTextField = namaTextField.convert(namaTextField.bounds, to: self.view).maxY;
+        let topOfKeyboard = self.view.frame.height - keyboardSize.height
+        
+        if bottomTextField > topOfKeyboard {
+            shouldMoveViewUp = true
+        }
+        
+        if shouldMoveViewUp {
+            self.view.frame.origin.y = 55 - keyboardSize.height
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        self.view.frame.origin.y = 0
     }
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+      textField.resignFirstResponder()
+      return true
     }
     
     private func playSound() {
@@ -57,14 +89,6 @@ class HomeScreenViewController: UIViewController {
             print(error)
         }
     }
-    
-//    func transferNama(){
-//        _ = nama
-//
-//        let vct = storyboard?.instantiateViewController(identifier: "Home Screen 2") as! HomeScreen2ViewController
-//        vct.namaInput = nama
-//        navigationController?.pushViewController(vct, animated: true)
-//    }
     
     @IBAction func homeButtonTapped(_ sender: Any) {
         print("Home Button Tapped")
@@ -85,7 +109,7 @@ class HomeScreenViewController: UIViewController {
     @IBAction func simpanButtonTapped(_ sender: Any) {
         backgroundSound.stop()
         nama = namaTextField.text ?? "Nama Empty"
-        print("Button simpan tapped || Oi \(nama)")
+        print("Button simpan tapped || Hi \(nama)")
       
         let homeScreen2 = storyboard?.instantiateViewController(identifier: "Home Screen 2") as! HomeScreen2ViewController
         homeScreen2.namaInput = nama
@@ -99,17 +123,6 @@ class HomeScreenViewController: UIViewController {
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         view.window!.layer.add(transition, forKey: kCATransition)
         present(homeScreen2, animated: false, completion: nil)
-        
-//        let storyTelling = storyboard?.instantiateViewController(identifier: "Story Telling") as! ViewController
-//        storyTelling.modalPresentationStyle = .fullScreen
-//
-//        let transition = CATransition()
-//        transition.duration = 0.5
-//        transition.type = CATransitionType.push
-//        transition.subtype = CATransitionSubtype.fromRight
-//        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-//        view.window!.layer.add(transition, forKey: kCATransition)
-//        present(storyTelling, animated: false, completion: nil)
         
     }
     
