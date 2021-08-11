@@ -17,12 +17,13 @@ class ViewController: UIViewController {
     var bgSoundURI: URL?
     var backgroundSound = AVAudioPlayer()
     
-        var backgroundImageArray = [UIImage(named: "stortel-1"), UIImage(named: "stortel-2"),
+        var backgroundImageArray = [UIImage(named: "stortel-1 new"), UIImage(named: "stortel-2"),
                                     UIImage(named: "Background-3"), UIImage(named: "stortel-4"),
                                     UIImage(named: "stortel-5"), UIImage(named: "stortel-6"),
                                     UIImage(named: "7"), UIImage(named: "stortel-8"),
                                     UIImage(named: "stortel-9"), UIImage(named: "stortel-10"),
-                                    UIImage(named: "stortel-11")]
+                                    UIImage(named: "stortel-11"),
+                                    UIImage(named: "ayo minum")]
     
     var voice = ["stortel1", "stortel2", "stortel3",
                  "stortel4", "stortel5", "stortel6", "stortel7",
@@ -65,19 +66,22 @@ class ViewController: UIViewController {
      
     }
     
-    @objc func ayoMinum() {
+    @objc func detectDrink() {
         backgroundSound.stop()
         
-        let ayoMinum = storyboard?.instantiateViewController(identifier: "Ayo Minum") as! AyoMinumViewController
-        ayoMinum.modalPresentationStyle = .fullScreen
+        print("Button Lihat Tapped")
+        
+        let detectDrink = storyboard?.instantiateViewController(identifier: "Detect Drink") as! DetectDrink
+        detectDrink.modalPresentationStyle = .fullScreen
         
         let transition = CATransition()
         transition.duration = 0.5
         transition.type = CATransitionType.push
-        transition.subtype = CATransitionSubtype.fromRight
+        transition.subtype = CATransitionSubtype.fromBottom
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         view.window!.layer.add(transition, forKey: kCATransition)
-        present(ayoMinum, animated: false, completion: nil)
+        present(detectDrink, animated: false, completion: nil)
+        
     }
     
     
@@ -127,69 +131,80 @@ extension ViewController: UICollectionViewDataSource{
 
         switch indexPath.row {
         case 0:
-            let gifImageView = UIImageView(frame: CGRect(x: 263, y: 8, width: 265, height: 265))
+            let gifImageView = UIImageView(frame: CGRect(x: (view.frame.width/2) - 132.5, y: 8, width: 265, height: 265))
             gifImageView.contentMode = .scaleAspectFit
             gifImageView.image = airgif[0]
             cell.addSubview(gifImageView)
         case 1:
-            let gifImageView1 = UIImageView(frame: CGRect(x: 197, y: 14, width: 483, height: 232))
+            let gifImageView1 = UIImageView(frame: CGRect(x: (view.frame.width/2) - 241.5, y: 14, width: 483, height: 232))
             gifImageView1.contentMode = .scaleAspectFit
             gifImageView1.image = airgif[1]
             cell.addSubview(gifImageView1)
         case 2:
-            let gifImageView2 = UIImageView(frame: CGRect(x: 79.5, y: 22, width: 681, height: 224))
+            let gifImageView2 = UIImageView(frame: CGRect(x: (view.frame.width/2) - 395, y: 22, width: 780, height: 224))
             gifImageView2.contentMode = .scaleAspectFit
             gifImageView2.image = airgif[2]
             cell.addSubview(gifImageView2)
         case 3:
-            let gifImageView3 = UIImageView(frame: CGRect(x: 264, y: 13, width: 278, height: 278))
+            let gifImageView3 = UIImageView(frame: CGRect(x: (view.frame.width/2) - 139, y: 13, width: 278, height: 278))
             gifImageView3.contentMode = .scaleAspectFit
             gifImageView3.image = airgif[3]
             cell.addSubview(gifImageView3)
         case 4:
-            let gifImageView4 = UIImageView(frame: CGRect(x: 194.08, y: 81, width: 437.5, height: 210))
+            let gifImageView4 = UIImageView(frame: CGRect(x: (view.frame.width/2) - 218, y: 81, width: 437.5, height: 210))
             gifImageView4.contentMode = .scaleAspectFit
             gifImageView4.image = airgif[4]
             cell.addSubview(gifImageView4)
         case 5:
-            let gifImageView5 = UIImageView(frame: CGRect(x: 146.92, y: 0, width: 547.92, height: 263))
+            let gifImageView5 = UIImageView(frame: CGRect(x: (view.frame.width/2) - 274, y: 0, width: 547.92, height: 263))
             gifImageView5.contentMode = .scaleAspectFit
             gifImageView5.image = airgif[5]
             cell.addSubview(gifImageView5)
         case 6:
-            let gifImageView6 = UIImageView(frame: CGRect(x: 270.67, y: 116, width: 273.33, height: 164))
+            let gifImageView6 = UIImageView(frame: CGRect(x: (view.frame.width/2) - 187, y: 116, width: 273.33, height: 164))
             gifImageView6.contentMode = .scaleAspectFit
             gifImageView6.image = airgif[6]
             cell.addSubview(gifImageView6)
         case 7:
-            let gifImageView7 = UIImageView(frame: CGRect(x: 187.23, y: 19, width: 482.69, height: 251))
+            let gifImageView7 = UIImageView(frame: CGRect(x: (view.frame.width/2) - 281, y: 19, width: 482.69, height: 251))
             gifImageView7.contentMode = .scaleAspectFit
             gifImageView7.image = airgif[7]
             cell.addSubview(gifImageView7)
         case 8:
-            let gifImageView8 = UIImageView(frame: CGRect(x: 270, y: 8, width: 275, height: 275))
+            let gifImageView8 = UIImageView(frame: CGRect(x: (view.frame.width/2) - 142.5, y: 8, width: 275, height: 275))
             gifImageView8.contentMode = .scaleAspectFit
             gifImageView8.image = airgif[8]
             cell.addSubview(gifImageView8)
         case 9:
-            let gifImageView9 = UIImageView(frame: CGRect(x: 254, y: 80, width: 305, height: 183))
+            let gifImageView9 = UIImageView(frame: CGRect(x: (view.frame.width/2) - 152.5, y: 80, width: 305, height: 183))
             gifImageView9.contentMode = .scaleAspectFit
             gifImageView9.image = airgif[9]
             cell.addSubview(gifImageView9)
         case 10:
-            let gifImageView10 = UIImageView(frame: CGRect(x: 282, y: 55, width: 250.67, height: 188))
+            let gifImageView10 = UIImageView(frame: CGRect(x: (view.frame.width/2) - 125, y: 55, width: 250.67, height: 188))
             gifImageView10.contentMode = .scaleAspectFit
             gifImageView10.image = airgif[10]
             cell.addSubview(gifImageView10)
             
-            let image = UIImage(named: "Sefron Kanan") as UIImage?
-            let buttonNext = UIButton(frame: CGRect(x: 712,
-                                                y: 286,
-                                                width: 80,
-                                                height: 80))
-            buttonNext.setImage(image, for: .normal)
-            buttonNext.addTarget(self, action: #selector(ayoMinum), for: .touchDown)
-            cell.addSubview(buttonNext)
+//            let image = UIImage(named: "Sefron Kanan") as UIImage?
+//            let buttonNext = UIButton(frame: CGRect(x: 712,
+//                                                y: 286,
+//                                                width: 80,
+//                                                height: 80))
+//            buttonNext.setImage(image, for: .normal)
+//            buttonNext.addTarget(self, action: #selector(ayoMinum), for: .touchDown)
+//            cell.addSubview(buttonNext)
+        case 11:
+            let image = UIImage(named: "Button") as UIImage?
+            let buttonLook = UIButton(frame: CGRect(x: 336.44,
+                                                y: 213,
+                                                width: 151.61,
+                                                height: 70))
+            buttonLook.setBackgroundImage(image, for: .normal)
+            buttonLook.setTitle("Lihat", for: .normal)
+            buttonLook.titleLabel?.font = UIFont(name: "Chalkboard SE", size: 17.0)
+            buttonLook.addTarget(self, action: #selector(detectDrink), for: .touchDown)
+            cell.addSubview(buttonLook)
            
         default:
             print("Default Mode")
@@ -259,8 +274,8 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
 //            self.view.addSubview(buttonNext)
             
         default:
-            playSound(number: 0)
-            print("Default, Current Page \(currentPage), Array Sound = \(0) ")
+            backgroundSound.stop()
+            print("Default Mode")
         }
     }
 //

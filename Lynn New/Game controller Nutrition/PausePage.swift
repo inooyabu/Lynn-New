@@ -13,6 +13,7 @@ let out = SKSpriteNode (imageNamed: "Out")
 let labelOut = SKLabelNode (fontNamed: "Chalkboard SE")
 let labelHelp = SKLabelNode (fontNamed: "Chalkboard SE")
 let close = SKSpriteNode (imageNamed: "Quit")
+let quit = SKSpriteNode (imageNamed: "keluar")
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -21,6 +22,12 @@ let close = SKSpriteNode (imageNamed: "Quit")
     override init(size: CGSize) {
         super.init(size: size)
         
+        quit.size = CGSize(width: 530, height: 353)
+        quit.position = CGPoint(x: size.width/2, y: size.height/2)
+        quit.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        quit.zPosition = 3
+        quit.isHidden = true
+        addChild(quit)
         
         close.size = CGSize(width: 60, height: 60)
         close.position = CGPoint (x: size.width/3, y: size.height - 50)
@@ -96,19 +103,26 @@ let close = SKSpriteNode (imageNamed: "Quit")
                 sKView.showsNodeCount = true
             
     }else if touchLocation.x >= out.position.x && touchLocation.x < (help.position.x) + 60 && touchLocation.y >= out.position.y {
-        let scene = MainMenuScene(size: CGSize(width: self.size.width, height: self.size.height))
-        scene.scaleMode = self.scaleMode
-           // Set the scale mode to scale to fit the window
-         let sKView = self.view as! SKView
-            // Load the SKScene from 'GameScene.sks'
-                // Present the scene
+        quit.isHidden = false
+    }else  if touchLocation.x <= (quit.position.x) - 30 && touchLocation.y <= size.height - 130 {
+            
+            let scene = MainMenuScene(size: CGSize(width: self.size.width, height: self.size.height))
+            scene.scaleMode = self.scaleMode
+           //     Set the scale mode to scale to fit the window
+             let sKView = self.view as! SKView
+                // Load the SKScene from 'GameScene.sks'
+                    // Present the scene
 
-            sKView.presentScene(scene)
-            sKView.ignoresSiblingOrder = true
-            sKView.showsFPS = true
-            sKView.showsNodeCount = true
+                sKView.presentScene(scene)
+                sKView.ignoresSiblingOrder = true
+                sKView.showsFPS = true
+                sKView.showsNodeCount = true
+            }else if touchLocation.x >= (quit.position.x) + 30 && touchLocation.y <= size.height - 130 {
+                quit.isHidden = true
+               
+            }
 }
 }
     
-}
+
 

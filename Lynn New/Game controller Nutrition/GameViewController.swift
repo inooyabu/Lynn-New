@@ -11,6 +11,25 @@ import GameplayKit
 
 class GameViewController: UIViewController {
 
+    
+        
+    @IBAction func home(_ sender: Any) {
+        let main = MainMenuScene()
+        
+        let homeScreen = storyboard?.instantiateViewController(identifier: "Home Screen") as! HomeScreenViewController
+        homeScreen.modalPresentationStyle = .fullScreen
+        
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromRight
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        view.window!.layer.add(transition, forKey: kCATransition)
+        present(homeScreen, animated: false, completion: nil)
+        
+        
+    
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         

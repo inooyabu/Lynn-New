@@ -2,6 +2,7 @@
 
 import Foundation
 import SpriteKit
+import UIKit
 
 class MainMenuScene: SKScene {
     let background = SKSpriteNode(imageNamed: "starting nutrition")
@@ -9,11 +10,17 @@ class MainMenuScene: SKScene {
     let lynn1 = SKSpriteNode(imageNamed: "Lynn move depan 1")
     var label = SKLabelNode (fontNamed: "Chalkboard SE")
     let button = SKLabelNode (fontNamed: "Chalkboard SE")
-   
+    let home = SKSpriteNode (imageNamed: "Home")
+    let backgroundMusic = SKAudioNode(fileNamed: "game nutrisi.mp3")
     
     override func didMove(to view: SKView) {
         
        
+        home.size = CGSize (width: 50, height: 50)
+        home.position = CGPoint(x: (size.width/2) * 0.1, y: size.height - 70 )
+        home.anchorPoint = CGPoint (x: 0.0, y: 0.0)
+        addChild(home)
+        
         
         background.size = CGSize(width: frame.maxX, height: frame.maxY)
         background.position = CGPoint(x: size.width/2,
@@ -53,7 +60,7 @@ class MainMenuScene: SKScene {
         button.text = "Sentuh layar untuk memulai"
         addChild(button)
         
-        startBackgroundMusic()
+       // startBackgroundMusic()
         
     }
     
@@ -69,10 +76,8 @@ class MainMenuScene: SKScene {
         guard let touch = touches.first else{return}
         let touchLocation = touch.location(in: self)
         print("touched point: \(touchLocation)")
-        if touchLocation.x <= 55 && touchLocation.y <= 55 {
-            self.removeFromParent()
-            StartingPageViewController()
-        }
+    
+        
         
     }
     #else
@@ -90,8 +95,15 @@ class MainMenuScene: SKScene {
         view?.presentScene(gameScene, transition: transition)
     }
     func startBackgroundMusic(){
-        let backgroundMusic = SKAudioNode(fileNamed: "game nutrisi.mp3")
-        backgroundMusic.autoplayLooped = true
+//        backgroundMusic = SKAudioNode(fileNamed: "game nutrisi.mp3")
+      //  backgroundMusic.autoplayLooped = true
         addChild(backgroundMusic)
     }
+    
+    func stopBackgroundMusic(){
+        backgroundMusic.run(SKAction.stop())
+        addChild(backgroundMusic)
+    }
+    
+
 }
