@@ -88,7 +88,7 @@ class MainMenuScene: SKScene {
     #endif
     
     func sceneTapped() {
-        let gameScene = GameScene(size: size)
+        let gameScene = HelpPage1(size: size)
         gameScene.scaleMode = scaleMode
         
         let transition = SKTransition.fade(withDuration: 3.0)
