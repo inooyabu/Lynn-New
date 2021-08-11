@@ -71,6 +71,7 @@ extension DetectDrink: PredictorDelegate{
                 AudioServicesPlayAlertSound(SystemSoundID(1322) )
                 self.isMinumdetected = false
                 self.moveToGame()
+                self.videoCapture.stop()
             }
         }
             else {
