@@ -41,22 +41,23 @@ class GameScene3: SKScene {
         infohelp?.size = CGSize(width: 1000, height: 800)
         infohelp?.zPosition = 50
         startBackgroundMusic()
-        
-        
-        
+      
         physicsWorld.contactDelegate = self
         
         player = childNode(withName: "player")
         joystick = childNode(withName: "joystick")
         joystickKnob = joystick?.childNode(withName: "knob")
         
-        playerState = GKStateMachine(states: [
-            JumpingState(playerNode: player!),
-            WalkingState(playerNode: player!),
-            IdleState(playerNode: player!),
-            LandingState(playerNode: player!),
-            StunnedState(playerNode: player!),
-        ])
+        if let player = player {
+            playerState = GKStateMachine(states: [
+                JumpingState(playerNode: player),
+                WalkingState(playerNode: player),
+                IdleState(playerNode: player),
+                LandingState(playerNode: player),
+                StunnedState(playerNode: player)
+            ])
+        }
+        
     }
 }
 
@@ -79,6 +80,7 @@ extension GameScene3 {
         guard let joystick = joystick else { return}
         guard let joystickKnob = joystickKnob else { return }
         
+        //sekarang disini
         if !joystickAction { return}
         
         for touch in touches {
