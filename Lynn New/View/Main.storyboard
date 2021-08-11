@@ -635,7 +635,7 @@ Siapa namamu?</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="18"/>
-                                <state key="normal" title="Simpan" backgroundImage="Button">
+                                <state key="normal" title="Lanjut" backgroundImage="Button">
                                     <color key="titleColor" red="0.93682306999999998" green="0.87465500829999998" blue="0.8666656613" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>

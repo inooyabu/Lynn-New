@@ -418,7 +418,7 @@ let playerContact : UInt32 = 0x1 << -2
             requestBrain.isHidden = false
             button.isHidden = true
         } else if touchLocation.x >= (level2.position.x) - 260 && touchLocation.x < (level2.position.x) + 260 && touchLocation.y <= (level2.position.y) - 100 {
-            let scene = GameScene2(size: CGSize(width: self.size.width, height: self.size.height))
+            let scene = GameScene3(size: CGSize(width: self.size.width, height: self.size.height))
             scene.scaleMode = self.scaleMode
                // Set the scale mode to scale to fit the window
              let sKView = self.view as! SKView
