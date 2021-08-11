@@ -16,7 +16,7 @@ class MainMenuScene: SKScene {
     override func didMove(to view: SKView) {
         
        
-        home.size = CGSize (width: 50, height: 50)
+        home.size = CGSize (width: 80, height: 80)
         home.position = CGPoint(x: (size.width/2) * 0.1, y: size.height - 70 )
         home.anchorPoint = CGPoint (x: 0.0, y: 0.0)
         addChild(home)
