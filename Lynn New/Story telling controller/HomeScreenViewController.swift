@@ -14,6 +14,7 @@ class HomeScreenViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var namaTextField: UITextField!
     @IBOutlet weak var simpanButton: UIButton!
+    @IBOutlet weak var messageLabel: UILabel!
     
     let profilGif = UIImage.gif(name: "Profil")
     var bgSoundURI: URL?
@@ -108,7 +109,13 @@ class HomeScreenViewController: UIViewController, UITextFieldDelegate {
     //Besok tambahin alert kalau nama empty
     @IBAction func simpanButtonTapped(_ sender: Any) {
         backgroundSound.stop()
-        nama = namaTextField.text ?? "Nama Empty"
+        nama = namaTextField.text ?? "Empty"
+        
+        if (nama.isEmpty) == true || (nama == "Masukkan namamu") {
+            displayMyAlertMessage(userMessage: "Masukkan namamu dulu ya 😀")
+            return
+        }
+        
         print("Button simpan tapped || Hi \(nama)")
       
         let homeScreen2 = storyboard?.instantiateViewController(identifier: "Home Screen 2") as! HomeScreen2ViewController
@@ -126,4 +133,11 @@ class HomeScreenViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    func displayMyAlertMessage(userMessage: String){
+        
+        let myAlert = UIAlertController(title: "Oopss...", message: userMessage, preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "Oke", style: UIAlertAction.Style.default, handler: nil)
+        myAlert.addAction(okAction)
+        self.present(myAlert, animated: true, completion: nil)
+    }
 }
