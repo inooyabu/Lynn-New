@@ -107,9 +107,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Starting page" translatesAutoresizingMaskIntoConstraints="NO" id="Bbi-Sb-WQf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Starting page" translatesAutoresizingMaskIntoConstraints="NO" id="Bbi-Sb-WQf">
                                 <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Bbi-Sb-WQf" secondAttribute="height" multiplier="422:195" id="RlC-Vk-WQ0"/>
+                                    <constraint firstAttribute="height" constant="390" id="Xdu-pb-Ryt"/>
+                                    <constraint firstAttribute="width" constant="844" id="xQC-Wr-OmX"/>
+                                </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lynn Logo" translatesAutoresizingMaskIntoConstraints="NO" id="dzy-IH-9v9">
                                 <rect key="frame" x="188.66666666666666" y="76.666666666666657" width="433.66666666666663" height="227.66666666666666"/>
@@ -123,18 +127,25 @@
                                     <action selector="quitImageButtonTapped:" destination="1Eb-i8-mwy" eventType="touchUpInside" id="qet-Aq-Ibg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jT0-NS-008">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jT0-NS-008">
                                 <rect key="frame" x="737" y="0.0" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jT0-NS-008" secondAttribute="height" multiplier="1:1" id="Dbp-Xi-RM3"/>
+                                    <constraint firstAttribute="height" constant="80" id="KoR-wz-0bQ"/>
+                                    <constraint firstAttribute="width" constant="80" id="Z9W-1G-Zff"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="Info"/>
                                 <connections>
                                     <action selector="infoImageButtonTapped:" destination="1Eb-i8-mwy" eventType="touchUpInside" id="jQr-gk-LSJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S07-RM-8sk">
-                                <rect key="frame" x="330.33333333333331" y="270" width="151.66666666666666" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S07-RM-8sk">
+                                <rect key="frame" x="323" y="271" width="198" height="98"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="198" id="NH7-yP-Afc"/>
+                                    <constraint firstAttribute="height" constant="98" id="P4i-5c-nIM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="18"/>
                                 <state key="normal" title="Mulai" backgroundImage="Button">
                                     <color key="titleColor" red="0.9489546418" green="0.92926537990000002" blue="0.93725687270000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -146,6 +157,16 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vsX-8v-5p2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Bbi-Sb-WQf" secondAttribute="trailing" id="10l-I5-fgU"/>
+                            <constraint firstItem="Bbi-Sb-WQf" firstAttribute="leading" secondItem="ocu-7N-jtY" secondAttribute="leading" id="1uA-j3-wka"/>
+                            <constraint firstAttribute="bottom" secondItem="Bbi-Sb-WQf" secondAttribute="bottom" id="Gui-Rv-zc2"/>
+                            <constraint firstItem="S07-RM-8sk" firstAttribute="leading" secondItem="vsX-8v-5p2" secondAttribute="leading" constant="279" id="TVu-0l-d0r"/>
+                            <constraint firstAttribute="trailing" secondItem="jT0-NS-008" secondAttribute="trailing" constant="27" id="YQ9-xY-gF8"/>
+                            <constraint firstItem="Bbi-Sb-WQf" firstAttribute="top" secondItem="vsX-8v-5p2" secondAttribute="top" id="oLn-Hs-hWr"/>
+                            <constraint firstItem="S07-RM-8sk" firstAttribute="bottom" secondItem="vsX-8v-5p2" secondAttribute="bottom" id="ufc-tO-bZZ"/>
+                            <constraint firstItem="jT0-NS-008" firstAttribute="top" secondItem="vsX-8v-5p2" secondAttribute="top" id="xcT-hv-dRN"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="infoButton" destination="jT0-NS-008" id="kTq-Y0-M0I"/>
