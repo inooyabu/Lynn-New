@@ -62,6 +62,7 @@
 		E29143E726B7F5A1005EE609 /* ShareNutritionScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E29143E626B7F5A1005EE609 /* ShareNutritionScene.sks */; };
 		E29143EB26B7F65E005EE609 /* ShareNutritionAction.sks in Resources */ = {isa = PBXBuildFile; fileRef = E29143EA26B7F65E005EE609 /* ShareNutritionAction.sks */; };
 		E29D605F26BC97BD00A7B070 /* with timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29D605E26BC97BC00A7B070 /* with timer.swift */; };
+		E2AC586F26C39E50008F1503 /* Hooray Child.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2AC586E26C39E50008F1503 /* Hooray Child.wav */; };
 		E2D3E57126BB90F000A13D11 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3E57026BB90F000A13D11 /* GameScene.swift */; };
 		E2D3E57726BB910600A13D11 /* HelpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3E57226BB910500A13D11 /* HelpPage.swift */; };
 		E2D3E57826BB910600A13D11 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3E57326BB910500A13D11 /* GameViewController.swift */; };
@@ -132,6 +133,7 @@
 		E29143E626B7F5A1005EE609 /* ShareNutritionScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ShareNutritionScene.sks; sourceTree = "<group>"; };
 		E29143EA26B7F65E005EE609 /* ShareNutritionAction.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ShareNutritionAction.sks; sourceTree = "<group>"; };
 		E29D605E26BC97BC00A7B070 /* with timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "with timer.swift"; sourceTree = "<group>"; };
+		E2AC586E26C39E50008F1503 /* Hooray Child.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Hooray Child.wav"; sourceTree = "<group>"; };
 		E2D3E57026BB90F000A13D11 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		E2D3E57226BB910500A13D11 /* HelpPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpPage.swift; sourceTree = "<group>"; };
 		E2D3E57326BB910500A13D11 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 		6D9FB36D26AC673F00111D66 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				E2AC586E26C39E50008F1503 /* Hooray Child.wav */,
 				6D635C9126AD8A9D00A5FC9E /* home page.mp3 */,
 				6D32277726BBC91D009944EA /* stortel3.mp3 */,
 				6D9FB39526AC67CD00111D66 /* sound1.mp3 */,
@@ -376,6 +379,7 @@
 				6D635D0626AD8C2E00A5FC9E /* Lembab.gif in Resources */,
 				E2889FB026BE0B010034F2B8 /* Main.storyboard in Resources */,
 				6D9FB39E26AC67CD00111D66 /* stortel8.mp3 in Resources */,
+				E2AC586F26C39E50008F1503 /* Hooray Child.wav in Resources */,
 				6D32277826BBC91D009944EA /* stortel3.mp3 in Resources */,
 				6D635D0D26AD8C2E00A5FC9E /* Child.gif in Resources */,
 				6D9FB3A326AC67CD00111D66 /* stortel1.mp3 in Resources */,
