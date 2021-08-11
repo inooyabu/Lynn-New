@@ -11,6 +11,7 @@ class MainMenuScene: SKScene {
     var label = SKLabelNode (fontNamed: "Chalkboard SE")
     let button = SKLabelNode (fontNamed: "Chalkboard SE")
     let home = SKSpriteNode (imageNamed: "Home")
+    let backgroundMusic = SKAudioNode(fileNamed: "game nutrisi.mp3")
     
     override func didMove(to view: SKView) {
         
@@ -59,7 +60,7 @@ class MainMenuScene: SKScene {
         button.text = "Sentuh layar untuk memulai"
         addChild(button)
         
-        startBackgroundMusic()
+       // startBackgroundMusic()
         
     }
     
@@ -75,6 +76,8 @@ class MainMenuScene: SKScene {
         guard let touch = touches.first else{return}
         let touchLocation = touch.location(in: self)
         print("touched point: \(touchLocation)")
+    
+        
         
     }
     #else
@@ -92,8 +95,13 @@ class MainMenuScene: SKScene {
         view?.presentScene(gameScene, transition: transition)
     }
     func startBackgroundMusic(){
-        let backgroundMusic = SKAudioNode(fileNamed: "game nutrisi.mp3")
-        backgroundMusic.autoplayLooped = true
+//        backgroundMusic = SKAudioNode(fileNamed: "game nutrisi.mp3")
+      //  backgroundMusic.autoplayLooped = true
+        addChild(backgroundMusic)
+    }
+    
+    func stopBackgroundMusic(){
+        backgroundMusic.run(SKAction.stop())
         addChild(backgroundMusic)
     }
     

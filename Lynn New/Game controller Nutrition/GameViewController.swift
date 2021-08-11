@@ -11,8 +11,10 @@ import GameplayKit
 
 class GameViewController: UIViewController {
 
+    
+        
     @IBAction func home(_ sender: Any) {
-        print("home button")
+        let main = MainMenuScene()
         
         let homeScreen = storyboard?.instantiateViewController(identifier: "Home Screen") as! HomeScreenViewController
         homeScreen.modalPresentationStyle = .fullScreen
@@ -26,6 +28,7 @@ class GameViewController: UIViewController {
         present(homeScreen, animated: false, completion: nil)
         
         
+    
     }
     override func viewDidLoad() {
         super.viewDidLoad()

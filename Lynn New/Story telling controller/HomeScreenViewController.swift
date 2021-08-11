@@ -31,6 +31,7 @@ class HomeScreenViewController: UIViewController, UITextFieldDelegate {
 
         namaTextField.placeholder = "Masukkan namamu"
         
+        let main = MainMenuScene()
         playSound()
         
         //Dismiss keyboard when tap anywhere
