@@ -674,10 +674,28 @@ Siapa namamu?</string>
                     <view key="view" contentMode="scaleToFill" id="eHA-MZ-HHn">
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="showDrink" translatesAutoresizingMaskIntoConstraints="NO" id="fOX-f6-5td">
+                                <rect key="frame" x="238" y="73" width="369" height="244"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="244" id="JfX-eF-iRL"/>
+                                    <constraint firstAttribute="width" constant="369" id="ckM-qF-t9Z"/>
+                                    <constraint firstAttribute="width" secondItem="fOX-f6-5td" secondAttribute="height" multiplier="369:244" id="wu9-dw-qhe"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ot8-zJ-85p"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fOX-f6-5td" firstAttribute="leading" secondItem="ot8-zJ-85p" secondAttribute="leading" constant="194" id="5d3-Md-WMk"/>
+                            <constraint firstItem="fOX-f6-5td" firstAttribute="top" secondItem="ot8-zJ-85p" secondAttribute="top" constant="73" id="GKx-BX-9OA"/>
+                            <constraint firstItem="ot8-zJ-85p" firstAttribute="trailing" secondItem="fOX-f6-5td" secondAttribute="trailing" constant="193" id="WFm-Xk-Vcb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WBs-pF-qtr"/>
+                    <connections>
+                        <outlet property="showDrink" destination="fOX-f6-5td" id="T4s-JH-uvX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1D-rx-DPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -892,6 +910,7 @@ Siapa namamu?</string>
         <image name="Text Field" width="426.66665649414062" height="100"/>
         <image name="home screen 2" width="577.66668701171875" height="281.66665649414062"/>
         <image name="minum anak" width="400" height="400"/>
+        <image name="showDrink" width="368.66665649414062" height="244"/>
         <image name="urinn" width="1500" height="400"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

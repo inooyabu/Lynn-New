@@ -20,11 +20,12 @@ class DetectDrink: UIViewController {
     
     var isMinumdetected = false
     
-   
+    @IBOutlet weak var showDrink: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       setupVideoPreview()
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {self.setupVideoPreview()})
+       
         
         videoCapture.predictor.delegate = self
         

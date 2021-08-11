@@ -105,22 +105,20 @@ let quit = SKSpriteNode (imageNamed: "keluar")
     }else if touchLocation.x >= out.position.x && touchLocation.x < (help.position.x) + 60 && touchLocation.y >= out.position.y {
         quit.isHidden = false
     }else  if touchLocation.x <= (quit.position.x) - 30 && touchLocation.y <= size.height - 130 {
-            
-            let scene = MainMenuScene(size: CGSize(width: self.size.width, height: self.size.height))
-            scene.scaleMode = self.scaleMode
-           //     Set the scale mode to scale to fit the window
-             let sKView = self.view as! SKView
-                // Load the SKScene from 'GameScene.sks'
-                    // Present the scene
+        let scene = MainMenuScene(size: CGSize(width: self.size.width, height: self.size.height))
+                   scene.scaleMode = self.scaleMode
+                  //     Set the scale mode to scale to fit the window
+                    let sKView = self.view as! SKView
+                       // Load the SKScene from 'GameScene.sks'
+                           // Present the scene
+                       sKView.presentScene(scene)
+                       sKView.ignoresSiblingOrder = true
+                       sKView.showsFPS = true
+                       sKView.showsNodeCount = true
+                   }else if touchLocation.x >= (quit.position.x) + 30 && touchLocation.y <= size.height - 130 {
+                       quit.isHidden = true
 
-                sKView.presentScene(scene)
-                sKView.ignoresSiblingOrder = true
-                sKView.showsFPS = true
-                sKView.showsNodeCount = true
-            }else if touchLocation.x >= (quit.position.x) + 30 && touchLocation.y <= size.height - 130 {
-                quit.isHidden = true
-               
-            }
+                   }
 }
 }
     
