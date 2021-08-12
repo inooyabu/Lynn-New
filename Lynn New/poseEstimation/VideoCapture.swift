@@ -38,4 +38,7 @@ extension VideoCapture: AVCaptureVideoDataOutputSampleBufferDelegate {
         predictor.estimation(sampleBuffer: sampleBuffer)
     
     }
+    func stop(){
+        captureSession.stopRunning()
+    }
 }

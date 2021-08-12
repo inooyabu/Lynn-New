@@ -33,6 +33,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let musclePop = SKSpriteNode (imageNamed: "musclePop")
     let button = SKSpriteNode (imageNamed: "startgame")
     let level2 = SKSpriteNode (imageNamed: "level2")
+    let endGame = SKSpriteNode (imageNamed: "endGame")
     
 let playerContact : UInt32 = 0x1 << -2
 
@@ -51,6 +52,12 @@ let playerContact : UInt32 = 0x1 << -2
         level2.isHidden = true
         addChild(level2)
         
+        endGame.size = CGSize(width: 510, height: 340)
+        endGame.position = CGPoint (x: size.width/2, y: size.height/2)
+        endGame.anchorPoint = CGPoint (x: 0.5, y: 0.5)
+        endGame.zPosition = 4
+        endGame.isHidden = true
+        addChild(endGame)
         
         button.size = CGSize (width: size.width, height: size.height)
         button.position = CGPoint (x: size.width/2, y: size.height/2)
@@ -316,7 +323,7 @@ let playerContact : UInt32 = 0x1 << -2
             })
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(19), execute: {
                 self.lungsPop.isHidden = true
-                self.level2.isHidden = false
+                self.endGame.isHidden = false
             })
         }else if  touchLocation.x >= (brain.position.x) && touchLocation.x < (brain.position.x) + 95 && touchLocation.y >= (brain.position.y) && touchLocation.y < (brain.position.y) + 95 {
             
@@ -417,8 +424,8 @@ let playerContact : UInt32 = 0x1 << -2
         } else if touchLocation.x >= (button.position.x) - 100 && touchLocation.x < (button.position.x) + 100 && touchLocation.y >= (button.position.y) - 50 && touchLocation.y < (button.position.y) + 50 {
             requestBrain.isHidden = false
             button.isHidden = true
-        } else if touchLocation.x >= (level2.position.x) - 260 && touchLocation.x < (level2.position.x) + 260 && touchLocation.y <= (level2.position.y) - 100 {
-            let scene = GameScene2(size: CGSize(width: self.size.width, height: self.size.height))
+        } else if touchLocation.x >= (endGame.position.x) - 260 && touchLocation.x < (endGame.position.x) + 260 && touchLocation.y <= (endGame.position.y) - 100 {
+            let scene = GameScene(size: CGSize(width: self.size.width, height: self.size.height))
             scene.scaleMode = self.scaleMode
                // Set the scale mode to scale to fit the window
              let sKView = self.view as! SKView
@@ -430,7 +437,20 @@ let playerContact : UInt32 = 0x1 << -2
                 sKView.showsFPS = true
                 sKView.showsNodeCount = true
 
-        }
+        }else if touchLocation.x >= (endGame.position.x) - 260 && touchLocation.x < (endGame.position.x) + 260 && touchLocation.y >= (endGame.position.y) + 100 {
+            let scene = MainMenuScene(size: CGSize(width: self.size.width, height: self.size.height))
+            scene.scaleMode = self.scaleMode
+               // Set the scale mode to scale to fit the window
+             let sKView = self.view as! SKView
+                // Load the SKScene from 'GameScene.sks'
+                    // Present the scene
+
+                sKView.presentScene(scene)
+                sKView.ignoresSiblingOrder = true
+                sKView.showsFPS = true
+                sKView.showsNodeCount = true
+
+    }
     }
 //    func brainUp() {
 //

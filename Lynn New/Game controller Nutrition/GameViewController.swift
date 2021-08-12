@@ -16,7 +16,7 @@ class GameViewController: UIViewController {
     @IBAction func home(_ sender: Any) {
         let main = MainMenuScene()
         
-        let homeScreen = storyboard?.instantiateViewController(identifier: "Home Screen") as! HomeScreenViewController
+        let homeScreen = storyboard?.instantiateViewController(identifier: "Story Telling") as! ViewController
         homeScreen.modalPresentationStyle = .fullScreen
         
         let transition = CATransition()
